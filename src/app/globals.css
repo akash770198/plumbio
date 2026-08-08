@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* brand */
+  --color-brand: #044194;
+  --color-brand-deep: #023066;
+  --color-brand-card: #0e46a3;
+  --color-brand-link: #1a4fa0;
+  --color-brand-head: #0d4a9e;
+  --color-brand-label: #1e6fd0;
+  --color-brand-tick: #1b62c4;
+  --color-accent-red: #dc2626;
+
+  /* neutrals */
+  --color-ink: #1a1a1a;
+  --color-body: #555555;
+  --color-muted: #6e7278;
+  --color-line: #e5e7eb;
+  --color-page: #f5f5f5;
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-signature), cursive;
+
+  --max-width-shell: 100%;
+}
+
+:root {
+  --ease: cubic-bezier(0.22, 0.68, 0.32, 1);
+  /* Matches navbar left/right gutter — shared by all non-hero sections */
+  --page-gutter: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --page-gutter: 3.5rem; /* 56px — same for navbar + sections */
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --page-gutter: 4.5rem; /* 72px on wide screens */
+  }
+}
+
+/* Shared left/right section gutters — used by every section except Hero */
+@utility shell {
+  width: 100%;
+  padding-inline: var(--page-gutter);
+}
+
+/* Shared vertical rhythm between homepage sections */
+@utility section-y {
+  padding-block: 4rem; /* 64px */
+
+  @media (min-width: 1024px) {
+    padding-block: 5rem; /* 80px */
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-body);
+    background: var(--color-page);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    font-weight: 700;
+    color: var(--color-ink);
+    line-height: 1.2;
+  }
+  p {
+    margin: 0;
+  }
+  button {
+    font: inherit;
+    color: inherit;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+  input {
+    font: inherit;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-brand-label);
+    outline-offset: 2px;
+  }
+}
+
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+.animate-hero-zoom {
+  animation: heroZoom 20s var(--ease) infinite alternate;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.animate-slide-down {
+  animation: slideDown 0.4s var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,660 @@
+{
+  "site": {
+    "name": "Plumbio",
+    "meta": {
+      "title": "Plumbio — Exceptional, Punctual & Professional Plumbing",
+      "description": "Plumbio provides reliable plumbing solutions for homes and businesses — on time, every time. Trusted plumbing experts since 1999."
+    }
+  },
+  "topbar": {
+    "note": "Trusted Plumbing Experts Since 1999",
+    "support": "24/7 Emergency Support",
+    "socials": [
+      {
+        "label": "Facebook",
+        "href": "#",
+        "icon": "fb"
+      },
+      {
+        "label": "YouTube",
+        "href": "#",
+        "icon": "yt"
+      },
+      {
+        "label": "Twitter",
+        "href": "#",
+        "icon": "tw"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "#",
+        "icon": "in"
+      },
+      {
+        "label": "Instagram",
+        "href": "#",
+        "icon": "ig"
+      }
+    ]
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About Us",
+      "href": "/about"
+    },
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Projects",
+      "href": "/projects"
+    },
+    {
+      "label": "Pages",
+      "href": "/pages",
+      "children": [
+        {
+          "label": "Our Team",
+          "href": "/team"
+        },
+        {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        {
+          "label": "FAQ",
+          "href": "/faq"
+        },
+        {
+          "label": "Testimonials",
+          "href": "/testimonials"
+        }
+      ]
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "header": {
+    "callLabel": "Need Help? Call Anytime",
+    "phone": "123 456 7890",
+    "phoneHref": "tel:1234567890",
+    "cta": {
+      "label": "Schedule Service",
+      "href": "/contact"
+    }
+  },
+  "hero": {
+    "image": "/img/hero-wrench.jpg",
+    "imageAlt": "Gloved hand holding a red pipe wrench and brass fittings",
+    "titleLines": [
+      "Exceptional, Punctual &",
+      "Professional."
+    ],
+    "lead": "We provide reliable plumbing solutions for homes and businesses — on time, every time.",
+    "primaryCta": {
+      "label": "Our Services",
+      "href": "/services"
+    },
+    "secondaryCta": {
+      "label": "Request Quote",
+      "href": "/contact"
+    }
+  },
+  "trustedBy": {
+    "title": "Trusted By",
+    "logos": [
+      {
+        "name": "HomeAdvisor",
+        "type": "homeadvisor"
+      },
+      {
+        "name": "yelp",
+        "type": "yelp"
+      },
+      {
+        "name": "Google",
+        "type": "google"
+      },
+      {
+        "name": "Angi",
+        "type": "angi"
+      },
+      {
+        "name": "Thumbtack",
+        "type": "thumbtack"
+      },
+      {
+        "name": "Trustpilot",
+        "type": "trustpilot"
+      }
+    ]
+  },
+  "aboutBanner": {
+    "title": "About Us",
+    "backgroundImage": "/img/hero-wrench.jpg",
+    "backgroundImageAlt": "Professional plumbing tools and pipes background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About us",
+        "href": "/about"
+      }
+    ]
+  },
+  "about": {
+    "label": "About Us",
+    "titleLines": [
+      "Delivering Reliable",
+      "Plumbing Solutions",
+      "You Can Trust"
+    ],
+    "text": "With years of experience and a commitment to quality, we provide top-notch plumbing services for homes and businesses.",
+    "points": [
+      "Licensed & Insured Plumbers",
+      "24/7 Emergency Service",
+      "Satisfaction Guaranteed"
+    ],
+    "signature": {
+      "script": "John Doe",
+      "name": "John Doe",
+      "role": "Founder, Plumbio"
+    },
+    "image": "/img/about-plumber-reference-upscaled.png",
+    "imageAlt": "Smiling Plumbio plumber fitting a copper pipe",
+    "cards": [
+      {
+        "icon": "shield",
+        "title": "Verified",
+        "text": "Your trusted local plumbing expert."
+      },
+      {
+        "icon": "badge",
+        "title": "Quality",
+        "text": "We use premium materials for long-lasting results."
+      },
+      {
+        "icon": "headset",
+        "title": "24/7 Service",
+        "text": "We're always ready to support you anytime."
+      }
+    ]
+  },
+  "whyChoose": {
+    "label": "WHY CHOOSE US",
+    "backgroundImage": "/img/cta-pipes.jpg",
+    "titleLines": [
+      "We're Committed to",
+      "Quality & Reliability"
+    ],
+    "description": "We combine skilled workmanship, modern tools, and a customer-focused approach to deliver plumbing services you can rely on.",
+    "features": [
+      {
+        "icon": "shield",
+        "title": "Experienced & Certified Plumbers"
+      },
+      {
+        "icon": "wrench",
+        "title": "Upfront Pricing – No Hidden Charges"
+      },
+      {
+        "icon": "clock",
+        "title": "Fast Response & On-Time Service"
+      },
+      {
+        "icon": "thumb",
+        "title": "100% Satisfaction Guarantee"
+      }
+    ],
+    "highlightCard": {
+      "icon": "shield",
+      "title": "Your Satisfaction is Our Priority",
+      "text": "We go above and beyond to ensure every job is done right — the first time."
+    },
+    "image": "/img/committed-plumber.png",
+    "imageAlt": "Professional plumber",
+    "stats": [
+      {
+        "icon": "users",
+        "title": "Trusted by",
+        "value": "Thousands"
+      },
+      {
+        "icon": "badge",
+        "title": "Quality",
+        "value": "Workmanship"
+      },
+      {
+        "icon": "clock",
+        "title": "24/7",
+        "value": "Support"
+      },
+      {
+        "icon": "shield",
+        "title": "Safe &",
+        "value": "Reliable"
+      }
+    ]
+  },
+  "process": {
+    "label": "HOW WE WORK",
+    "title": [
+      "Our Simple",
+      "4-Step",
+      "Process"
+    ],
+    "steps": [
+      {
+        "number": "01",
+        "title": "Book Online",
+        "description": "Schedule your service easily in just a few clicks.",
+        "icon": "clipboard"
+      },
+      {
+        "number": "02",
+        "title": "We Arrive",
+        "description": "Our expert plumbers arrive on time and ready to help.",
+        "icon": "wrench"
+      },
+      {
+        "number": "03",
+        "title": "Fix & Solve",
+        "description": "We diagnose the issue and get the job done right.",
+        "icon": "pipe"
+      },
+      {
+        "number": "04",
+        "title": "You Relax",
+        "description": "Enjoy hassle-free plumbing and complete peace of mind.",
+        "icon": "thumb"
+      }
+    ]
+  },
+  "companyShowcase": {
+    "label": "ABOUT OUR COMPANY",
+    "titleLines": [
+      "Delivering Quality Work",
+      "That Lasts"
+    ],
+    "description": "We combine expertise, advanced tools, and a commitment to excellence to deliver plumbing solutions you can rely on.",
+    "button": {
+      "label": "More About Us",
+      "href": "/about"
+    },
+    "gallery": [
+      {
+        "image": "/img/company-1.jpg",
+        "alt": "Modern bathroom"
+      },
+      {
+        "image": "/img/company-2.jpg",
+        "alt": "Industrial plumbing"
+      },
+      {
+        "image": "/img/company-3.jpg",
+        "alt": "Modern kitchen"
+      },
+      {
+        "image": "/img/company-4.jpg",
+        "alt": "Mechanical room"
+      }
+    ],
+    "servicesHeading": {
+      "label": "WE PROVIDE SOLUTIONS FOR",
+      "title": "Plumbing Services for Every Industry"
+    },
+    "services": [
+      {
+        "icon": "home",
+        "title": "Residential",
+        "subtitle": "Home Plumbing"
+      },
+      {
+        "icon": "building",
+        "title": "Commercial",
+        "subtitle": "Office & Retail"
+      },
+      {
+        "icon": "factory",
+        "title": "Industrial",
+        "subtitle": "Heavy Duty Systems"
+      },
+      {
+        "icon": "gear",
+        "title": "Installation",
+        "subtitle": "New Fixtures"
+      },
+      {
+        "icon": "wrench",
+        "title": "Repairs",
+        "subtitle": "Fix & Replace"
+      },
+      {
+        "icon": "support",
+        "title": "24/7 Support",
+        "subtitle": "Quick Response"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "users",
+        "value": "25+",
+        "label": "Years Experience"
+      },
+      {
+        "icon": "clipboard",
+        "value": "12K+",
+        "label": "Projects Completed"
+      },
+      {
+        "icon": "wrench",
+        "value": "9K+",
+        "label": "Happy Clients"
+      },
+      {
+        "icon": "worker",
+        "value": "50+",
+        "label": "Skilled Plumbers"
+      },
+      {
+        "icon": "support",
+        "value": "24/7",
+        "label": "Emergency Service"
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "TESTIMONIALS",
+    "titleLines": [
+      "What People Say",
+      "About Us"
+    ],
+    "image": "/img/testimonial.jpg",
+    "imageAlt": "Happy customer with child in kitchen",
+    "background": {
+      "showPattern": true,
+      "showQuote": true,
+      "showShapes": true
+    },
+    "items": [
+      {
+        "name": "Sonia Duvall",
+        "designation": "Supervisor",
+        "rating": 5,
+        "review": "Called for someone to come out to take a look at a leak under my sidewalk next to my house/front door. Two gentlemen came out on time, quickly diagnosed the problem, and gave me information about the fix."
+      },
+      {
+        "name": "Michael Anderson",
+        "designation": "Business Owner",
+        "rating": 5,
+        "review": "Professional, punctual, and extremely knowledgeable. The team fixed our commercial plumbing issue with minimal downtime. Highly recommended for any business."
+      },
+      {
+        "name": "Emily Johnson",
+        "designation": "Homeowner",
+        "rating": 5,
+        "review": "Excellent experience from booking to completion. The plumber explained everything clearly, completed the work neatly, and left the area spotless."
+      },
+      {
+        "name": "Robert Smith",
+        "designation": "Restaurant Manager",
+        "rating": 5,
+        "review": "Emergency service was outstanding. They arrived within an hour and solved a major pipe issue before it affected our business operations."
+      }
+    ],
+    "navigation": {
+      "showArrows": true,
+      "showIndicators": true,
+      "autoplay": true,
+      "autoplayDelay": 6000
+    }
+  },
+  "team": {
+    "backgroundTitle": "Our Team",
+    "label": "OUR TEAM",
+    "title": "Expert Plumber You Can Trust",
+    "button": {
+      "label": "View All Team",
+      "href": "/team"
+    },
+    "members": [
+      {
+        "name": "John Mathew",
+        "designation": "Founder & CEO",
+        "image": "/img/team-1.jpg",
+        "imageAlt": "John Mathew - Founder & CEO"
+      },
+      {
+        "name": "David Williams",
+        "designation": "Senior Plumber",
+        "image": "/img/team-2.jpg",
+        "imageAlt": "David Williams - Senior Plumber"
+      },
+      {
+        "name": "James Anderson",
+        "designation": "Pipe Fitting Expert",
+        "image": "/img/team-3.jpg",
+        "imageAlt": "James Anderson - Pipe Fitting Expert"
+      },
+      {
+        "name": "Robert Taylor",
+        "designation": "Drain Specialist",
+        "image": "/img/team-4.jpg",
+        "imageAlt": "Robert Taylor - Drain Specialist"
+      }
+    ]
+  },
+  "awards": {
+    "label": "AWARDS & CERTIFICATIONS",
+    "title": {
+      "normal": "Recognized for",
+      "highlight": "Excellence"
+    },
+    "description": "Our commitment to quality and customer satisfaction has earned us recognized certifications and prestigious industry awards.",
+    "items": [
+      {
+        "title": "Licensed & Insured",
+        "description": "Fully Licensed & Insured for Your Protection",
+        "logo": "/img/awards/Licensed & Insured.png",
+        "icon": "shield",
+        "accent": "blue"
+      },
+      {
+        "title": "BBB Accredited Business",
+        "description": "Proud BBB Accredited with A+ Rating",
+        "logo": "/img/awards/BBB.png",
+        "icon": "building",
+        "accent": "blue"
+      },
+      {
+        "title": "Angi Super Service Award",
+        "description": "Honored for Superior Service & Customer Satisfaction",
+        "logo": "/img/awards/Angi_super.png",
+        "icon": "award",
+        "accent": "red"
+      },
+      {
+        "title": "Top Rated on HomeAdvisor",
+        "description": "Top Rated & Trusted by HomeAdvisor Customers",
+        "logo": "/img/awards/HomeAdvisor.png",
+        "icon": "star",
+        "accent": "blue"
+      }
+    ]
+  },
+  "faq": {
+    "backgroundTitle": "FAQ",
+    "label": "FREQUENTLY ASKED QUESTIONS",
+    "titleLines": [
+      "You Have Questions,",
+      "We Have Answers"
+    ],
+    "description": "Plumbing problems can be extremely frustrating, especially when it means you can't use your toilet, sink, shower, or all of the above! Have plumbing questions? Our experienced team is here to provide clear answers and practical solutions.",
+    "button": {
+      "label": "Ask Question",
+      "href": "/contact"
+    },
+    "items": [
+      {
+        "question": "How do you plunge a drain?",
+        "answer": "One of the biggest ways a seemingly trivial toilet can contribute to the overall sustainable ecosystem of a building is by helping it save water. Using the correct plunger and maintaining proper pressure will often clear minor blockages safely.",
+        "defaultOpen": true
+      },
+      {
+        "question": "Are all new toilets water saving toilet suites?",
+        "answer": "Most modern toilets are designed to meet water-efficiency standards. Dual-flush and low-flow models significantly reduce water consumption while maintaining strong flushing performance.",
+        "defaultOpen": false
+      },
+      {
+        "question": "What do you do when servicing a tap?",
+        "answer": "We inspect washers, cartridges, valves, seals, aerators, and pipe connections. Any worn components are replaced, leaks are repaired, and water pressure is tested before completion.",
+        "defaultOpen": false
+      },
+      {
+        "question": "How quickly can you respond to emergency plumbing issues?",
+        "answer": "Our emergency plumbing team is available 24/7 and aims to reach customers as quickly as possible depending on location and service demand.",
+        "defaultOpen": false
+      },
+      {
+        "question": "Do you provide free estimates?",
+        "answer": "Yes. We provide transparent estimates before beginning any work so you know exactly what to expect without hidden charges.",
+        "defaultOpen": false
+      }
+    ]
+  },
+  "blog": {
+    "label": "OUR BLOG",
+    "title": "Latest Plumbing Tips & Blog",
+    "description": "Expert advice, how-to guides, and helpful tips to keep your plumbing systems running smoothly.",
+    "items": [
+      {
+        "category": "PLUMBING TIPS",
+        "date": "May 20, 2024",
+        "title": "5 Common Plumbing Problems and How to Fix Them",
+        "excerpt": "From leaky faucets to clogged drains, discover quick and easy solutions to common plumbing issues.",
+        "image": "/img/blog-1.jpg",
+        "link": "/blog/common-plumbing-problems"
+      },
+      {
+        "category": "WATER HEATER",
+        "date": "May 18, 2024",
+        "title": "How to Maintain Your Water Heater for Long-Lasting Performance",
+        "excerpt": "Simple maintenance tips to improve efficiency and extend the life of your water heater.",
+        "image": "/img/blog-2.jpg",
+        "link": "/blog/water-heater-maintenance"
+      },
+      {
+        "category": "KITCHEN PLUMBING",
+        "date": "May 15, 2024",
+        "title": "Easy Ways to Prevent Clogs in Your Kitchen Sink",
+        "excerpt": "Best practices to keep your kitchen drains clear and avoid unpleasant blockages.",
+        "image": "/img/blog-3.jpg",
+        "link": "/blog/prevent-kitchen-clogs"
+      },
+      {
+        "category": "BATHROOM TIPS",
+        "date": "May 12, 2024",
+        "title": "Signs You Need Professional Plumbing Services",
+        "excerpt": "Don't ignore these warning signs. Know when it's time to call a licensed plumber.",
+        "image": "/img/blog-4.jpg",
+        "link": "/blog/signs-you-need-plumber"
+      }
+    ]
+  },
+  "ctaSection": {
+    "subtitle": "Need Help? We're Just a Call Away",
+    "title": "24/7 Emergency Plumbing Services",
+    "description": "Fast Response. Trusted Experts. Anytime, Anywhere.",
+    "phone": "123 456 7890",
+    "phoneHref": "tel:1234567890",
+    "button": {
+      "label": "SCHEDULE SERVICE",
+      "href": "/contact"
+    },
+    "backgroundImage": "/img/cta-pipes.jpg"
+  },
+  "contactInfo": {
+    "label": "CONTACT INFORMATION",
+    "title": "Get in Touch",
+    "items": [
+      {
+        "icon": "location",
+        "text": ["123 Plumbing Street", "Plumbville, CA 90210"]
+      },
+      {
+        "icon": "phone",
+        "text": ["123 456 7890"]
+      },
+      {
+        "icon": "email",
+        "text": ["info@plumbio.com"]
+      },
+      {
+        "icon": "clock",
+        "text": ["Mon - Sat: 8 AM - 6 PM", "Sunday: Closed"]
+      }
+    ],
+    "socials": [
+      { "icon": "fb", "href": "#" },
+      { "icon": "tw", "href": "#" },
+      { "icon": "ig", "href": "#" },
+      { "icon": "in", "href": "#" },
+      { "icon": "yt", "href": "#" }
+    ],
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373531531664!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1628678070381!5m2!1sen!2sau"
+  },
+  "footer": {
+    "logoText": "Plumbio",
+    "description": "Providing reliable, professional, and affordable plumbing services since 1990.",
+    "columns": [
+      {
+        "title": "Quick Links",
+        "links": [
+          { "label": "About Us", "href": "/about" },
+          { "label": "Services", "href": "/services" },
+          { "label": "Projects", "href": "/projects" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Contact Us", "href": "/contact" }
+        ]
+      },
+      {
+        "title": "Our Services",
+        "links": [
+          { "label": "Residential Plumbing", "href": "#" },
+          { "label": "Commercial Plumbing", "href": "#" },
+          { "label": "Emergency Plumbing", "href": "#" },
+          { "label": "Water Cleanup", "href": "#" },
+          { "label": "Water Heater Services", "href": "#" }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          { "label": "FAQs", "href": "#" },
+          { "label": "Service Policy", "href": "#" },
+          { "label": "Terms & Conditions", "href": "#" },
+          { "label": "Sitemap", "href": "#" }
+        ]
+      }
+    ],
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to get updates & exclusive offers.",
+      "placeholder": "Enter your email"
+    },
+    "copyright": "© 2025 Plumbio. All Rights Reserved."
+  }
+}
