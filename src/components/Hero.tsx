@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data";
-import { Icon, LogoMark } from "./Icon";
+import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
 
 export function Hero() {
