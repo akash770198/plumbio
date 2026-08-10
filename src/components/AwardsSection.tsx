@@ -31,14 +31,14 @@ export function AwardsSection() {
   const { awards } = site;
 
   return (
-    <section className="section-y bg-[#fbfcff]">
+    <section className="bg-[#fbfcff] pt-0 pb-0">
       <div className="shell">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
             {/* Label */}
             <div className="flex items-center justify-center gap-3">
               <span className="h-[2px] w-6 bg-[#0051d4]" />
-              <p className="text-[14px] font-bold uppercase tracking-wider text-[#0051d4]">
+              <p className="section-label">
                 {awards.label}
               </p>
               <span className="h-[2px] w-6 bg-[#0051d4]" />
@@ -67,7 +67,7 @@ export function AwardsSection() {
 
             return (
               <Reveal key={item.title} delay={index * 100}>
-                <div className="flex h-full flex-col items-center rounded-2xl border border-[#eef2f9] bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md">
+                <div className="flex h-full flex-col items-center rounded-xl border border-[#eef2f9] bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md">
                   
                   {/* Logo Image */}
                   <div className="relative mb-4 flex h-[160px] w-full items-end justify-center pb-2">

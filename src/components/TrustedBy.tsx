@@ -6,7 +6,7 @@ export function TrustedBy() {
   const { trustedBy } = site;
 
   return (
-    <section className="bg-white pt-16 pb-8 lg:pt-20 lg:pb-10">
+    <section className="bg-white pt-14 pb-5 lg:pt-16 lg:pb-6">
       <div className="shell">
         {/* heading */}
         <Reveal className="flex items-center justify-center gap-5 pb-9">

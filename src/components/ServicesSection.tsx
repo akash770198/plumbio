@@ -2,7 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "./Reveal";
 
-const services = [
+interface ServiceItem {
+  title: string;
+  image: string;
+  alt: string;
+  icon: string;
+}
+
+const defaultServices: ServiceItem[] = [
   {
     title: "Residential",
     image: "/img/service-residential-hd.png",
@@ -23,10 +30,21 @@ const services = [
   },
 ];
 
-export function ServicesSection() {
+export function ServicesSection({
+  className,
+  services = defaultServices,
+}: {
+  className?: string;
+  services?: ServiceItem[];
+}) {
   return (
     <>
-      <section className="section-y relative overflow-hidden bg-white">
+      <section
+        className={
+          className ??
+          "relative overflow-hidden bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]"
+        }
+      >
         <div className="pointer-events-none absolute left-[7%] top-3 select-none text-[clamp(90px,14vw,190px)] font-extrabold leading-none tracking-[-0.07em] text-[#f7f8fa]">
           Services
         </div>
@@ -36,7 +54,7 @@ export function ServicesSection() {
             {/* Left: Heading */}
             <Reveal className="lg:pr-2">
               {/* Label */}
-              <p className="font-sans text-[14px] font-bold uppercase tracking-[0.12em] text-brand">
+              <p className="section-label">
                 OUR SERVICES
               </p>
 

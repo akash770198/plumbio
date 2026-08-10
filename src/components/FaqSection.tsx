@@ -18,7 +18,7 @@ export function FaqSection() {
   };
 
   return (
-    <section className="section-y relative overflow-hidden bg-white">
+    <section className="relative overflow-hidden bg-white pt-0 pb-0">
       <div className="shell flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-20">
         
         {/* Left Column (Text & Button) */}
@@ -36,7 +36,7 @@ export function FaqSection() {
               {/* Label */}
               <div className="flex items-center gap-3">
                 <span className="h-[2px] w-8 bg-[#2d95ff]" />
-                <p className="text-[13px] font-bold uppercase tracking-wider text-[#2d95ff]">
+                <p className="section-label">
                   {faq.label.toUpperCase()}
                 </p>
               </div>

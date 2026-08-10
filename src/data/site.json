@@ -63,6 +63,10 @@
           "href": "/team"
         },
         {
+          "label": "Industries We Serve",
+          "href": "/industries"
+        },
+        {
           "label": "Pricing",
           "href": "/pricing"
         },
@@ -95,13 +99,6 @@
     }
   },
   "hero": {
-    "image": "/img/hero-wrench.jpg",
-    "imageAlt": "Gloved hand holding a red pipe wrench and brass fittings",
-    "titleLines": [
-      "Exceptional, Punctual &",
-      "Professional."
-    ],
-    "lead": "We provide reliable plumbing solutions for homes and businesses — on time, every time.",
     "primaryCta": {
       "label": "Our Services",
       "href": "/services"
@@ -109,7 +106,36 @@
     "secondaryCta": {
       "label": "Request Quote",
       "href": "/contact"
-    }
+    },
+    "slides": [
+      {
+        "image": "/img/hero-wrench.jpg",
+        "imageAlt": "Gloved hand holding a red pipe wrench and brass fittings",
+        "titleLines": [
+          "Exceptional, Punctual &",
+          "Professional."
+        ],
+        "lead": "We provide reliable plumbing solutions for homes and businesses — on time, every time."
+      },
+      {
+        "image": "/img/banner/Plumbing_Hero4.jpg",
+        "imageAlt": "Professional plumbing service hero background",
+        "titleLines": [
+          "Trusted Experts for",
+          "Every Repair."
+        ],
+        "lead": "From routine maintenance to complex installations, our licensed plumbers deliver clean, lasting results."
+      },
+      {
+        "image": "/img/banner/Plumbing_Hero2.jpg",
+        "imageAlt": "Licensed plumber on a residential service call",
+        "titleLines": [
+          "24/7 Emergency",
+          "Plumbing Support."
+        ],
+        "lead": "Burst pipes and sudden leaks don’t wait — neither do we. Fast response when you need help most."
+      }
+    ]
   },
   "trustedBy": {
     "title": "Trusted By",
@@ -142,8 +168,8 @@
   },
   "aboutBanner": {
     "title": "About Us",
-    "backgroundImage": "/img/hero-wrench.jpg",
-    "backgroundImageAlt": "Professional plumbing tools and pipes background",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Plumbing page banner background",
     "breadcrumbs": [
       {
         "label": "Home",
@@ -154,6 +180,290 @@
         "href": "/about"
       }
     ]
+  },
+  "servicesBanner": {
+    "title": "Services",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Plumbing page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Services",
+        "href": "/services"
+      }
+    ]
+  },
+  "industriesBanner": {
+    "title": "Industries We Serve",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Plumbing page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Industries We Serve",
+        "href": "/industries"
+      }
+    ]
+  },
+  "industriesWeServe": {
+    "items": [
+      {
+        "title": "Commercial Buildings",
+        "description": "Reliable plumbing for offices, business parks, and corporate spaces — keeping systems running smoothly.",
+        "icon": "buildings",
+        "href": "/contact"
+      },
+      {
+        "title": "Schools & Colleges",
+        "description": "Safe, dependable plumbing for learning environments serving students, staff, and visitors.",
+        "icon": "school",
+        "href": "/contact"
+      },
+      {
+        "title": "Healthcare Facilities",
+        "description": "Code-compliant plumbing that supports hygiene, patient safety, and uninterrupted care.",
+        "icon": "healthcare",
+        "href": "/contact"
+      },
+      {
+        "title": "Retail Stores",
+        "description": "Fast, professional plumbing that keeps stores welcoming and open for customers.",
+        "icon": "retail",
+        "href": "/contact"
+      },
+      {
+        "title": "Industrial Facilities",
+        "description": "Heavy-duty plumbing solutions for manufacturing plants and industrial work areas.",
+        "icon": "industrial",
+        "href": "/contact"
+      },
+      {
+        "title": "Residential Complexes",
+        "description": "Multi-unit plumbing maintenance that keeps common areas and residences running well.",
+        "icon": "residential",
+        "href": "/contact"
+      },
+      {
+        "title": "Hotels & Hospitality",
+        "description": "Guest-ready plumbing support for hotels, resorts, and hospitality properties.",
+        "icon": "hotel",
+        "href": "/contact"
+      },
+      {
+        "title": "Government Offices",
+        "description": "Professional plumbing services for public offices and government buildings.",
+        "icon": "government",
+        "href": "/contact"
+      }
+    ],
+    "learnMoreLabel": "Learn More",
+    "cta": {
+      "title": "Need a Plumbing Partner for Your Industry?",
+      "text": "We're here to help you maintain reliable, safe, and efficient plumbing systems with our expert services.",
+      "buttonLabel": "Get a Free Quote",
+      "buttonHref": "/contact"
+    }
+  },
+  "projectsBanner": {
+    "title": "Projects",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Plumbing page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Projects",
+        "href": "/projects"
+      }
+    ]
+  },
+  "projectsGallery": {
+    "label": "OUR WORK GALLERY",
+    "titleBefore": "Explore Our",
+    "titleAccent": "Plumbing Work",
+    "description": "Take a look at some of our recent plumbing projects. From small repairs to full installations, we deliver quality work every time.",
+    "filters": [
+      "All Projects",
+      "Residential",
+      "Commercial",
+      "Installations",
+      "Repairs",
+      "Maintenance"
+    ],
+    "items": [
+      {
+        "image": "/img/service-residential-hd.png",
+        "alt": "Plumber repairing residential pipework under a sink",
+        "category": "Repairs"
+      },
+      {
+        "image": "/img/gallery-2.jpg",
+        "alt": "Modern renovated bathroom with vanity and glass shower",
+        "category": "Residential"
+      },
+      {
+        "image": "/img/service-1.jpg",
+        "alt": "Plumber installing PVC drain piping under a kitchen sink",
+        "category": "Installations"
+      },
+      {
+        "image": "/img/gallery-4.jpg",
+        "alt": "Mechanical room with water heaters and copper piping",
+        "category": "Commercial"
+      },
+      {
+        "image": "/img/gallery-3.jpg",
+        "alt": "Modern kitchen sink with black faucet",
+        "category": "Installations"
+      },
+      {
+        "image": "/img/hero-wrench.jpg",
+        "alt": "Gloved hands connecting industrial pipe fittings",
+        "category": "Maintenance"
+      },
+      {
+        "image": "/img/gallery-1.jpg",
+        "alt": "Chrome showerhead with water spray",
+        "category": "Residential"
+      },
+      {
+        "image": "/img/service-2.jpg",
+        "alt": "Plumber servicing a toilet tank",
+        "category": "Repairs"
+      },
+      {
+        "image": "/img/service-emergency-hd.png",
+        "alt": "Emergency plumbing repair in progress",
+        "category": "Repairs"
+      },
+      {
+        "image": "/img/service-commercial-hd.png",
+        "alt": "Commercial kitchen plumbing fixtures",
+        "category": "Commercial"
+      },
+      {
+        "image": "/img/Commercial_service.jpeg",
+        "alt": "Industrial valves and commercial pipework",
+        "category": "Commercial"
+      },
+      {
+        "image": "/img/service-3.jpg",
+        "alt": "Plumbing maintenance and fixture service",
+        "category": "Maintenance"
+      }
+    ],
+    "banner": {
+      "features": [
+        {
+          "icon": "quality",
+          "title": "High Quality Work",
+          "text": "We use the best materials and latest tools for every job."
+        },
+        {
+          "icon": "shield",
+          "title": "Satisfaction Guaranteed",
+          "text": "Your satisfaction is our priority. We stand behind our work."
+        },
+        {
+          "icon": "phone",
+          "title": "Need Plumbing Help?",
+          "text": "Our experts are ready to help you 24/7. Call us now!"
+        }
+      ],
+      "buttonLabel": "Contact Us",
+      "buttonHref": "/contact"
+    }
+  },
+  "commercialServices": {
+    "label": "commercial services",
+    "title": "Need a Plumber for Your Commercial Property?",
+    "image": "/img/Commercial_service.jpeg",
+    "imageAlt": "Industrial commercial plumbing valves and pipework",
+    "intro": "Whether you are a property manager, a real estate developer, or a commercial building owner, you are likely aware of just how important the plumbing system is to the operations of your property. When something stops working properly, it can create difficulty and stress for everyone involved. This is not the ideal situation, but if it occurs, we can guide you through it effectively and efficiently.",
+    "industriesTitle": "Industries We Work Across are:",
+    "industriesIntro": "From hotels to schools, we serves all sizes and types of commercial locations. We have the necessary equipment and training to provide top-quality services wherever you need them.",
+    "industries": [
+      "Shopping Centres",
+      "Secure Data Centres",
+      "Business Parks",
+      "Retirement Living",
+      "Schools",
+      "Commercial Real Estate Property",
+      "Restaurants and Catering",
+      "Manufacturing Business's",
+      "Retail",
+      "Aged Care",
+      "Hospitals",
+      "Prisons"
+    ],
+    "experienceTitle": "Extensive Experience for Plumbing",
+    "experienceText": "Customers love us for our quality craftsmanship, our professionalism, and our dedication to knowing and meeting all necessary plumbing codes to keep everyone safe. We take on all types of new commercial plumbing projects, including additions and renovations, new construction installations, and new multi-family installations. For a new construction, we handle plumbing services such as:",
+    "experiencePoints": [
+      {
+        "title": "Piping and plumbing",
+        "text": "We take care of all of the gas, water, and drainage to ensure it is safely installed."
+      },
+      {
+        "title": "Sewer and water lines",
+        "text": "In order to prevent backups, we take care of the water and sewer line installation process."
+      },
+      {
+        "title": "Fixtures",
+        "text": "Every bathroom and kitchen must have faucets, toilets, and shower heads."
+      },
+      {
+        "title": "Shut-off valves",
+        "text": "All showers, sinks, and toilets must have a shut-off valve installed."
+      }
+    ],
+    "bidCta": {
+      "text": "Request a bid for your next commercial plumbing project from our professional, experienced plumbing company today!",
+      "vanImage": "/img/Van.png",
+      "vanImageAlt": "Plumbio service van"
+    },
+    "servicesHeading": "Commercial Services",
+    "servicesList": [
+      "Preventive Maintenance",
+      "Drain Cleaning Service",
+      "Sewer Installations",
+      "Pipe Repairs and Installations",
+      "Hot Water Heating Systems",
+      "Sewer Repairs",
+      "New Construction Installations",
+      "Fixture Installation and Repairs"
+    ],
+    "askQuestion": {
+      "title": "Ask Question",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "E-mail",
+      "questionPlaceholder": "Your Question",
+      "buttonLabel": "Send Question"
+    },
+    "bookCta": {
+      "title": "Book A Plumber Now!",
+      "text": "Get a Free, No-Obligation Quote Today",
+      "phone": "123-456-789",
+      "phoneHref": "tel:123456789"
+    },
+    "reasons": {
+      "title": "6 Different Reasons You Should Hire Us",
+      "items": [
+        "Licensed, Bonded & Insured",
+        "High-quality Workmanship",
+        "Exceptional Customer Service",
+        "Clean, Trustworthy Plumbers",
+        "Family Owned & Operated",
+        "We're Personable & Friendly"
+      ]
+    }
   },
   "about": {
     "label": "About Us",
@@ -625,6 +935,7 @@
         "links": [
           { "label": "About Us", "href": "/about" },
           { "label": "Services", "href": "/services" },
+          { "label": "Industries We Serve", "href": "/industries" },
           { "label": "Projects", "href": "/projects" },
           { "label": "Blog", "href": "/blog" },
           { "label": "Contact Us", "href": "/contact" }

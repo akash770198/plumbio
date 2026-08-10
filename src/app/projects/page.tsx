@@ -1,14 +1,22 @@
 import { Header } from "@/components/Header";
+import { PageBanner } from "@/components/PageBanner";
+import { ProjectsGallery } from "@/components/ProjectsGallery";
+import { site } from "@/data";
 
 export default function Page() {
+  const { projectsBanner } = site;
+
   return (
     <>
       <Header />
-      <main className="bg-white">
-        <div className="px-6 py-28 lg:px-12">
-          <h1 className="text-[clamp(28px,3vw,40px)] font-bold text-brand-head">Projects</h1>
-          <p className="mt-4 text-[15px] text-body">This page is coming next.</p>
-        </div>
+      <main className="block">
+        <PageBanner
+          title={projectsBanner.title}
+          breadcrumbs={projectsBanner.breadcrumbs}
+          backgroundImage={projectsBanner.backgroundImage}
+          backgroundImageAlt={projectsBanner.backgroundImageAlt}
+        />
+        <ProjectsGallery />
       </main>
     </>
   );

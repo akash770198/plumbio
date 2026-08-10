@@ -70,16 +70,27 @@ const STATS = [
   },
 ];
 
-export function AboutCompany() {
+export function AboutCompany({
+  className,
+  contentClassName,
+}: {
+  className?: string;
+  contentClassName?: string;
+}) {
   return (
-    <section className="bg-white">
+    <section className={className ?? "bg-white"}>
       {/* ── Top: Copy + 4-Panel Image Grid ── */}
-      <div className="shell section-y">
+      <div
+        className={
+          contentClassName ??
+          "shell pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]"
+        }
+      >
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
 
           {/* Left: Copy */}
           <Reveal className="flex-shrink-0 lg:w-[340px] xl:w-[380px]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-[#0051d4]">
+            <p className="section-label">
               About Our Company
             </p>
             <h2 className="mt-3 text-[clamp(28px,3vw,42px)] font-extrabold leading-[1.2] text-[#0a1f5c]">
@@ -119,12 +130,12 @@ export function AboutCompany() {
       </div>
 
       {/* ── Solutions For Row ── */}
-      <div className="border-t border-[#e8edf5] bg-white py-10">
+      <div className="border-t border-[#e8edf5] bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
         <Reveal className="shell">
           {/* Title */}
-          <div className="mb-4 flex items-center justify-center gap-4">
+          <div className="mb-5 flex items-center justify-center gap-4">
             <span className="h-[1.5px] w-14 bg-[#0051d4]" />
-            <p className="text-[12px] font-bold uppercase tracking-[0.15em] text-[#0051d4]">
+            <p className="section-label">
               We Provide Solutions For
             </p>
             <span className="h-[1.5px] w-14 bg-[#0051d4]" />

@@ -70,7 +70,7 @@ export function ContactSection() {
         {/* Left Column: Contact Details */}
         <div className="w-full lg:w-[35%] xl:w-[30%]">
           <Reveal>
-            <h4 className="mb-2 text-[13px] font-bold uppercase tracking-wider text-[#0051d4]">
+            <h4 className="mb-2 section-label">
               {contactInfo.label}
             </h4>
             <h2 className="mb-10 text-[36px] font-extrabold text-[#0a1f5c] md:text-[42px]">

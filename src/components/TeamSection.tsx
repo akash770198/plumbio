@@ -3,11 +3,16 @@ import Link from "next/link";
 import { site } from "@/data";
 import { Reveal } from "./Reveal";
 
-export function TeamSection() {
+export function TeamSection({ className }: { className?: string }) {
   const { team } = site;
 
   return (
-    <section className="section-y relative overflow-hidden bg-white">
+    <section
+      className={
+        className ??
+        "relative overflow-hidden bg-white pt-[3.25rem] pb-0 lg:pt-[3.75rem]"
+      }
+    >
 
       {/* Large watermark text */}
       <div
@@ -33,7 +38,7 @@ export function TeamSection() {
           <div className="mb-10 text-center">
             <div className="flex items-center justify-center gap-3">
               <span className="h-[2px] w-10 bg-[#0051d4]" />
-              <p className="text-[13px] font-semibold uppercase text-[#0051d4]">{team.label.toUpperCase()}</p>
+              <p className="section-label">{team.label.toUpperCase()}</p>
             </div>
             <h2 className="mt-3 text-[clamp(26px,3vw,40px)] font-extrabold text-[#0a1f5c]">
               {team.title}
@@ -45,7 +50,7 @@ export function TeamSection() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {team.members.map((member, i) => (
             <Reveal key={member.name} delay={i * 80}>
-              <div className="group overflow-hidden rounded-2xl border border-[#e8edf5] bg-white shadow-sm transition-shadow hover:shadow-md">
+              <div className="group overflow-hidden rounded-xl border border-[#e8edf5] bg-white shadow-sm transition-shadow hover:shadow-md">
 
                 {/* Photo area — light gray bg */}
                 <div className="relative h-[280px] w-full overflow-hidden bg-[#f0f2f6]">

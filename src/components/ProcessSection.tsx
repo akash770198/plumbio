@@ -6,7 +6,7 @@ export function ProcessSection() {
   const { process } = site;
 
   return (
-    <section className="section-y relative overflow-hidden bg-white">
+    <section className="relative overflow-hidden bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]">
 
       {/* background dots */}
       <div className="absolute left-0 top-28 h-72 w-72 rounded-full bg-[radial-gradient(circle,#dbeafe_2px,transparent_2px)] [background-size:14px_14px] opacity-60" />
@@ -31,17 +31,11 @@ export function ProcessSection() {
           <div className="text-center">
 
             <div className="flex items-center justify-center gap-5">
-
               <span className="h-[2px] w-16 bg-blue-600" />
-
-              <p className="text-sm font-bold tracking-[0.14em] text-blue-700">
-
+              <p className="section-label">
                 {process.label}
-
               </p>
-
               <span className="h-[2px] w-16 bg-blue-600" />
-
             </div>
 
             <h2 className="mt-6 text-[clamp(36px,4vw,58px)] font-extrabold leading-tight">

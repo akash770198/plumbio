@@ -21,18 +21,29 @@ export default function HomePage() {
         <Hero />
         <TrustedBy />
         <About />
-        <div aria-hidden className="border-t border-[#e5e7eb] bg-white" />
+        <div aria-hidden className="section-divider">
+          <span className="section-divider-line" />
+        </div>
         <ServicesSection />
         <WhyChoose/>
+        <div aria-hidden className="section-divider">
+          <span className="section-divider-line" />
+        </div>
         <ProcessSection/>
         <AboutCompany/>
         <Testimonials/>
         <TeamSection/>
-        <div aria-hidden className="h-px bg-[#e8e8e8]" />
+        <div aria-hidden className="section-divider">
+          <span className="section-divider-line" />
+        </div>
         <AwardsSection/>
-        <div aria-hidden className="h-px bg-[#e8e8e8]" />
+        <div aria-hidden className="section-divider">
+          <span className="section-divider-line" />
+        </div>
         <FaqSection/>
-        <div aria-hidden className="h-px bg-[#e8e8e8]" />
+        <div aria-hidden className="section-divider">
+          <span className="section-divider-line" />
+        </div>
         <BlogSection/>
         <CtaSection/>
       </main>

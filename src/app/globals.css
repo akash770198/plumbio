@@ -48,13 +48,43 @@
   padding-inline: var(--page-gutter);
 }
 
-/* Shared vertical rhythm between homepage sections */
+/*
+  Ideal rhythm = Team ↔ Awards divider gap.
+  section-y one side = section-divider one side (equal everywhere).
+*/
 @utility section-y {
-  padding-block: 4rem; /* 64px */
+  padding-block: 3.25rem; /* 52px — matches divider side */
 
   @media (min-width: 1024px) {
-    padding-block: 5rem; /* 80px */
+    padding-block: 3.75rem; /* 60px */
   }
+}
+
+/* Equal space above & below section divider lines (ideal reference) */
+@utility section-divider {
+  display: block;
+  padding-block: 3.25rem; /* 52px each side — equal */
+  background: #fff;
+
+  @media (min-width: 1024px) {
+    padding-block: 3.75rem; /* 60px each side */
+  }
+}
+
+@utility section-divider-line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #b8bec8;
+}
+
+@utility section-label {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-brand);
 }
 
 @layer base {

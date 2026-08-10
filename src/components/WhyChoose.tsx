@@ -32,11 +32,16 @@ function FeatureIcon({ name, className }: { name: string; className: string }) {
   );
 }
 
-export function WhyChoose() {
+export function WhyChoose({ className }: { className?: string }) {
   const { whyChoose } = site;
 
   return (
-    <section className="section-y relative w-full overflow-hidden bg-[#001746] font-sans lg:min-h-[640px]">
+    <section
+      className={
+        className ??
+        "relative w-full overflow-hidden bg-[#001746] pt-[3.25rem] pb-0 font-sans lg:min-h-[640px] lg:pt-[3.75rem]"
+      }
+    >
       {/* Layer 0: pipes background */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <Image
@@ -131,12 +136,12 @@ export function WhyChoose() {
       </div>
 
       {/* Left copy — top aligns with plumber (same top-12) */}
-      <div className="shell relative z-30 flex flex-col lg:min-h-[560px] lg:flex-row lg:items-start lg:pb-24">
+      <div className="shell relative z-30 flex flex-col lg:min-h-[560px] lg:flex-row lg:items-start lg:pb-28">
         <div className="relative w-full lg:w-[48%] lg:pr-4">
           <Reveal>
             <div className="flex items-center gap-3">
               <span className="block h-[2px] w-8 bg-[#20b2ff]" />
-              <p className="text-[14px] font-bold uppercase tracking-[0.1em] text-[#20b2ff]">
+              <p className="section-label">
                 {whyChoose.label}
               </p>
             </div>

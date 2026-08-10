@@ -76,7 +76,7 @@ export function Testimonials() {
 
           <div className="flex items-center gap-3">
             <span className="h-[2px] w-8 bg-[#0051d4]" />
-            <p className="text-[12px] font-semibold uppercase tracking-wider text-[#0051d4]">
+            <p className="section-label">
               {testimonials.label.toUpperCase()}
             </p>
           </div>

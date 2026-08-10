@@ -3,18 +3,18 @@ import { site } from "@/data";
 import { BadgeIcon, Icon, VerifiedIcon } from "./Icon";
 import { Reveal } from "./Reveal";
 
-export function About() {
+export function About({ className }: { className?: string }) {
   const { about } = site;
 
   return (
-    <section className="bg-white pt-8 pb-16 lg:pt-10 lg:pb-20">
+    <section className={className ?? "bg-white pt-5 pb-0 lg:pt-6"}>
       <div className="shell">
         <div className="grid items-stretch gap-6 lg:grid-cols-[0.88fr_1.08fr_1fr]">
 
           {/* ── Left: Copy ── */}
           <Reveal className="flex h-full flex-col justify-between lg:py-1 lg:pr-2">
             {/* label */}
-            <p className="font-sans text-[14px] font-bold uppercase tracking-[0.12em] text-brand">
+            <p className="section-label">
               {about.label}
             </p>
 
@@ -54,7 +54,7 @@ export function About() {
           </Reveal>
 
           {/* ── Middle: Photo ── */}
-          <Reveal delay={100} className="relative min-h-[440px] overflow-hidden rounded-[8px] lg:aspect-[0.86] lg:min-h-0">
+          <Reveal delay={100} className="relative min-h-[440px] overflow-hidden rounded-xl lg:aspect-[0.86] lg:min-h-0">
             <Image
               src={about.image}
               alt={about.imageAlt}
@@ -69,7 +69,7 @@ export function About() {
             {about.cards.map((card) => (
               <article
                 key={card.title}
-                className="flex items-center gap-5 rounded-[4px] bg-brand px-5 py-5 lg:px-6"
+                className="flex items-center gap-5 rounded-xl bg-brand px-5 py-5 lg:px-6"
               >
                 {/* icon circle */}
                 <span className="grid h-[58px] w-[58px] shrink-0 place-items-center rounded-full bg-white text-brand">

@@ -7,6 +7,14 @@ import { TeamSection } from "@/components/TeamSection";
 import { WhyChoose } from "@/components/WhyChoose";
 import { site } from "@/data";
 
+function SectionDivider() {
+  return (
+    <div aria-hidden className="section-divider">
+      <span className="section-divider-line" />
+    </div>
+  );
+}
+
 export default function Page() {
   const { aboutBanner } = site;
 
@@ -20,13 +28,16 @@ export default function Page() {
           backgroundImage={aboutBanner.backgroundImage}
           backgroundImageAlt={aboutBanner.backgroundImageAlt}
         />
-        <About />
+        <About className="bg-white pt-[3.25rem] pb-0 lg:pt-[3.75rem]" />
+        <SectionDivider />
         <ProcessSection />
+        <SectionDivider />
         <WhyChoose />
-        <AboutCompany />
-        <TeamSection />
+        <SectionDivider />
+        <AboutCompany contentClassName="shell pt-0 pb-[3.25rem] lg:pb-[3.75rem]" />
+        <SectionDivider />
+        <TeamSection className="relative overflow-hidden bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]" />
       </main>
     </>
   );
 }
-
