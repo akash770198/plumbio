@@ -1,14 +1,26 @@
 import { Header } from "@/components/Header";
+import { PageBanner } from "@/components/PageBanner";
+import { TeamSection } from "@/components/TeamSection";
+import { site } from "@/data";
 
 export default function Page() {
+  const { teamBanner } = site;
+
   return (
     <>
       <Header />
-      <main className="bg-white">
-        <div className="px-6 py-28 lg:px-12">
-          <h1 className="text-[clamp(28px,3vw,40px)] font-bold text-brand-head">Our Team</h1>
-          <p className="mt-4 text-[15px] text-body">This page is coming next.</p>
-        </div>
+      <main className="block">
+        <PageBanner
+          title={teamBanner.title}
+          breadcrumbs={teamBanner.breadcrumbs}
+          backgroundImage={teamBanner.backgroundImage}
+          backgroundImageAlt={teamBanner.backgroundImageAlt}
+        />
+        <TeamSection
+          className="relative overflow-hidden bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]"
+          showButton={false}
+          linkToDetail
+        />
       </main>
     </>
   );

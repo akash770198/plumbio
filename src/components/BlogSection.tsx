@@ -3,11 +3,25 @@ import Link from "next/link";
 import { site } from "@/data";
 import { Reveal } from "./Reveal";
 
-export function BlogSection() {
+type BlogItem = (typeof site.blog.items)[number];
+
+export function BlogSection({
+  className,
+  items,
+}: {
+  className?: string;
+  items?: BlogItem[];
+}) {
   const { blog } = site;
+  const blogItems = items ?? blog.items;
 
   return (
-    <section className="relative overflow-hidden bg-[#fafbfc] pt-0 pb-[3.25rem] lg:pb-[3.75rem]">
+    <section
+      className={
+        className ??
+        "relative overflow-hidden bg-[#fafbfc] pt-0 pb-[3.25rem] lg:pb-[3.75rem]"
+      }
+    >
       {/* ── BACKGROUND WATERMARKS ── */}
       {/* Faucet Outline (Left) */}
       <div className="pointer-events-none absolute left-[-5%] top-[10%] opacity-[0.03]">
@@ -72,7 +86,7 @@ export function BlogSection() {
 
         {/* ── BLOG CARDS GRID ── */}
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {blog.items.map((item, index) => (
+          {blogItems.map((item, index) => (
             <Reveal key={index} delay={index * 100}>
               <div className="group flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-lg">
                 

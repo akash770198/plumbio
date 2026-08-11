@@ -77,7 +77,7 @@ export function ServicesSection({
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-10 md:grid-cols-3 lg:gap-11">
+          <div className="mt-16 grid gap-10 pb-24 md:grid-cols-3 lg:gap-11">
             {services.map((service, index) => (
               <Reveal key={service.title} delay={index * 80}>
                 <article className="group relative aspect-square bg-[#edf2f6] shadow-[0_12px_24px_rgba(6,51,105,0.10)]">

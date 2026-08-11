@@ -75,6 +75,10 @@
           "href": "/faq"
         },
         {
+          "label": "Awards",
+          "href": "/awards"
+        },
+        {
           "label": "Testimonials",
           "href": "/testimonials"
         }
@@ -282,6 +286,21 @@
       {
         "label": "Projects",
         "href": "/projects"
+      }
+    ]
+  },
+  "blogBanner": {
+    "title": "Blog",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Plumbing blog page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
       }
     ]
   },
@@ -686,6 +705,92 @@
       }
     ]
   },
+  "testimonialsBanner": {
+    "title": "Testimonials",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Testimonials page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Testimonials",
+        "href": "/testimonials"
+      }
+    ]
+  },
+  "reviews": {
+    "label": "customer say",
+    "titleBefore": "Reviews from Our",
+    "titleAccent": "Customers",
+    "description": "Hear what our happy customers have to say about us. Our plumbing contractors are experienced, reliable, and professional.",
+    "items": [
+      {
+        "title": "Outstanding service!",
+        "review": "Service was great! The plumber was extremely helpful and courteous. He fixed my issue quickly and was very respectful of my time constraints with another appointment. I appreciate the help!",
+        "author": "Donna Behrens",
+        "role": "Homeowner",
+        "rating": 5
+      },
+      {
+        "title": "Thanks you guys",
+        "review": "Called for someone to come out to take a look at leak under my sidewalk next to my house/front door. Two gentleman came out on time, quickly diagnosed the problem, and gave me information about the fix.",
+        "author": "Donna Behrens",
+        "role": "Homeowner",
+        "rating": 5
+      },
+      {
+        "title": "Did an Exceptional Job",
+        "review": "Service was great! The plumber was extremely helpful and courteous. He fixed my issue quickly and was very respectful of my time constraints with another appointment. I appreciate the help!",
+        "author": "Donna Behrens",
+        "role": "Homeowner",
+        "rating": 5
+      },
+      {
+        "title": "Excellent Service!",
+        "review": "Plumbers were very professional, seemed to be very knowledgeable, worked like crazy the entire time they were here, and left my house cleaner then they found it! Always happy with our service.",
+        "author": "Donna Behrens",
+        "role": "Homeowner",
+        "rating": 5
+      }
+    ],
+    "moreButton": {
+      "label": "More Testimonials",
+      "href": "/testimonials"
+    }
+  },
+  "videoTestimonials": {
+    "label": "video reviews",
+    "title": "Satisfied Clients Videos About Our Work",
+    "description": "Check out our testimonials videos and five-star reviews to see what our current customers say, then give us a call. Below you will find a collection of testimonials that have been published by our commercial and domestic plumbing clients.",
+    "cta": {
+      "label": "Get Service Now",
+      "href": "/contact"
+    },
+    "mainVideo": {
+      "thumbnail": "/img/testimonial.jpg",
+      "alt": "Plumbing service testimonial video"
+    },
+    "videos": [
+      {
+        "thumbnail": "/img/testimonial-1.jpeg",
+        "alt": "Customer testimonial video 1"
+      },
+      {
+        "thumbnail": "/img/testimonial-2.jpeg",
+        "alt": "Customer testimonial video 2"
+      },
+      {
+        "thumbnail": "/img/testimonial-3.jpeg",
+        "alt": "Customer testimonial video 3"
+      },
+      {
+        "thumbnail": "/img/testimonial-4.jpeg",
+        "alt": "Customer testimonial video 4"
+      }
+    ]
+  },
   "testimonials": {
     "label": "TESTIMONIALS",
     "titleLines": [
@@ -732,38 +837,593 @@
       "autoplayDelay": 6000
     }
   },
+  "teamBanner": {
+    "title": "Our Team",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Our team page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Our Team",
+        "href": "/team"
+      }
+    ]
+  },
+  "teamDetailBanner": {
+    "title": "Team Detail Page",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Team member detail page banner background"
+  },
   "team": {
     "backgroundTitle": "Our Team",
     "label": "OUR TEAM",
     "title": "Expert Plumber You Can Trust",
+    "homeDisplayCount": 4,
     "button": {
       "label": "View All Team",
       "href": "/team"
     },
+    "detailCta": {
+      "title": "Need Plumbing Help?",
+      "description": "Our experts like {name} are ready to help you 24/7. Call us now!",
+      "phone": "123 456 7890",
+      "phoneHref": "tel:1234567890",
+      "buttonLabel": "Call 123 456 7890"
+    },
     "members": [
       {
+        "slug": "john-mathew",
         "name": "John Mathew",
         "designation": "Founder & CEO",
+        "roleLabel": "FOUNDER & CEO",
         "image": "/img/team-1.jpg",
-        "imageAlt": "John Mathew - Founder & CEO"
+        "imageAlt": "John Mathew - Founder & CEO",
+        "yearsExperience": "25+",
+        "bio": "John founded Plumbio with a mission to deliver honest, reliable plumbing services. He leads our team with decades of industry leadership and hands-on expertise.",
+        "aboutParagraphs": [
+          "John Mathew founded Plumbio in 1999 with a simple goal: provide dependable plumbing services built on trust, transparency, and quality workmanship. Under his leadership, Plumbio has grown into one of the region's most respected plumbing companies.",
+          "With more than 25 years in the industry, John continues to oversee operations while mentoring the next generation of skilled plumbers. His commitment to customer satisfaction remains the foundation of everything we do."
+        ],
+        "phone": "123 456 7890",
+        "email": "john.mathew@plumbio.com",
+        "location": "Chicago, Illinois",
+        "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
+        "skills": [
+          { "name": "Business Leadership", "percent": 98 },
+          { "name": "Project Management", "percent": 95 },
+          { "name": "Commercial Plumbing", "percent": 92 },
+          { "name": "Team Development", "percent": 96 },
+          { "name": "Customer Relations", "percent": 97 }
+        ],
+        "experience": [
+          {
+            "period": "1999 - Present",
+            "title": "Founder & CEO",
+            "company": "Plumbio Plumbing Services",
+            "description": "Built and scaled a full-service plumbing company serving residential and commercial clients across the region."
+          },
+          {
+            "period": "1994 - 1999",
+            "title": "Master Plumber",
+            "company": "Citywide Plumbing Co.",
+            "description": "Led complex commercial installations and managed field teams on large-scale construction projects."
+          },
+          {
+            "period": "1990 - 1994",
+            "title": "Journeyman Plumber",
+            "company": "Metro Pipe Works",
+            "description": "Specialized in new construction plumbing, pipe layout, and system inspections."
+          }
+        ],
+        "certifications": [
+          {
+            "icon": "badge",
+            "title": "Master Plumber License",
+            "subtitle": "State of Illinois License #MP-001245"
+          },
+          {
+            "icon": "shield",
+            "title": "Business Operations Certified",
+            "subtitle": "National Plumbing Contractors Association"
+          },
+          {
+            "icon": "hard-hat",
+            "title": "OSHA Safety Certified",
+            "subtitle": "Occupational Safety and Health Administration"
+          },
+          {
+            "icon": "document",
+            "title": "Commercial Systems Specialist",
+            "subtitle": "American Society of Plumbing Engineers"
+          }
+        ]
       },
       {
+        "slug": "david-williams",
         "name": "David Williams",
         "designation": "Senior Plumber",
+        "roleLabel": "SENIOR PLUMBER",
         "image": "/img/team-2.jpg",
-        "imageAlt": "David Williams - Senior Plumber"
+        "imageAlt": "David Williams - Senior Plumber",
+        "yearsExperience": "18+",
+        "bio": "David is a senior plumber with extensive experience in residential repairs, repiping, and fixture upgrades. He is known for clear communication and lasting solutions.",
+        "aboutParagraphs": [
+          "David Williams has been with Plumbio for over 12 years, bringing deep expertise in residential plumbing systems, leak repair, and full-home repiping projects.",
+          "Customers appreciate David's thorough diagnostics and his ability to explain options clearly before any work begins. He takes pride in leaving every job site clean and every client confident in the repair."
+        ],
+        "phone": "123 456 7890",
+        "email": "david.williams@plumbio.com",
+        "location": "Chicago, Illinois",
+        "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
+        "skills": [
+          { "name": "Residential Repairs", "percent": 96 },
+          { "name": "Repiping", "percent": 93 },
+          { "name": "Fixture Installation", "percent": 91 },
+          { "name": "Water Pressure Issues", "percent": 89 },
+          { "name": "Customer Service", "percent": 94 }
+        ],
+        "experience": [
+          {
+            "period": "2012 - Present",
+            "title": "Senior Plumber",
+            "company": "Plumbio Plumbing Services",
+            "description": "Handles complex residential service calls, repiping projects, and quality inspections for new installations."
+          },
+          {
+            "period": "2008 - 2012",
+            "title": "Plumbing Technician",
+            "company": "HomeFlow Plumbing",
+            "description": "Performed routine maintenance, drain services, and water heater replacements for residential clients."
+          },
+          {
+            "period": "2006 - 2008",
+            "title": "Apprentice Plumber",
+            "company": "Northside Plumbing",
+            "description": "Trained in pipe fitting, soldering, and code-compliant residential plumbing practices."
+          }
+        ],
+        "certifications": [
+          {
+            "icon": "badge",
+            "title": "Licensed Plumber",
+            "subtitle": "State of Illinois License #LP-089432"
+          },
+          {
+            "icon": "shield",
+            "title": "Backflow Prevention Certified",
+            "subtitle": "Illinois Department of Public Health"
+          },
+          {
+            "icon": "hard-hat",
+            "title": "OSHA Safety Certified",
+            "subtitle": "Occupational Safety and Health Administration"
+          },
+          {
+            "icon": "document",
+            "title": "Residential Systems Specialist",
+            "subtitle": "Plumbing-Heating-Cooling Contractors Association"
+          }
+        ]
       },
       {
+        "slug": "james-anderson",
         "name": "James Anderson",
         "designation": "Pipe Fitting Expert",
+        "roleLabel": "SENIOR PLUMBING SPECIALIST",
         "image": "/img/team-3.jpg",
-        "imageAlt": "James Anderson - Pipe Fitting Expert"
+        "imageAlt": "James Anderson - Pipe Fitting Expert",
+        "yearsExperience": "15+",
+        "bio": "James is a licensed plumbing expert with over 15 years of hands-on experience in residential and commercial plumbing services. He specializes in leak detection, pipe installation, and emergency repairs.",
+        "aboutParagraphs": [
+          "James Anderson is a licensed plumbing expert with over 15 years of hands-on experience in residential and commercial plumbing services. He specializes in leak detection, pipe installation, and emergency repairs.",
+          "Known for his precision and calm approach under pressure, James has earned a reputation for solving complex plumbing issues efficiently while maintaining the highest safety standards."
+        ],
+        "phone": "123 456 7890",
+        "email": "james.anderson@plumbio.com",
+        "location": "Chicago, Illinois",
+        "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
+        "skills": [
+          { "name": "Leak Detection", "percent": 95 },
+          { "name": "Pipe Installation", "percent": 90 },
+          { "name": "Drain Cleaning", "percent": 92 },
+          { "name": "Water Heater Repair", "percent": 88 },
+          { "name": "Emergency Plumbing", "percent": 96 }
+        ],
+        "experience": [
+          {
+            "period": "2010 - Present",
+            "title": "Senior Plumbing Specialist",
+            "company": "Plumbio Plumbing Services",
+            "description": "Handles advanced diagnostics, pipe fitting, and emergency response for residential and commercial clients."
+          },
+          {
+            "period": "2007 - 2010",
+            "title": "Plumbing Technician",
+            "company": "FlowRight Plumbing",
+            "description": "Specialized in repiping, fixture upgrades, and preventive maintenance programs."
+          },
+          {
+            "period": "2005 - 2007",
+            "title": "Junior Plumber",
+            "company": "QuickFix Plumbing",
+            "description": "Supported senior technicians on service calls and learned advanced pipe fitting techniques."
+          }
+        ],
+        "certifications": [
+          {
+            "icon": "badge",
+            "title": "Licensed Plumber",
+            "subtitle": "State of Illinois License #058-196789"
+          },
+          {
+            "icon": "shield",
+            "title": "Backflow Prevention Certified",
+            "subtitle": "Illinois Department of Public Health"
+          },
+          {
+            "icon": "hard-hat",
+            "title": "OSHA Safety Certified",
+            "subtitle": "Occupational Safety and Health Administration"
+          },
+          {
+            "icon": "document",
+            "title": "Advanced Leak Detection",
+            "subtitle": "American Leak Detection Association"
+          }
+        ]
       },
       {
+        "slug": "robert-taylor",
         "name": "Robert Taylor",
         "designation": "Drain Specialist",
+        "roleLabel": "DRAIN SPECIALIST",
         "image": "/img/team-4.jpg",
-        "imageAlt": "Robert Taylor - Drain Specialist"
+        "imageAlt": "Robert Taylor - Drain Specialist",
+        "yearsExperience": "12+",
+        "bio": "Robert specializes in drain cleaning, sewer line diagnostics, and hydro-jetting. He delivers fast, effective solutions for stubborn blockages and recurring drainage issues.",
+        "aboutParagraphs": [
+          "Robert Taylor is Plumbio's go-to expert for drain and sewer problems. From kitchen clogs to main line backups, he uses modern camera inspection and hydro-jetting tools to restore flow quickly.",
+          "Robert's methodical approach helps homeowners understand the root cause of drainage issues and how to prevent them in the future, saving time and costly repeat repairs."
+        ],
+        "phone": "123 456 7890",
+        "email": "robert.taylor@plumbio.com",
+        "location": "Chicago, Illinois",
+        "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
+        "skills": [
+          { "name": "Drain Cleaning", "percent": 97 },
+          { "name": "Sewer Line Inspection", "percent": 94 },
+          { "name": "Hydro-Jetting", "percent": 93 },
+          { "name": "Root Removal", "percent": 90 },
+          { "name": "Preventive Maintenance", "percent": 88 }
+        ],
+        "experience": [
+          {
+            "period": "2014 - Present",
+            "title": "Drain Specialist",
+            "company": "Plumbio Plumbing Services",
+            "description": "Leads drain and sewer service calls using camera inspection, hydro-jetting, and trenchless repair methods."
+          },
+          {
+            "period": "2011 - 2014",
+            "title": "Drain Technician",
+            "company": "ClearFlow Drains",
+            "description": "Performed residential and commercial drain cleaning, snaking, and line locating services."
+          },
+          {
+            "period": "2009 - 2011",
+            "title": "Plumbing Assistant",
+            "company": "DrainPro Services",
+            "description": "Supported field teams on emergency drain calls and equipment maintenance."
+          }
+        ],
+        "certifications": [
+          {
+            "icon": "badge",
+            "title": "Licensed Plumber",
+            "subtitle": "State of Illinois License #LP-112908"
+          },
+          {
+            "icon": "shield",
+            "title": "Sewer & Drain Certified",
+            "subtitle": "National Association of Sewer Service Companies"
+          },
+          {
+            "icon": "hard-hat",
+            "title": "OSHA Safety Certified",
+            "subtitle": "Occupational Safety and Health Administration"
+          },
+          {
+            "icon": "document",
+            "title": "Hydro-Jetting Operator",
+            "subtitle": "Water Jetting Association"
+          }
+        ]
+      },
+      {
+        "slug": "michael-carter",
+        "name": "Michael Carter",
+        "designation": "Water Heater Specialist",
+        "roleLabel": "WATER HEATER SPECIALIST",
+        "image": "/img/team-1.jpg",
+        "imageAlt": "Michael Carter - Water Heater Specialist",
+        "yearsExperience": "10+",
+        "bio": "Michael focuses on water heater installation, repair, and tankless system upgrades. He helps clients choose efficient solutions tailored to their home or business.",
+        "aboutParagraphs": [
+          "Michael Carter brings dedicated expertise in traditional and tankless water heater systems. He guides customers through repair-versus-replace decisions with clear, honest recommendations.",
+          "From gas and electric units to high-efficiency tankless installs, Michael ensures every system is sized correctly, installed safely, and performing at peak efficiency."
+        ],
+        "phone": "123 456 7890",
+        "email": "michael.carter@plumbio.com",
+        "location": "Chicago, Illinois",
+        "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
+        "skills": [
+          { "name": "Water Heater Installation", "percent": 95 },
+          { "name": "Tankless Systems", "percent": 92 },
+          { "name": "Gas Line Connections", "percent": 88 },
+          { "name": "System Diagnostics", "percent": 91 },
+          { "name": "Energy Efficiency Upgrades", "percent": 89 }
+        ],
+        "experience": [
+          {
+            "period": "2016 - Present",
+            "title": "Water Heater Specialist",
+            "company": "Plumbio Plumbing Services",
+            "description": "Installs and services residential and commercial water heating systems, including tankless conversions."
+          },
+          {
+            "period": "2013 - 2016",
+            "title": "HVAC & Plumbing Technician",
+            "company": "ComfortHeat Solutions",
+            "description": "Serviced water heaters, boilers, and combined HVAC-plumbing systems."
+          },
+          {
+            "period": "2011 - 2013",
+            "title": "Apprentice Technician",
+            "company": "WarmFlow Services",
+            "description": "Assisted with water heater replacements and gas line hookups under licensed supervision."
+          }
+        ],
+        "certifications": [
+          {
+            "icon": "badge",
+            "title": "Licensed Plumber",
+            "subtitle": "State of Illinois License #LP-145672"
+          },
+          {
+            "icon": "shield",
+            "title": "Gas Appliance Certified",
+            "subtitle": "Illinois Department of Public Health"
+          },
+          {
+            "icon": "hard-hat",
+            "title": "OSHA Safety Certified",
+            "subtitle": "Occupational Safety and Health Administration"
+          },
+          {
+            "icon": "document",
+            "title": "Tankless Water Heater Installer",
+            "subtitle": "Rinnai Pro Network Certification"
+          }
+        ]
+      },
+      {
+        "slug": "daniel-brooks",
+        "name": "Daniel Brooks",
+        "designation": "Gas Line Expert",
+        "roleLabel": "GAS LINE EXPERT",
+        "image": "/img/team-2.jpg",
+        "imageAlt": "Daniel Brooks - Gas Line Expert",
+        "yearsExperience": "14+",
+        "bio": "Daniel is certified in gas line installation, testing, and repair. He ensures every gas plumbing project meets strict safety codes and inspection standards.",
+        "aboutParagraphs": [
+          "Daniel Brooks specializes in gas line work for stoves, fireplaces, water heaters, and outdoor grills. His attention to detail and code compliance gives clients peace of mind.",
+          "Whether running new lines or repairing leaks, Daniel follows rigorous testing protocols and keeps homeowners informed at every step of the process."
+        ],
+        "phone": "123 456 7890",
+        "email": "daniel.brooks@plumbio.com",
+        "location": "Chicago, Illinois",
+        "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
+        "skills": [
+          { "name": "Gas Line Installation", "percent": 96 },
+          { "name": "Leak Testing", "percent": 94 },
+          { "name": "Code Compliance", "percent": 97 },
+          { "name": "Appliance Hookups", "percent": 90 },
+          { "name": "Pressure Regulation", "percent": 92 }
+        ],
+        "experience": [
+          {
+            "period": "2013 - Present",
+            "title": "Gas Line Expert",
+            "company": "Plumbio Plumbing Services",
+            "description": "Installs, tests, and repairs gas lines for residential and light commercial applications."
+          },
+          {
+            "period": "2010 - 2013",
+            "title": "Gas Fitters Technician",
+            "company": "SafeGas Plumbing",
+            "description": "Performed gas leak detection, line pressure testing, and appliance connections."
+          },
+          {
+            "period": "2008 - 2010",
+            "title": "Plumbing Apprentice",
+            "company": "Urban Pipe Services",
+            "description": "Trained in gas and water line installation under licensed master plumbers."
+          }
+        ],
+        "certifications": [
+          {
+            "icon": "badge",
+            "title": "Licensed Plumber",
+            "subtitle": "State of Illinois License #LP-098765"
+          },
+          {
+            "icon": "shield",
+            "title": "Gas Piping Certified",
+            "subtitle": "Illinois Department of Public Health"
+          },
+          {
+            "icon": "hard-hat",
+            "title": "OSHA Safety Certified",
+            "subtitle": "Occupational Safety and Health Administration"
+          },
+          {
+            "icon": "document",
+            "title": "Gas Leak Detection Specialist",
+            "subtitle": "National Fuel Gas Code Institute"
+          }
+        ]
+      },
+      {
+        "slug": "chris-evans",
+        "name": "Chris Evans",
+        "designation": "Commercial Plumber",
+        "roleLabel": "COMMERCIAL PLUMBER",
+        "image": "/img/team-3.jpg",
+        "imageAlt": "Chris Evans - Commercial Plumber",
+        "yearsExperience": "11+",
+        "bio": "Chris handles commercial plumbing for restaurants, offices, and retail spaces. He minimizes downtime with efficient scheduling and durable, code-compliant installations.",
+        "aboutParagraphs": [
+          "Chris Evans supports Plumbio's commercial clients with everything from grease trap maintenance to large-scale restroom renovations and backflow prevention.",
+          "His experience in fast-paced commercial environments means he understands the importance of completing work on schedule without disrupting daily operations."
+        ],
+        "phone": "123 456 7890",
+        "email": "chris.evans@plumbio.com",
+        "location": "Chicago, Illinois",
+        "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
+        "skills": [
+          { "name": "Commercial Installations", "percent": 94 },
+          { "name": "Backflow Prevention", "percent": 91 },
+          { "name": "Grease Trap Service", "percent": 93 },
+          { "name": "Restroom Renovations", "percent": 89 },
+          { "name": "Preventive Maintenance", "percent": 90 }
+        ],
+        "experience": [
+          {
+            "period": "2015 - Present",
+            "title": "Commercial Plumber",
+            "company": "Plumbio Plumbing Services",
+            "description": "Manages commercial service contracts, installations, and emergency repairs for business clients."
+          },
+          {
+            "period": "2012 - 2015",
+            "title": "Commercial Technician",
+            "company": "BuildRight Plumbing",
+            "description": "Installed plumbing systems for new commercial construction and tenant improvement projects."
+          },
+          {
+            "period": "2010 - 2012",
+            "title": "Maintenance Plumber",
+            "company": "FacilityFlow Inc.",
+            "description": "Maintained plumbing systems for multi-tenant office and retail properties."
+          }
+        ],
+        "certifications": [
+          {
+            "icon": "badge",
+            "title": "Licensed Plumber",
+            "subtitle": "State of Illinois License #LP-167834"
+          },
+          {
+            "icon": "shield",
+            "title": "Backflow Prevention Certified",
+            "subtitle": "Illinois Department of Public Health"
+          },
+          {
+            "icon": "hard-hat",
+            "title": "OSHA Safety Certified",
+            "subtitle": "Occupational Safety and Health Administration"
+          },
+          {
+            "icon": "document",
+            "title": "Commercial Plumbing Systems",
+            "subtitle": "International Association of Plumbing and Mechanical Officials"
+          }
+        ]
+      },
+      {
+        "slug": "andrew-mitchell",
+        "name": "Andrew Mitchell",
+        "designation": "Emergency Response Lead",
+        "roleLabel": "EMERGENCY RESPONSE LEAD",
+        "image": "/img/team-4.jpg",
+        "imageAlt": "Andrew Mitchell - Emergency Response Lead",
+        "yearsExperience": "9+",
+        "bio": "Andrew leads Plumbio's 24/7 emergency response team. He coordinates rapid dispatch and on-site repairs for burst pipes, flooding, and urgent plumbing failures.",
+        "aboutParagraphs": [
+          "Andrew Mitchell is the first call when emergencies strike. He coordinates our after-hours team and arrives prepared to stabilize situations and prevent further damage.",
+          "Calm under pressure and highly organized, Andrew ensures every emergency job is handled safely, quickly, and with the same quality standards as our scheduled services."
+        ],
+        "phone": "123 456 7890",
+        "email": "andrew.mitchell@plumbio.com",
+        "location": "Chicago, Illinois",
+        "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
+        "skills": [
+          { "name": "Emergency Repairs", "percent": 98 },
+          { "name": "Burst Pipe Response", "percent": 96 },
+          { "name": "Flood Mitigation", "percent": 92 },
+          { "name": "Team Coordination", "percent": 94 },
+          { "name": "After-Hours Service", "percent": 97 }
+        ],
+        "experience": [
+          {
+            "period": "2017 - Present",
+            "title": "Emergency Response Lead",
+            "company": "Plumbio Plumbing Services",
+            "description": "Leads 24/7 emergency dispatch and on-site response for urgent residential and commercial plumbing failures."
+          },
+          {
+            "period": "2014 - 2017",
+            "title": "Emergency Plumber",
+            "company": "RapidFlow Emergency Plumbing",
+            "description": "Responded to after-hours calls for burst pipes, sewer backups, and water heater failures."
+          },
+          {
+            "period": "2012 - 2014",
+            "title": "Service Plumber",
+            "company": "AllHours Plumbing",
+            "description": "Handled same-day service calls and learned emergency diagnostic procedures."
+          }
+        ],
+        "certifications": [
+          {
+            "icon": "badge",
+            "title": "Licensed Plumber",
+            "subtitle": "State of Illinois License #LP-178901"
+          },
+          {
+            "icon": "shield",
+            "title": "Emergency Response Certified",
+            "subtitle": "National Emergency Plumbing Association"
+          },
+          {
+            "icon": "hard-hat",
+            "title": "OSHA Safety Certified",
+            "subtitle": "Occupational Safety and Health Administration"
+          },
+          {
+            "icon": "document",
+            "title": "Water Damage Prevention",
+            "subtitle": "Institute of Inspection Cleaning and Restoration"
+          }
+        ]
+      }
+    ]
+  },
+  "awardsBanner": {
+    "title": "Awards",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Awards and certifications page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Awards",
+        "href": "/awards"
       }
     ]
   },
@@ -805,45 +1465,95 @@
       }
     ]
   },
-  "faq": {
-    "backgroundTitle": "FAQ",
-    "label": "FREQUENTLY ASKED QUESTIONS",
-    "titleLines": [
-      "You Have Questions,",
-      "We Have Answers"
-    ],
-    "description": "Plumbing problems can be extremely frustrating, especially when it means you can't use your toilet, sink, shower, or all of the above! Have plumbing questions? Our experienced team is here to provide clear answers and practical solutions.",
-    "button": {
-      "label": "Ask Question",
-      "href": "/contact"
-    },
-    "items": [
+  "faqBanner": {
+    "title": "FAQ",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Plumbing FAQ page banner background",
+    "breadcrumbs": [
       {
-        "question": "How do you plunge a drain?",
-        "answer": "One of the biggest ways a seemingly trivial toilet can contribute to the overall sustainable ecosystem of a building is by helping it save water. Using the correct plunger and maintaining proper pressure will often clear minor blockages safely.",
-        "defaultOpen": true
+        "label": "Home",
+        "href": "/"
       },
       {
-        "question": "Are all new toilets water saving toilet suites?",
-        "answer": "Most modern toilets are designed to meet water-efficiency standards. Dual-flush and low-flow models significantly reduce water consumption while maintaining strong flushing performance.",
-        "defaultOpen": false
+        "label": "FAQ",
+        "href": "/faq"
+      }
+    ]
+  },
+  "faq": {
+    "backgroundTitle": "Questions",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "description": "From emergency plumbing services to slab leak repair, we've put together a comprehensive run down of questions we hear most often.",
+    "items": [
+      {
+        "question": "What do you charge for services?",
+        "answer": "Our pricing depends on the type of service, complexity, and time required. We provide transparent estimates before work begins so you know exactly what to expect with no hidden charges.",
+        "icon": "wallet",
+        "defaultOpen": true,
+        "openStyle": "primary"
+      },
+      {
+        "question": "Why is my water hot?",
+        "answer": "Hot water issues can stem from thermostat settings, sediment buildup, faulty heating elements, or circulation problems. We diagnose the cause quickly and restore safe, consistent temperature.",
+        "icon": "hot-water",
+        "defaultOpen": false,
+        "openStyle": "default"
+      },
+      {
+        "question": "Are all bathroom fittings the same?",
+        "answer": "No. Bathroom fittings vary in quality, material, flow rate, and compatibility. We help you choose fixtures that match your plumbing system and performance needs.",
+        "icon": "shower",
+        "defaultOpen": false,
+        "openStyle": "default"
+      },
+      {
+        "question": "What is the purpose of a thermometer in a hot water system?",
+        "answer": "Thermometers monitor water temperature for safety and efficiency. They help prevent scalding, protect equipment, and ensure your system runs within recommended limits.",
+        "icon": "thermometer",
+        "defaultOpen": false,
+        "openStyle": "default"
       },
       {
         "question": "What do you do when servicing a tap?",
-        "answer": "We inspect washers, cartridges, valves, seals, aerators, and pipe connections. Any worn components are replaced, leaks are repaired, and water pressure is tested before completion.",
-        "defaultOpen": false
+        "answer": "We inspect washers, cartridges, valves, seals, aerators, and pipe connections. Worn parts are replaced, leaks are repaired, and water pressure is tested before completion.",
+        "icon": "faucet",
+        "defaultOpen": false,
+        "openStyle": "default"
       },
       {
-        "question": "How quickly can you respond to emergency plumbing issues?",
-        "answer": "Our emergency plumbing team is available 24/7 and aims to reach customers as quickly as possible depending on location and service demand.",
-        "defaultOpen": false
+        "question": "Are all new toilets water saving toilet suites?",
+        "answer": "Most modern toilets are designed to meet water-efficiency standards. Dual-flush and low-flow models significantly reduce water use while maintaining strong flushing performance.",
+        "icon": "toilet",
+        "defaultOpen": true,
+        "openStyle": "default"
       },
       {
-        "question": "Do you provide free estimates?",
-        "answer": "Yes. We provide transparent estimates before beginning any work so you know exactly what to expect without hidden charges.",
-        "defaultOpen": false
+        "question": "Where are you located?",
+        "answer": "We serve homes and businesses across the local area and surrounding communities. Contact us to confirm service availability at your address.",
+        "icon": "location",
+        "defaultOpen": false,
+        "openStyle": "default"
+      },
+      {
+        "question": "Does the bathroom fittings need to be replaced?",
+        "answer": "Replacement is needed when fixtures leak, corrode, fail to seal properly, or no longer meet efficiency standards. We inspect first and recommend the most cost-effective solution.",
+        "icon": "hand-drop",
+        "defaultOpen": false,
+        "openStyle": "default"
       }
-    ]
+    ],
+    "cta": {
+      "helpEyebrow": "Still Have Questions?",
+      "helpTitle": "We're Here to Help!",
+      "callLabel": "Call Us Anytime",
+      "phone": "123 456 7890",
+      "phoneHref": "tel:1234567890",
+      "button": {
+        "label": "Contact Us",
+        "href": "/contact"
+      }
+    }
   },
   "blog": {
     "label": "OUR BLOG",
@@ -882,7 +1592,134 @@
         "image": "/img/blog-4.jpg",
         "link": "/blog/signs-you-need-plumber"
       }
-    ]
+    ],
+    "pageItems": [
+      {
+        "category": "PLUMBING TIPS",
+        "date": "May 20, 2024",
+        "title": "5 Common Plumbing Problems and How to Fix Them",
+        "excerpt": "From leaky faucets to clogged drains, discover quick and easy solutions to common plumbing issues.",
+        "image": "/img/blog-1.jpg",
+        "link": "/blog/common-plumbing-problems"
+      },
+      {
+        "category": "WATER HEATER",
+        "date": "May 18, 2024",
+        "title": "How to Maintain Your Water Heater for Long-Lasting Performance",
+        "excerpt": "Simple maintenance tips to improve efficiency and extend the life of your water heater.",
+        "image": "/img/blog-2.jpg",
+        "link": "/blog/water-heater-maintenance"
+      },
+      {
+        "category": "KITCHEN PLUMBING",
+        "date": "May 15, 2024",
+        "title": "Easy Ways to Prevent Clogs in Your Kitchen Sink",
+        "excerpt": "Best practices to keep your kitchen drains clear and avoid unpleasant blockages.",
+        "image": "/img/blog-3.jpg",
+        "link": "/blog/prevent-kitchen-clogs"
+      },
+      {
+        "category": "BATHROOM TIPS",
+        "date": "May 12, 2024",
+        "title": "Signs You Need Professional Plumbing Services",
+        "excerpt": "Don't ignore these warning signs. Know when it's time to call a licensed plumber.",
+        "image": "/img/blog-4.jpg",
+        "link": "/blog/signs-you-need-plumber"
+      },
+      {
+        "category": "DRAIN CLEANING",
+        "date": "May 09, 2024",
+        "title": "How to Keep Your Drains Flowing Smoothly",
+        "excerpt": "Simple habits that help prevent buildup, odors, and slow drains throughout your home.",
+        "image": "/img/service-1.jpg",
+        "link": "/blog/keep-drains-flowing"
+      },
+      {
+        "category": "LEAK REPAIR",
+        "date": "May 06, 2024",
+        "title": "What to Do When You Find a Hidden Leak",
+        "excerpt": "Learn the first steps to reduce water damage while you wait for professional help.",
+        "image": "/img/service-residential-hd.png",
+        "link": "/blog/hidden-leak-repair"
+      },
+      {
+        "category": "MAINTENANCE",
+        "date": "May 03, 2024",
+        "title": "Seasonal Plumbing Maintenance Checklist",
+        "excerpt": "Protect pipes, fixtures, and water systems with these easy seasonal maintenance tips.",
+        "image": "/img/gallery-4.jpg",
+        "link": "/blog/seasonal-plumbing-checklist"
+      },
+      {
+        "category": "EMERGENCY TIPS",
+        "date": "Apr 30, 2024",
+        "title": "When Should You Call an Emergency Plumber?",
+        "excerpt": "Know which plumbing issues need urgent attention and which repairs can safely wait.",
+        "image": "/img/service-emergency-hd.png",
+        "link": "/blog/call-emergency-plumber"
+      }
+    ],
+    "details": {
+      "heading": "Blog details",
+      "heroImage": "/img/gallery-1.jpg",
+      "heroImageAlt": "Clean water pouring into a glass",
+      "date": "Nov 22, 2021",
+      "author": "Admin",
+      "comments": "2 Comments",
+      "intro": "Smart thermostats aren't just a fancier way to control your home's temperature. Contemporary smart thermostats allow you far greater control over indoor temperature and humidity than any conventional thermostat could. That increased control will help you save money on power, use your HVAC more efficiently, and live more comfortably.",
+      "quote": "The infamous toilet paper shortage occurring all over America is a natural consequence of the quarantine. It's also probably not ending any time soon. Unless you luck out, you may.",
+      "quoteAuthor": "Donna Behrens",
+      "quoteRole": "Homeowner",
+      "sections": [
+        {
+          "title": "They Save You Money",
+          "paragraphs": [
+            "Perhaps ironically, the single biggest reason to invest in a Wi-Fi enabled smart thermostat is to save money. The manufacturers of the Nest thermostat say that you can save 15 percent on cooling costs and over 10 percent on heating costs with one of their devices.",
+            "Considering that smart thermostats aren't too expensive to install in the first place, these savings are a big deal. The money you save on HVAC power costs will essentially pay for the thermostat quickly, and then some!"
+          ],
+          "images": [
+            {
+              "src": "/img/Thermostat1.jpeg",
+              "alt": "Red pipe wrench on a plumbing repair job"
+            },
+            {
+              "src": "/img/Thermostat2.jpeg",
+              "alt": "Leaking faucet close up"
+            }
+          ]
+        },
+        {
+          "title": "They're Simply Easier to Use",
+          "paragraphs": [
+            "If you want to use your traditional thermostat, you have to interface with the device directly. When you get there, you'll find your options are quite limited. You can turn up and down the temperature, but you can't interact with your HVAC in any other way."
+          ]
+        }
+      ],
+      "searchPlaceholder": "Search...",
+      "recentPostsTitle": "Recent Posts",
+      "recentPosts": [
+        {
+          "dateMonth": "Nov",
+          "dateDay": "18",
+          "image": "/img/plumbing_problems.jpeg",
+          "imageAlt": "Pipe wrench and plumbing fittings",
+          "author": "Admin",
+          "comments": "2 Comments",
+          "title": "4 Reasons For Stinky Plumbing Problems",
+          "href": "/blog/stinky-plumbing-problems"
+        },
+        {
+          "dateMonth": "Nov",
+          "dateDay": "18",
+          "image": "/img/blog-3.jpg",
+          "imageAlt": "Kitchen faucet running while hands are washed",
+          "author": "Admin",
+          "comments": "2 Comments",
+          "title": "How Can I Fix a Loose Outlet?",
+          "href": "/blog/fix-loose-outlet"
+        }
+      ]
+    }
   },
   "ctaSection": {
     "subtitle": "Need Help? We're Just a Call Away",
@@ -925,6 +1762,347 @@
       { "icon": "yt", "href": "#" }
     ],
     "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373531531664!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1628678070381!5m2!1sen!2sau"
+  },
+  "pricingBanner": {
+    "title": "Our Prices",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Plumbing pricing page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Prices",
+        "href": "/pricing"
+      }
+    ]
+  },
+  "specialOffers": {
+    "label": "SPECIAL OFFERS",
+    "titleBefore": "Take Advantage of",
+    "titleAccent": "Our Specials!",
+    "description": "Mention the coupons below when you call for service or click to print and present to our technicians when they arrive.",
+    "printLabel": "Print Coupon",
+    "coupons": [
+      {
+        "amount": "$50",
+        "amountSuffix": "OFF",
+        "tag": "SPECIAL OFFER",
+        "title": "Drain Testing",
+        "description": "Coupons & special offers cannot be combined with other offers. Valid toward standard pricing only.",
+        "expires": "12/31/2021"
+      },
+      {
+        "amount": "$250",
+        "amountSuffix": "OFF",
+        "tag": "SPECIAL OFFER",
+        "title": "Water Treatment",
+        "description": "Get $250 off a water filter & softener package. Cannot be combined with any other offers.",
+        "expires": "12/31/2021"
+      },
+      {
+        "amount": "$75",
+        "amountSuffix": "OFF",
+        "tag": "SPECIAL OFFER",
+        "title": "Water Heater Tune-Up",
+        "description": "Save on a professional water heater inspection and tune-up. Cannot be combined with other offers.",
+        "expires": "12/31/2021"
+      },
+      {
+        "amount": "$100",
+        "amountSuffix": "OFF",
+        "tag": "SPECIAL OFFER",
+        "title": "Pipe Relining",
+        "description": "Discount applies to qualifying pipe relining jobs. Valid toward standard pricing only.",
+        "expires": "12/31/2021"
+      },
+      {
+        "amount": "$40",
+        "amountSuffix": "OFF",
+        "tag": "SPECIAL OFFER",
+        "title": "Fixture Installation",
+        "description": "Save on faucet, toilet, or fixture installation labor. Cannot be combined with other offers.",
+        "expires": "12/31/2021"
+      },
+      {
+        "amount": "$150",
+        "amountSuffix": "OFF",
+        "tag": "SPECIAL OFFER",
+        "title": "Sewer Camera Inspection",
+        "description": "Get $150 off a full sewer camera inspection. Valid toward standard pricing only.",
+        "expires": "12/31/2021"
+      }
+    ]
+  },
+  "pricing": {
+    "label": "MONEY SAVING",
+    "titleBefore": "Plumbing",
+    "titleAccent": "Service Plans",
+    "plans": [
+      {
+        "icon": "faucet",
+        "name": "Plumbing Plan",
+        "price": "$134.99",
+        "period": "/month",
+        "badge": null,
+        "features": [
+          "Get 10% OFF all parts and repairs",
+          "Test Water Pressure",
+          "Identify Shut-Off Valves",
+          "Priority service"
+        ],
+        "cta": {
+          "label": "Get This Plan",
+          "href": "/contact"
+        }
+      },
+      {
+        "icon": "boiler",
+        "name": "Boiler Service Plan",
+        "price": "$14.99",
+        "period": "/month",
+        "badge": "MOST POPULAR",
+        "features": [
+          "Exclusive Customer Benefits",
+          "Boiler + Controls",
+          "Annual Boiler Service",
+          "Unlimited Call Outs"
+        ],
+        "cta": {
+          "label": "Get This Plan",
+          "href": "/contact"
+        }
+      },
+      {
+        "icon": "building",
+        "name": "Commercial Plumbing Plan",
+        "price": "$1029.99",
+        "period": "/month",
+        "badge": null,
+        "features": [
+          "15% Discount on Repairs",
+          "Priority Scheduling",
+          "Maintained Equipment Efficiency",
+          "Extended Equipment Life"
+        ],
+        "cta": {
+          "label": "Get This Plan",
+          "href": "/contact"
+        }
+      },
+      {
+        "icon": "drain",
+        "name": "Drain Care Plan",
+        "price": "$49.99",
+        "period": "/month",
+        "badge": null,
+        "features": [
+          "Annual drain inspection",
+          "Priority drain cleaning",
+          "10% OFF hydro jetting",
+          "Camera inspection discount"
+        ],
+        "cta": {
+          "label": "Get This Plan",
+          "href": "/contact"
+        }
+      },
+      {
+        "icon": "waterheater",
+        "name": "Water Heater Plan",
+        "price": "$29.99",
+        "period": "/month",
+        "badge": null,
+        "features": [
+          "Annual flush & tune-up",
+          "Priority replacement service",
+          "Parts discount included",
+          "Leak check every visit"
+        ],
+        "cta": {
+          "label": "Get This Plan",
+          "href": "/contact"
+        }
+      },
+      {
+        "icon": "home",
+        "name": "Home Essentials Plan",
+        "price": "$89.99",
+        "period": "/month",
+        "badge": null,
+        "features": [
+          "Fixture & faucet coverage",
+          "Toilet repair support",
+          "Seasonal system check",
+          "Same-day booking priority"
+        ],
+        "cta": {
+          "label": "Get This Plan",
+          "href": "/contact"
+        }
+      },
+      {
+        "icon": "emergency",
+        "name": "Emergency Shield Plan",
+        "price": "$59.99",
+        "period": "/month",
+        "badge": null,
+        "features": [
+          "24/7 emergency dispatch",
+          "Waived after-hours fees",
+          "Rapid response guarantee",
+          "Backup plumber network"
+        ],
+        "cta": {
+          "label": "Get This Plan",
+          "href": "/contact"
+        }
+      },
+      {
+        "icon": "pipe",
+        "name": "Pipe Protection Plan",
+        "price": "$79.99",
+        "period": "/month",
+        "badge": null,
+        "features": [
+          "Pipe leak monitoring",
+          "Freeze protection tips",
+          "Repipe consultation credit",
+          "Annual pressure test"
+        ],
+        "cta": {
+          "label": "Get This Plan",
+          "href": "/contact"
+        }
+      },
+      {
+        "icon": "filter",
+        "name": "Water Quality Plan",
+        "price": "$39.99",
+        "period": "/month",
+        "badge": null,
+        "features": [
+          "Filter system checkups",
+          "Softener salt delivery credit",
+          "Water quality report",
+          "15% OFF new equipment"
+        ],
+        "cta": {
+          "label": "Get This Plan",
+          "href": "/contact"
+        }
+      }
+    ]
+  },
+  "laborPricing": {
+    "backgroundImage": "/img/cta-pipes.jpg",
+    "title": "A Nationwide Plumbing Force, on Hand All Day, Every Day",
+    "subtitle": "Plumbing Labor Services Price List",
+    "options": [
+      {
+        "id": "hourly",
+        "label": "Hourly Rate Plumbing"
+      },
+      {
+        "id": "fixed",
+        "label": "Fixed Price Plumbing"
+      }
+    ]
+  },
+  "hourlyRatePricing": {
+    "label": "OUR PRICELIST",
+    "titleBefore": "Hourly Rate",
+    "titleAccent": "Plumbing",
+    "fixedTitleBefore": "Fixed Price",
+    "fixedTitleAccent": "Plumbing",
+    "description": "A plumber ranges from $45 to $200 per hour or more depending on the job, timing and location. According to project data from HomeAdvisor members, it ranges between $173 and $459 with an average cost of $316. Services may include drain cleaning, faucet replacement or installation, and toilet repair.",
+    "highlights": [
+      "Set a minimum number of hours for service calls.",
+      "Add a trip fee of $50-$300",
+      "Charge a service fee averaging $150.",
+      "Offer flat rates for a few common issues."
+    ],
+    "rateTable": [
+      {
+        "service": "Plumbing, Drainlaying",
+        "rate": "$125 per hour*"
+      },
+      {
+        "service": "Gasfitting, Leak Detection",
+        "rate": "$149 per hour*"
+      },
+      {
+        "service": "Apprentice Work",
+        "rate": "$55 per hour*"
+      },
+      {
+        "service": "Drain Unblocking",
+        "rate": "$265 per hour*"
+      },
+      {
+        "service": "Additional Time Plumbing",
+        "rate": "$24.50 per hour*"
+      },
+      {
+        "service": "Additional Time Leak Detection",
+        "rate": "$28.50 per hour*"
+      },
+      {
+        "service": "Additional Time Apprentice Work",
+        "rate": "$13.75 per hour*"
+      },
+      {
+        "service": "Work at Height",
+        "rate": "$170 per hour*"
+      }
+    ],
+    "fixedRateTable": [
+      {
+        "service": "Toilet Installation",
+        "rate": "$249 fixed*"
+      },
+      {
+        "service": "Faucet Replacement",
+        "rate": "$179 fixed*"
+      },
+      {
+        "service": "Garbage Disposal Install",
+        "rate": "$229 fixed*"
+      },
+      {
+        "service": "Water Heater Flush",
+        "rate": "$149 fixed*"
+      },
+      {
+        "service": "Drain Cleaning (Standard)",
+        "rate": "$199 fixed*"
+      },
+      {
+        "service": "Sump Pump Replacement",
+        "rate": "$549 fixed*"
+      },
+      {
+        "service": "Showerhead Upgrade",
+        "rate": "$129 fixed*"
+      },
+      {
+        "service": "Angle Stop Replacement",
+        "rate": "$159 fixed*"
+      }
+    ],
+    "disclaimer": "* Do take note that there may be additional charges for supplies and equipment."
+  },
+  "pricingCta": {
+    "eyebrow": "Need Help or Have Questions?",
+    "title": "We're Here to Help!",
+    "callLabel": "Call Us Now",
+    "phone": "(123) 456-7890",
+    "phoneHref": "tel:1234567890",
+    "button": {
+      "label": "Request a Quote",
+      "href": "/contact"
+    }
   },
   "footer": {
     "logoText": "Plumbio",

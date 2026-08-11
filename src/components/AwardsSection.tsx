@@ -27,11 +27,11 @@ const ICONS = {
   ),
 };
 
-export function AwardsSection() {
+export function AwardsSection({ className }: { className?: string }) {
   const { awards } = site;
 
   return (
-    <section className="bg-[#fbfcff] pt-0 pb-0">
+    <section className={className ?? "bg-[#fbfcff] pt-0 pb-0"}>
       <div className="shell">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">

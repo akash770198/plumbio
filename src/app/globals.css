@@ -187,6 +187,35 @@
   animation: slideDown 0.4s var(--ease);
 }
 
+@keyframes pricingFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pricingSoftPulse {
+  0%,
+  100% {
+    box-shadow: 0 12px 36px rgba(10, 31, 92, 0.08);
+  }
+  50% {
+    box-shadow: 0 16px 44px rgba(30, 111, 208, 0.22);
+  }
+}
+
+.pricing-fade-up {
+  animation: pricingFadeUp 0.45s var(--ease) both;
+}
+
+.pricing-popular-pulse {
+  animation: pricingSoftPulse 2.8s var(--ease) infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -199,5 +228,9 @@
   .reveal {
     opacity: 1;
     transform: none;
+  }
+  .pricing-fade-up,
+  .pricing-popular-pulse {
+    animation: none !important;
   }
 }

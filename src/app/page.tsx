@@ -12,6 +12,7 @@ import { AwardsSection } from "@/components/AwardsSection";
 import { FaqSection } from "@/components/FaqSection";
 import { BlogSection } from "@/components/BlogSection";
 import { CtaSection } from "@/components/CtaSection";
+import { site } from "@/data";
 
 export default function HomePage() {
   return (
@@ -24,15 +25,18 @@ export default function HomePage() {
         <div aria-hidden className="section-divider">
           <span className="section-divider-line" />
         </div>
-        <ServicesSection />
-        <WhyChoose/>
+        <ServicesSection className="relative overflow-hidden bg-white pt-0 pb-0" />
+        <div aria-hidden className="section-divider">
+          <span className="section-divider-line" />
+        </div>
+        <WhyChoose className="relative w-full overflow-hidden bg-[#001746] pt-0 pb-0 font-sans lg:min-h-[640px]" />
         <div aria-hidden className="section-divider">
           <span className="section-divider-line" />
         </div>
         <ProcessSection/>
         <AboutCompany/>
         <Testimonials/>
-        <TeamSection/>
+        <TeamSection limit={site.team.homeDisplayCount} />
         <div aria-hidden className="section-divider">
           <span className="section-divider-line" />
         </div>
