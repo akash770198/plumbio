@@ -187,7 +187,7 @@ export function PricingSection() {
       pages.push(specialOffers.coupons.slice(i, i + 2));
     }
     return pages;
-  }, [specialOffers.coupons]);
+  }, [specialOffers]);
 
   const planPages = useMemo(() => {
     const pages: (typeof pricing.plans)[] = [];
@@ -195,7 +195,7 @@ export function PricingSection() {
       pages.push(pricing.plans.slice(i, i + 3));
     }
     return pages;
-  }, [pricing.plans]);
+  }, [pricing]);
 
   const visiblePlans = planPages[planPage] ?? [];
 

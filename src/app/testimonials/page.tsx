@@ -1,7 +1,6 @@
 import { Header } from "@/components/Header";
 import { PageBanner } from "@/components/PageBanner";
 import { ReviewsSection } from "@/components/ReviewsSection";
-import { Testimonials } from "@/components/Testimonials";
 import { site } from "@/data";
 
 export default function Page() {

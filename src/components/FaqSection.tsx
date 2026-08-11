@@ -101,12 +101,10 @@ function FaqIcon({ name, className = "h-5 w-5" }: { name: string; className?: st
 
 function FaqCard({
   item,
-  index,
   isOpen,
   onToggle,
 }: {
   item: FaqItem;
-  index: number;
   isOpen: boolean;
   onToggle: () => void;
 }) {
@@ -200,7 +198,6 @@ export function FaqSection({ className }: { className?: string }) {
           <Reveal key={item.question} delay={colIndex * 60}>
             <FaqCard
               item={item}
-              index={index}
               isOpen={openItems.has(index)}
               onToggle={() => toggle(index)}
             />

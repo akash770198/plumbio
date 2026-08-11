@@ -64,25 +64,43 @@ export function Header() {
           <nav className="mr-auto hidden items-center xl:flex" aria-label="Primary">
             <ul className="flex items-center gap-7 xl:gap-8">
               {nav.map((item) => {
-                const active =
-                  item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+                const hasChildren = "children" in item && item.children;
+                const active = hasChildren
+                  ? item.children!.some(
+                      (child) =>
+                        child.href === "/"
+                          ? pathname === "/"
+                          : pathname.startsWith(child.href)
+                    )
+                  : item.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(item.href);
+
                 return (
                   <li key={item.label} className="group relative">
-                    <Link
-                      href={item.href}
-                      className={`flex items-center gap-1 text-[15px] font-semibold transition-colors ${
-                        active ? "text-brand" : "text-brand hover:text-brand-deep"
-                      }`}
-                    >
-                      {item.label}
-                      {"children" in item && item.children && (
+                    {hasChildren ? (
+                      <span
+                        className={`flex cursor-default items-center gap-1 text-[15px] font-semibold ${
+                          active ? "text-brand" : "text-brand hover:text-brand-deep"
+                        }`}
+                      >
+                        {item.label}
                         <Icon name="chevron" className="h-[12px] w-[12px]" />
-                      )}
-                    </Link>
+                      </span>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className={`flex items-center gap-1 text-[15px] font-semibold transition-colors ${
+                          active ? "text-brand" : "text-brand hover:text-brand-deep"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
 
-                    {"children" in item && item.children && (
+                    {hasChildren && (
                       <ul className="invisible absolute left-0 top-full z-20 w-[190px] translate-y-2 rounded-md border border-line bg-white py-2 opacity-0 shadow-[0_18px_40px_rgba(4,65,148,.16)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                        {item.children.map((c) => (
+                        {item.children!.map((c) => (
                           <li key={c.label}>
                             <Link
                               href={c.href}
