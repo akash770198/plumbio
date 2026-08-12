@@ -3044,7 +3044,7 @@
       },
       "agreePrefix": "I agree to the",
       "termsLabel": "Terms & Conditions",
-      "termsHref": "#",
+      "termsHref": "/terms",
       "andLabel": "and",
       "privacyLabel": "Privacy Policy",
       "privacyHref": "#",
@@ -3177,7 +3177,7 @@
       },
       "agreePrefix": "I agree to the",
       "termsLabel": "Terms & Conditions",
-      "termsHref": "#",
+      "termsHref": "/terms",
       "andLabel": "and",
       "privacyLabel": "Privacy Policy",
       "privacyHref": "#",
@@ -3341,7 +3341,7 @@
           },
           {
             "label": "Terms & Conditions",
-            "href": "#"
+            "href": "/terms"
           },
           {
             "label": "Privacy Policy",
@@ -3436,6 +3436,10 @@
             "href": "/enquiry"
           },
           {
+            "label": "Terms & Conditions",
+            "href": "/terms"
+          },
+          {
             "label": "Sitemap",
             "href": "/sitemap"
           }
@@ -3448,5 +3452,96 @@
       "placeholder": "Enter your email"
     },
     "copyright": "© 2025 Plumbio. All Rights Reserved."
+  },
+  "termsBanner": {
+    "title": "Terms",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Terms and conditions page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Terms",
+        "href": "/terms"
+      }
+    ]
+  },
+  "termsPage": {
+    "effectiveDateLabel": "Effective Date :",
+    "effectiveDate": "01 January 2026",
+    "lastUpdatedLabel": "Last Updated :",
+    "lastUpdated": "01 January 2026",
+    "sections": [
+      {
+        "title": "1. Acceptance of Terms",
+        "text": "By accessing our website or using our plumbing services, you agree to comply with these Terms & Conditions and our service policies."
+      },
+      {
+        "title": "2. Our Services",
+        "text": "We provide residential and commercial plumbing services including installation, repair, maintenance, drain cleaning, leak detection, and emergency plumbing."
+      },
+      {
+        "title": "3. Booking & Appointments",
+        "text": "Appointments are scheduled based on technician availability. Emergency services may incur additional charges. Customers must provide accurate service information."
+      },
+      {
+        "title": "4. Pricing & Payments",
+        "text": "All estimates are based on inspection and may vary. Payment is due upon completion of the service. We accept cash, card and online payments."
+      },
+      {
+        "title": "5. Cancellation Policy",
+        "text": "Cancel at least 24 hours before your appointment to avoid cancellation charges. Less than 24 hours may be subject to a service fee. If the technician is already on-site, visit charges will apply."
+      },
+      {
+        "title": "6. Emergency Services",
+        "text": "We offer 24/7 emergency plumbing services. Response times depend on technician availability and location."
+      },
+      {
+        "title": "7. Warranty",
+        "text": "We provide warranty on workmanship for selected services. Warranty does not cover damages caused by misuse, normal wear and tear, or third-party repairs."
+      },
+      {
+        "title": "8. Limitation of Liability",
+        "text": "We are not liable for any indirect, incidental or consequential damages. Our total liability is limited to the amount paid for the service."
+      },
+      {
+        "title": "9. Privacy Policy",
+        "text": "Your personal information is used only for service purposes. We do not share your information with third parties except as required by law."
+      },
+      {
+        "title": "10. Contact Us",
+        "text": "If you have any questions about these Terms & Conditions, please contact us using the details below."
+      }
+    ],
+    "helpBar": {
+      "items": [
+        {
+          "icon": "headset",
+          "title": "Need Help?",
+          "text": "We're here to help you with any plumbing service.",
+          "href": "/contact"
+        },
+        {
+          "icon": "phone",
+          "title": "Call Us",
+          "text": "+1 (555) 123-4567",
+          "href": "tel:+15551234567"
+        },
+        {
+          "icon": "email",
+          "title": "Email Us",
+          "text": "support@plumbio.com",
+          "href": "mailto:support@plumbio.com"
+        },
+        {
+          "icon": "clock",
+          "title": "Working Hours",
+          "text": "Mon - Sat: 8:00 AM - 7:00 PM",
+          "href": "/contact"
+        }
+      ]
+    }
   }
 }
