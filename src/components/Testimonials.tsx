@@ -81,7 +81,7 @@ export function Testimonials() {
             </p>
           </div>
 
-          <h2 className="mt-3 text-[clamp(24px,2.6vw,36px)] font-extrabold leading-[1.2] text-[#0a1f5c]">
+          <h2 className="section-title mt-3">
             {testimonials.titleLines[0]}
             <br />
             {testimonials.titleLines[1]}

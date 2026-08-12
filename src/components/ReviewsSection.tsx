@@ -85,11 +85,11 @@ export function ReviewsSection({
                 <p className="section-label text-[#1e6fd0]">{reviews.label}</p>
                 <span className="h-[2px] w-10 bg-[#1e6fd0]" />
               </div>
-              <h2 className="mb-4 text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-[#0a1f5c]">
+              <h2 className="section-title mb-4">
                 {reviews.titleBefore}{" "}
                 <span className="text-[#1e6fd0]">{reviews.titleAccent}</span>
               </h2>
-              <p className="text-[15px] leading-[1.75] text-[#666]">
+              <p className="section-desc">
                 {reviews.description}
               </p>
             </div>
@@ -116,7 +116,7 @@ export function ReviewsSection({
                     {item.title}
                   </h3>
 
-                  <p className="relative z-[1] mt-3 text-[15px] leading-[1.75] text-[#666]">
+                  <p className="section-desc relative z-[1] mt-3">
                     {item.review}
                   </p>
 
@@ -166,10 +166,10 @@ export function ReviewsSection({
                 <p className="section-label mb-4 text-[#1e6fd0]">
                   {videoTestimonials.label}
                 </p>
-                <h2 className="mb-6 text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-[#0a1f5c]">
+                <h2 className="section-title mb-6">
                   {videoTestimonials.title}
                 </h2>
-                <p className="mb-8 text-[15px] leading-[1.75] text-[#666]">
+                <p className="section-desc mb-8">
                   {videoTestimonials.description}
                 </p>
                 <Link

@@ -180,10 +180,10 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
                   <span className="h-[2px] w-8 bg-[#1e6fd0]" />
                   <p className="section-label">{member.roleLabel}</p>
                 </div>
-                <h1 className="mt-4 text-[clamp(32px,4vw,48px)] font-extrabold leading-tight text-[#0a1f5c]">
+                <h1 className="section-title mt-4">
                   {member.name}
                 </h1>
-                <p className="mt-5 max-w-xl text-[15px] leading-[1.85] text-[#666]">{member.bio}</p>
+                <p className="section-desc mt-5 max-w-xl">{member.bio}</p>
 
                 <ul className="mt-8 space-y-4">
                   {contactItems.map((item) => (
@@ -226,9 +226,11 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
           <div className="grid gap-6 lg:grid-cols-2">
             <Reveal>
               <SectionCard title={`About ${member.name}`}>
-                <div className="space-y-4 text-[15px] leading-[1.85] text-[#666]">
+                <div className="space-y-4">
                   {member.aboutParagraphs.map((paragraph) => (
-                    <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                    <p key={paragraph.slice(0, 40)} className="section-desc">
+                      {paragraph}
+                    </p>
                   ))}
                 </div>
                 <div className="mt-8 border-t border-[#e8edf5] pt-6">

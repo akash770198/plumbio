@@ -6,8 +6,8 @@ export default function Page() {
       <Header />
       <main className="bg-white">
         <div className="px-6 py-28 lg:px-12">
-          <h1 className="text-[clamp(28px,3vw,40px)] font-bold text-brand-head">Contact</h1>
-          <p className="mt-4 text-[15px] text-body">This page is coming next.</p>
+          <h1 className="section-title">Contact</h1>
+          <p className="section-desc mt-4">This page is coming next.</p>
         </div>
       </main>
     </>

@@ -81,7 +81,7 @@ function BlogDetails() {
     <section className="bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]">
       <div className="shell">
         <Reveal>
-          <h2 className="text-center text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-[#0a1f5c]">
+          <h2 className="section-title text-center">
             {details.heading}
           </h2>
         </Reveal>
@@ -115,7 +115,7 @@ function BlogDetails() {
                   comments={details.comments}
                 />
 
-                <p className="mt-8 text-[15px] leading-[1.85] text-[#666]">
+                <p className="section-desc mt-8">
                   {details.intro}
                 </p>
 
@@ -139,15 +139,12 @@ function BlogDetails() {
 
                 {details.sections.map((section) => (
                   <section key={section.title} className="mt-12">
-                    <h3 className="text-[clamp(24px,2.4vw,32px)] font-extrabold leading-tight text-[#0a1f5c]">
+                    <h3 className="section-title">
                       {section.title}
                     </h3>
                     <div className="mt-5 space-y-5">
                       {section.paragraphs.map((paragraph) => (
-                        <p
-                          key={paragraph}
-                          className="text-[15px] leading-[1.85] text-[#666]"
-                        >
+                        <p key={paragraph} className="section-desc">
                           {paragraph}
                         </p>
                       ))}

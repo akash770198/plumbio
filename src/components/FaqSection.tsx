@@ -224,10 +224,10 @@ export function FaqSection({ className }: { className?: string }) {
               <p className="section-label">{faq.label}</p>
               <span className="h-[2px] w-10 bg-[#1e6fd0]" />
             </div>
-            <h2 className="mt-4 text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-[#0a1f5c]">
+            <h2 className="section-title mt-4">
               {faq.title}
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-[1.75] text-[#666]">
+            <p className="section-desc mx-auto mt-4 max-w-2xl">
               {faq.description}
             </p>
           </div>

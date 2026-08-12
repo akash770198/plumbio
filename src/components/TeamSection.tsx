@@ -50,7 +50,7 @@ export function TeamSection({
               <p className="section-label">{team.label}</p>
               <span className="h-[2px] w-10 bg-[#1e6fd0]" />
             </div>
-            <h2 className="mt-4 text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-[#0a1f5c]">
+            <h2 className="section-title mt-4">
               {team.title}
             </h2>
           </div>

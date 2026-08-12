@@ -38,26 +38,16 @@ export function ProcessSection() {
               <span className="h-[2px] w-16 bg-blue-600" />
             </div>
 
-            <h2 className="mt-6 text-[clamp(36px,4vw,58px)] font-extrabold leading-tight">
-
+            <h2 className="section-title mt-6">
               <span className="text-[#082b7a]">
-
                 {process.title[0]}{" "}
-
               </span>
-
               <span className="text-blue-600">
-
                 {process.title[1]}
-
               </span>
-
               <span className="text-[#082b7a]">
-
                 {" "}{process.title[2]}
-
               </span>
-
             </h2>
 
             <div className="mx-auto mt-5 h-[4px] w-16 rounded-full bg-blue-600" />
@@ -121,7 +111,7 @@ export function ProcessSection() {
 
                   <div className="mx-auto mt-3 h-[2px] w-8 rounded-full bg-blue-600" />
 
-                  <p className="mx-auto mt-4 max-w-[170px] text-[17px] leading-[1.6] text-slate-600">
+                  <p className="section-desc mx-auto mt-4 max-w-[170px]">
                     {step.description}
                   </p>
 

@@ -141,10 +141,10 @@ export function IndustriesWeServe() {
               </div>
 
               <div className="min-w-0 flex-1 text-center lg:text-left">
-                <h3 className="text-[clamp(20px,2.2vw,28px)] font-extrabold leading-tight text-[#0a1f5c]">
+                <h3 className="section-title">
                   {data.cta.title}
                 </h3>
-                <p className="mt-2 text-[14px] leading-[1.7] text-[#4a5568] sm:text-[15px]">
+                <p className="section-desc mt-2">
                   {data.cta.text}
                 </p>
               </div>

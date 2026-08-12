@@ -52,7 +52,7 @@ export function PageBanner({
 
           {/* Content */}
           <div className="relative z-10 flex h-full flex-col justify-center px-8 sm:px-12 lg:px-12">
-            <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[40px]">
+            <h1 className="section-title text-white">
               {title}
             </h1>
 

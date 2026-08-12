@@ -58,16 +58,14 @@ export function ServicesSection({
                 OUR SERVICES
               </p>
 
-              {/* Title - Same style as About */}
-              <h2 className="mt-3 font-sans text-[clamp(26px,2.6vw,36px)] font-bold leading-[1.22] tracking-[-0.01em] text-brand">
+              <h2 className="section-title mt-3">
                 <span className="block">From Leaking Faucet</span>
                 <span className="block">to Gushing Pipes</span>
               </h2>
             </Reveal>
 
-            {/* Right: Description (unchanged) */}
             <Reveal delay={80} className="flex flex-col justify-center lg:pr-10 lg:pt-6">
-              <p className="max-w-[470px] text-[15px] leading-[1.6] text-[#686b70]">
+              <p className="section-desc max-w-[470px]">
                 While certain plumbing issues, such as a minor toilet clog, can be quickly
                 addressed with do-it-yourself methods, most plumbing problems require the
                 assistance of a professional.
@@ -77,7 +75,8 @@ export function ServicesSection({
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-10 pb-24 md:grid-cols-3 lg:gap-11">
+          {/* pb matches tag overhang (-bottom-[20px]) so section spacing is measured from tag bottoms */}
+          <div className="mt-16 grid gap-10 pb-5 md:grid-cols-3 lg:gap-11">
             {services.map((service, index) => (
               <Reveal key={service.title} delay={index * 80}>
                 <article className="group relative aspect-square bg-[#edf2f6] shadow-[0_12px_24px_rgba(6,51,105,0.10)]">

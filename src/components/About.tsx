@@ -19,14 +19,14 @@ export function About({ className }: { className?: string }) {
             </p>
 
             {/* heading */}
-            <h2 className="mt-3 font-sans text-[clamp(26px,2.6vw,36px)] font-bold leading-[1.22] tracking-[-0.01em] text-brand">
+            <h2 className="section-title mt-3">
               {about.titleLines.map((line) => (
                 <span key={line} className="block">{line}</span>
               ))}
             </h2>
 
             {/* body */}
-            <p className="mt-4 font-sans text-[clamp(15.5px,1.2vw,17px)] font-normal leading-[1.65] text-[#555]">
+            <p className="section-desc mt-4">
               {about.text}
             </p>
 

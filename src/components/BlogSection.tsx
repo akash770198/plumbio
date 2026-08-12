@@ -63,13 +63,12 @@ export function BlogSection({
             </div>
 
             {/* Title */}
-            <h2 className="mt-4 text-[clamp(32px,4vw,52px)] font-extrabold leading-[1.2] text-[#0a1f5c]">
+            <h2 className="section-title mt-4">
               <span className="text-black">{blog.title.split(" ").slice(0, 2).join(" ")}</span>{" "}
               {blog.title.split(" ").slice(2).join(" ")}
             </h2>
 
-            {/* Description */}
-            <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.8] text-[#6b7a9a]">
+            <p className="section-desc mx-auto mt-5 max-w-2xl">
               {blog.description}
             </p>
 

@@ -73,7 +73,7 @@ export function ContactSection() {
             <h4 className="mb-2 section-label">
               {contactInfo.label}
             </h4>
-            <h2 className="mb-10 text-[36px] font-extrabold text-[#0a1f5c] md:text-[42px]">
+            <h2 className="section-title mb-10">
               {contactInfo.title}
             </h2>
 

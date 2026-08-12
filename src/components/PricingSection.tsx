@@ -225,11 +225,11 @@ export function PricingSection() {
                 <p className="section-label">{specialOffers.label}</p>
                 <span className="h-[2px] w-10 origin-left bg-[#1e6fd0]" />
               </div>
-              <h2 className="mt-4 text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-[#0a1f5c]">
+              <h2 className="section-title mt-4">
                 {specialOffers.titleBefore}{" "}
                 <span className="text-[#1e6fd0]">{specialOffers.titleAccent}</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-[1.75] text-[#666]">
+              <p className="section-desc mx-auto mt-4 max-w-2xl">
                 {specialOffers.description}
               </p>
             </div>
@@ -272,7 +272,7 @@ export function PricingSection() {
                 <p className="section-label">{pricing.label}</p>
                 <span className="h-[2px] w-10 bg-[#1e6fd0]" />
               </div>
-              <h2 className="mt-4 text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-[#0a1f5c]">
+              <h2 className="section-title mt-4">
                 {pricing.titleBefore}{" "}
                 <span className="text-[#1e6fd0]">{pricing.titleAccent}</span>
               </h2>
@@ -397,10 +397,10 @@ export function PricingSection() {
               </div>
 
               <div className="min-w-0 flex-1 lg:ml-6">
-                <h2 className="max-w-3xl text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-white">
+                <h2 className="section-title max-w-3xl text-white">
                   {laborPricing.title}
                 </h2>
-                <p className="mt-3 text-[15px] font-bold leading-[1.6] text-white/95 sm:text-[17px]">
+                <p className="section-desc mt-3 text-white/95">
                   {laborPricing.subtitle}
                 </p>
 
@@ -442,12 +442,12 @@ export function PricingSection() {
                 </div>
                 <h2
                   key={`${rateMode}-title`}
-                  className="pricing-fade-up mt-3 text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-[#0a1f5c]"
+                  className="section-title pricing-fade-up mt-3"
                 >
                   {rateTitleBefore}{" "}
                   <span className="text-[#1e6fd0]">{rateTitleAccent}</span>
                 </h2>
-                <p className="mt-5 text-[15px] leading-[1.85] text-[#666]">
+                <p className="section-desc mt-5">
                   {hourlyRatePricing.description}
                 </p>
                 <ul className="mt-7 flex flex-col gap-3.5">

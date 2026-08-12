@@ -101,7 +101,7 @@ export function CommercialServices() {
                 </p>
               </div>
 
-              <h2 className="mt-3 max-w-[640px] text-[clamp(30px,3.4vw,44px)] font-extrabold leading-[1.15] text-[#0a1f5c]">
+              <h2 className="section-title mt-3 max-w-[640px]">
                 {data.title}
               </h2>
 
@@ -112,14 +112,14 @@ export function CommercialServices() {
                 sizes="(max-width: 1024px) 100vw, 60vw"
               />
 
-              <p className="mt-8 text-[15px] leading-[1.85] text-[#666]">
+              <p className="section-desc mt-8">
                 {data.intro}
               </p>
 
-              <h3 className="mt-9 text-[clamp(24px,2.4vw,32px)] font-extrabold leading-tight text-[#0a1f5c]">
+              <h3 className="section-title mt-9">
                 {data.industriesTitle}
               </h3>
-              <p className="mt-4 text-[15px] leading-[1.85] text-[#666]">
+              <p className="section-desc mt-4">
                 {data.industriesIntro}
               </p>
 
@@ -139,10 +139,10 @@ export function CommercialServices() {
                 ))}
               </div>
 
-              <h3 className="mt-12 text-[clamp(24px,2.4vw,32px)] font-extrabold leading-tight text-[#0a1f5c]">
+              <h3 className="section-title mt-12">
                 {data.experienceTitle}
               </h3>
-              <p className="mt-4 text-[15px] leading-[1.85] text-[#666]">
+              <p className="section-desc mt-4">
                 {data.experienceText}
               </p>
 

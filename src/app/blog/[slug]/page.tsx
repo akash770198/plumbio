@@ -67,16 +67,16 @@ export default async function Page({ params }: PageProps) {
                   <span>{post.comments}</span>
                 </div>
 
-                <p className="mt-8 text-[15px] leading-[1.85] text-[#666]">{post.excerpt}</p>
+                <p className="section-desc mt-8">{post.excerpt}</p>
 
                 {blog.details.sections.map((section) => (
                   <section key={section.title} className="mt-12">
-                    <h2 className="text-[clamp(24px,2.4vw,32px)] font-extrabold leading-tight text-[#0a1f5c]">
+                    <h2 className="section-title">
                       {section.title}
                     </h2>
                     <div className="mt-5 space-y-5">
                       {section.paragraphs.map((paragraph) => (
-                        <p key={paragraph} className="text-[15px] leading-[1.85] text-[#666]">
+                        <p key={paragraph} className="section-desc">
                           {paragraph}
                         </p>
                       ))}

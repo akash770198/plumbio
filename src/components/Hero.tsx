@@ -66,7 +66,7 @@ export function Hero() {
             </h1>
           </Reveal>
           <Reveal key={`lead-${index}`} delay={100}>
-            <p className="mt-4 max-w-[420px] text-[15px] leading-relaxed text-white/95">
+            <p className="section-desc mt-4 max-w-[420px] text-white/95">
               {slide.lead}
             </p>
           </Reveal>

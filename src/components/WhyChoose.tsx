@@ -146,7 +146,7 @@ export function WhyChoose({ className }: { className?: string }) {
               </p>
             </div>
 
-            <h2 className="mt-3 text-[clamp(30px,3.6vw,48px)] font-extrabold leading-[1.15] text-white">
+            <h2 className="section-title mt-3 text-white">
               {whyChoose.titleLines.map((line, i) => (
                 <span
                   key={line}
@@ -157,7 +157,7 @@ export function WhyChoose({ className }: { className?: string }) {
               ))}
             </h2>
 
-            <p className="mt-4 max-w-[500px] text-[17px] leading-relaxed text-white/90">
+            <p className="section-desc mt-4 max-w-[500px] text-white/90">
               {whyChoose.description}
             </p>
 

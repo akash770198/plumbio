@@ -52,12 +52,12 @@ export function ProjectsGallery() {
               <span className="h-[2px] w-12 bg-[#1e6fd0]" />
             </div>
 
-            <h2 className="mt-4 text-[clamp(28px,3.4vw,44px)] font-extrabold leading-tight text-[#0a1f5c]">
+            <h2 className="section-title mt-4">
               {data.titleBefore}{" "}
               <span className="text-[#1e6fd0]">{data.titleAccent}</span>
             </h2>
 
-            <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-[1.75] text-[#666]">
+            <p className="section-desc mx-auto mt-4 max-w-2xl">
               {data.description}
             </p>
           </div>

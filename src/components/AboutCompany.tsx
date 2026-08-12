@@ -93,11 +93,11 @@ export function AboutCompany({
             <p className="section-label">
               About Our Company
             </p>
-            <h2 className="mt-3 text-[clamp(28px,3vw,42px)] font-extrabold leading-[1.2] text-[#0a1f5c]">
+            <h2 className="section-title mt-3">
               Delivering Quality Work<br />
               That Lasts
             </h2>
-            <p className="mt-4 text-[15px] leading-[1.75] text-[#555]">
+            <p className="section-desc mt-4">
               We combine expertise, advanced tools, and a commitment to excellence to deliver
               plumbing solutions you can rely on.
             </p>
@@ -140,7 +140,7 @@ export function AboutCompany({
             </p>
             <span className="h-[1.5px] w-14 bg-[#0051d4]" />
           </div>
-          <h3 className="mb-8 text-center text-[clamp(22px,2.5vw,34px)] font-extrabold text-[#0a1f5c]">
+          <h3 className="section-title mb-8 text-center">
             Plumbing Services for Every Industry
           </h3>
 

@@ -43,13 +43,11 @@ export function CtaSection() {
             {ctaSection.subtitle}
           </h3>
 
-          {/* Title */}
-          <h2 className="mb-6 text-[clamp(32px,4vw,48px)] font-extrabold leading-tight text-white">
+          <h2 className="section-title mb-6 text-white">
             {ctaSection.title}
           </h2>
 
-          {/* Description */}
-          <p className="mb-10 text-[16px] text-white md:text-[18px]">
+          <p className="section-desc mb-10 text-white">
             {ctaSection.description}
           </p>
 

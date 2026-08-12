@@ -25,11 +25,8 @@ export default function HomePage() {
         <div aria-hidden className="section-divider">
           <span className="section-divider-line" />
         </div>
-        <ServicesSection className="relative overflow-hidden bg-white pt-0 pb-0" />
-        <div aria-hidden className="section-divider">
-          <span className="section-divider-line" />
-        </div>
-        <WhyChoose className="relative w-full overflow-hidden bg-[#001746] pt-0 pb-0 font-sans lg:min-h-[640px]" />
+        <ServicesSection />
+        <WhyChoose/>
         <div aria-hidden className="section-divider">
           <span className="section-divider-line" />
         </div>
