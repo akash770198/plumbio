@@ -81,6 +81,18 @@
         {
           "label": "Testimonials",
           "href": "/testimonials"
+        },
+        {
+          "label": "Get A Quote",
+          "href": "/quote"
+        },
+        {
+          "label": "Enquiry",
+          "href": "/enquiry"
+        },
+        {
+          "label": "Sitemap",
+          "href": "/sitemap"
         }
       ]
     },
@@ -99,7 +111,7 @@
     "phoneHref": "tel:1234567890",
     "cta": {
       "label": "Schedule Service",
-      "href": "/contact"
+      "href": "/quote"
     }
   },
   "hero": {
@@ -197,6 +209,614 @@
       {
         "label": "Services",
         "href": "/services"
+      }
+    ]
+  },
+  "servicesCatalog": {
+    "label": "OUR SERVICES",
+    "titleLines": [
+      "From Leaking Faucet",
+      "to Gushing Pipes"
+    ],
+    "description": "While certain plumbing issues, such as a minor toilet clog, can be quickly addressed with do-it-yourself methods, most plumbing problems require the assistance of a professional.",
+    "homeDisplayCount": 3,
+    "items": [
+      {
+        "slug": "residential",
+        "title": "Residential",
+        "tagline": "Services",
+        "image": "/img/service-residential-hd.png",
+        "imageAlt": "Plumber repairing residential pipework",
+        "icon": "M4 13h16c0 3.5-3.6 6-8 6s-8-2.5-8-6Zm5 0V9a3 3 0 0 1 6 0v1m-3-6v2m-5 4h10m-5 9v2",
+        "href": "/services/residential",
+        "pageType": "detail",
+        "label": "residential plumbing",
+        "headline": "Trusted Plumbing for Your Home",
+        "intro": "From everyday repairs to full-home upgrades, our residential plumbers keep your kitchen, bathroom, and water systems running smoothly with clean, reliable workmanship.",
+        "badgeValue": "25+",
+        "badgeLabel": "Years Serving Homes",
+        "highlights": [
+          "Leak detection & repair",
+          "Fixture installation",
+          "Water pressure solutions",
+          "Bathroom & kitchen plumbing"
+        ],
+        "features": [
+          {
+            "title": "Home Leak Repair",
+            "description": "Fast diagnosis and lasting repairs for sinks, toilets, showers, and hidden pipe leaks."
+          },
+          {
+            "title": "Fixture Upgrades",
+            "description": "Professional install of faucets, toilets, showers, and water-efficient fixtures."
+          },
+          {
+            "title": "Pipe & Drain Care",
+            "description": "Clear clogs, restore flow, and protect your home from recurring drainage issues."
+          },
+          {
+            "title": "Preventive Maintenance",
+            "description": "Scheduled checkups that catch small problems before they become costly emergencies."
+          }
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Inspect",
+            "description": "We assess the issue and explain clear repair options before any work begins."
+          },
+          {
+            "step": "02",
+            "title": "Repair",
+            "description": "Licensed plumbers complete the job carefully with quality parts and clean work areas."
+          },
+          {
+            "step": "03",
+            "title": "Test",
+            "description": "We test the system thoroughly so you can enjoy reliable performance right away."
+          }
+        ],
+        "ctaTitle": "Need Residential Plumbing Help?",
+        "ctaText": "Book a home visit today and get honest pricing with professional results.",
+        "ctaButtonLabel": "Get A Quote",
+        "ctaButtonHref": "/quote",
+        "page": {
+          "label": "residential services",
+          "title": "Need a Plumber for Your Home?",
+          "image": "/img/service-residential-hd.png",
+          "imageAlt": "Plumber repairing residential pipework",
+          "intro": "Whether you are a homeowner dealing with a sudden leak or planning a bathroom upgrade, reliable plumbing keeps daily life running smoothly. When something stops working properly, it creates stress for the whole household. That is not ideal — but when it happens, our residential team guides you through it quickly, cleanly, and with clear communication every step of the way.",
+          "industriesTitle": "Home Areas We Support Are:",
+          "industriesIntro": "From kitchens to laundry rooms, we serve homes of every size. Our residential plumbers arrive prepared with the equipment and experience needed for lasting results.",
+          "industries": [
+            "Kitchen Plumbing",
+            "Bathroom Fixtures",
+            "Water Heaters",
+            "Laundry Connections",
+            "Toilet Repair & Install",
+            "Shower & Tub Systems",
+            "Leak Detection",
+            "Water Pressure Fixes",
+            "Drain Cleaning",
+            "Pipe Repairs",
+            "Fixture Upgrades",
+            "Preventive Maintenance"
+          ],
+          "experienceTitle": "Extensive Experience for Home Plumbing",
+          "experienceText": "Homeowners choose us for careful craftsmanship, respectful service, and code-compliant work that keeps families safe. We handle everyday repairs, fixture replacements, and larger residential upgrades such as:",
+          "experiencePoints": [
+            {
+              "title": "Leak repair",
+              "text": "We locate and fix hidden and visible leaks before they cause costly damage."
+            },
+            {
+              "title": "Fixture installation",
+              "text": "Sinks, faucets, toilets, and showers are installed cleanly and securely."
+            },
+            {
+              "title": "Drain care",
+              "text": "We clear clogs and restore healthy flow throughout your home."
+            },
+            {
+              "title": "System checkups",
+              "text": "Preventive visits catch small issues before they become emergencies."
+            }
+          ],
+          "bidCtaText": "Request a quote for your next residential plumbing project from our professional, experienced plumbing company today!",
+          "servicesHeading": "Residential Services",
+          "servicesList": [
+            "Leak Detection & Repair",
+            "Fixture Installation",
+            "Water Heater Service",
+            "Drain Cleaning",
+            "Toilet & Faucet Repair",
+            "Pipe Replacement",
+            "Bathroom Remodel Plumbing",
+            "Preventive Maintenance"
+          ]
+        }
+      },
+      {
+        "slug": "commercial",
+        "title": "Commercial",
+        "tagline": "Services",
+        "image": "/img/service-commercial-hd.png",
+        "imageAlt": "Commercial kitchen plumbing fixtures",
+        "icon": "M5 4v8a7 7 0 0 0 14 0V4h-4v8a3 3 0 0 1-6 0V4H5Zm-2 3h4m10 0h4M7 19h3m4 0h3m-8-4 2-2m4 2-2-2",
+        "href": "/services/commercial",
+        "pageType": "commercial",
+        "label": "commercial plumbing",
+        "headline": "Commercial Plumbing Solutions",
+        "intro": "Dependable plumbing support for offices, restaurants, retail, and multi-unit properties.",
+        "badgeValue": "24/7",
+        "badgeLabel": "Business Support",
+        "highlights": [],
+        "features": [],
+        "process": [],
+        "ctaTitle": "Need Commercial Plumbing?",
+        "ctaText": "Request a bid for your next commercial project.",
+        "ctaButtonLabel": "Get A Quote",
+        "ctaButtonHref": "/quote"
+      },
+      {
+        "slug": "emergency",
+        "title": "Emergency",
+        "tagline": "Services",
+        "image": "/img/service-emergency-hd.png",
+        "imageAlt": "Emergency water cleanup",
+        "icon": "M12 4v5M6 9h12M6 9v4m12-4v4m-6-4v4M3 13h6v5H3v-5Zm12 0h6v5h-6v-5Zm-6 0h6v5H9v-5Zm3 5v3m0 0c-1.2-1.4-2-2.3-2-3.1a2 2 0 1 1 4 0c0 .8-.8 1.7-2 3.1Z",
+        "href": "/services/emergency",
+        "pageType": "detail",
+        "label": "emergency plumbing",
+        "headline": "24/7 Emergency Plumbing Response",
+        "intro": "Burst pipes, flooding, and sudden backups don't wait — and neither do we. Our emergency team arrives ready to stabilize the situation and restore service fast.",
+        "badgeValue": "24/7",
+        "badgeLabel": "Rapid Response",
+        "highlights": [
+          "Burst pipe response",
+          "Flood mitigation",
+          "Sewer backup cleanup",
+          "After-hours service"
+        ],
+        "features": [
+          {
+            "title": "Immediate Dispatch",
+            "description": "Call anytime — we prioritize urgent jobs and get a plumber on the way quickly."
+          },
+          {
+            "title": "Damage Control",
+            "description": "We stop the leak, protect your property, and outline next steps clearly."
+          },
+          {
+            "title": "Same-Day Repairs",
+            "description": "Most emergency repairs are completed the same day whenever parts allow."
+          },
+          {
+            "title": "Peace of Mind",
+            "description": "Licensed, insured technicians who treat your home with care under pressure."
+          }
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Call",
+            "description": "Tell us what happened and we dispatch the nearest available emergency plumber."
+          },
+          {
+            "step": "02",
+            "title": "Stabilize",
+            "description": "We shut off water if needed, contain damage, and identify the source."
+          },
+          {
+            "step": "03",
+            "title": "Restore",
+            "description": "Permanent repairs bring your plumbing back to safe, reliable operation."
+          }
+        ],
+        "ctaTitle": "Plumbing Emergency?",
+        "ctaText": "Don't wait — call now or request urgent service online.",
+        "ctaButtonLabel": "Call Now",
+        "ctaButtonHref": "tel:1234567890",
+        "page": {
+          "label": "emergency services",
+          "title": "Need Emergency Plumbing Help Right Now?",
+          "image": "/img/service-emergency-hd.png",
+          "imageAlt": "Emergency water cleanup",
+          "intro": "Burst pipes, flooding, and sudden backups do not wait for business hours — and neither do we. When plumbing fails unexpectedly, every minute matters for protecting your property and restoring safe water service. Our emergency team responds quickly, stabilizes the situation, and explains clear next steps so you are never left guessing.",
+          "industriesTitle": "Emergency Situations We Handle Are:",
+          "industriesIntro": "From overnight floods to after-hours backups, we are equipped and trained to respond when urgent plumbing problems strike homes and businesses.",
+          "industries": [
+            "Burst Pipe Response",
+            "Flood Mitigation",
+            "Sewer Backup Cleanup",
+            "No Hot Water Emergencies",
+            "Major Leak Shutdowns",
+            "Toilet Overflows",
+            "Gas Line Concerns",
+            "Water Heater Failures",
+            "After-Hours Repairs",
+            "Weekend Emergencies",
+            "Holiday Call-Outs",
+            "Urgent Drain Blockages"
+          ],
+          "experienceTitle": "Extensive Experience for Emergency Plumbing",
+          "experienceText": "Customers rely on us under pressure for fast arrival, calm communication, and durable repairs. In emergency calls we commonly handle:",
+          "experiencePoints": [
+            {
+              "title": "Immediate dispatch",
+              "text": "We prioritize urgent jobs and get a plumber moving as quickly as possible."
+            },
+            {
+              "title": "Damage control",
+              "text": "We stop the leak, protect floors and belongings, and identify the source."
+            },
+            {
+              "title": "Same-day repairs",
+              "text": "Most emergency fixes are completed the same day whenever parts allow."
+            },
+            {
+              "title": "Clear guidance",
+              "text": "You always know what happened, what we fixed, and what to watch for next."
+            }
+          ],
+          "bidCtaText": "Do not wait during a plumbing emergency — request urgent service from our professional response team today!",
+          "servicesHeading": "Emergency Services",
+          "servicesList": [
+            "Burst Pipe Repair",
+            "Flood Response",
+            "Sewer Backup Help",
+            "Emergency Leak Repair",
+            "After-Hours Plumbing",
+            "Urgent Drain Clearing",
+            "Water Heater Emergencies",
+            "Emergency Shut-Off Support"
+          ]
+        }
+      },
+      {
+        "slug": "installation",
+        "title": "Installation",
+        "tagline": "Services",
+        "image": "/img/service-1.jpg",
+        "imageAlt": "Plumber installing a new fixture",
+        "icon": "M12 2l3 6H9l3-6Zm0 4v4m0 6v2m-4 3h8",
+        "href": "/services/installation",
+        "pageType": "detail",
+        "label": "plumbing installation",
+        "headline": "Professional Plumbing Installations",
+        "intro": "Whether you're remodeling a bathroom or upgrading fixtures, we install plumbing systems that are code-compliant, efficient, and built to last.",
+        "badgeValue": "100%",
+        "badgeLabel": "Code Compliant",
+        "highlights": [
+          "New fixture installs",
+          "Water heater installation",
+          "Repiping projects",
+          "Bathroom remodeling support"
+        ],
+        "features": [
+          {
+            "title": "Fixture Installation",
+            "description": "Precise install of sinks, toilets, showers, tubs, and specialty fixtures."
+          },
+          {
+            "title": "Water Heater Setup",
+            "description": "Tank and tankless water heater installation sized for your household needs."
+          },
+          {
+            "title": "Pipe Replacement",
+            "description": "Modern piping upgrades that improve flow, safety, and long-term reliability."
+          },
+          {
+            "title": "Remodel Support",
+            "description": "Coordinate plumbing for kitchen and bathroom renovations from start to finish."
+          }
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Plan",
+            "description": "We review your layout, recommend the right products, and confirm the scope."
+          },
+          {
+            "step": "02",
+            "title": "Install",
+            "description": "Clean, careful installation with attention to finish quality and code standards."
+          },
+          {
+            "step": "03",
+            "title": "Verify",
+            "description": "Final testing ensures every connection is secure and performing correctly."
+          }
+        ],
+        "ctaTitle": "Planning an Installation?",
+        "ctaText": "Get a clear quote and schedule your install with our expert team.",
+        "ctaButtonLabel": "Get A Quote",
+        "ctaButtonHref": "/quote",
+        "page": {
+          "label": "installation services",
+          "title": "Need Professional Plumbing Installation?",
+          "image": "/img/service-1.jpg",
+          "imageAlt": "Plumber installing a new fixture",
+          "intro": "Whether you are remodeling a bathroom, upgrading fixtures, or installing a new water heater, quality installation protects your home for years. Poor fittings and rushed work create leaks and callbacks. Our installers take a precise, code-compliant approach so every connection is secure, efficient, and finished to a high standard.",
+          "industriesTitle": "Installations We Complete Are:",
+          "industriesIntro": "From single fixture swaps to full remodel support, we install residential and light-commercial plumbing systems with the right parts and workmanship.",
+          "industries": [
+            "Sink & Faucet Install",
+            "Toilet Installation",
+            "Shower & Tub Setup",
+            "Tank Water Heaters",
+            "Tankless Water Heaters",
+            "Dishwasher Hookups",
+            "Laundry Connections",
+            "Repiping Projects",
+            "Shut-Off Valves",
+            "Garbage Disposals",
+            "Bathroom Remodel Plumbing",
+            "Kitchen Remodel Plumbing"
+          ],
+          "experienceTitle": "Extensive Experience for Plumbing Installations",
+          "experienceText": "Customers choose us for clean installs, product guidance, and careful protection of finished spaces. Our installation work commonly includes:",
+          "experiencePoints": [
+            {
+              "title": "Fixture installation",
+              "text": "Precise setup of sinks, toilets, showers, tubs, and specialty fixtures."
+            },
+            {
+              "title": "Water heater setup",
+              "text": "Tank and tankless systems sized correctly for your household demand."
+            },
+            {
+              "title": "Pipe upgrades",
+              "text": "Modern piping that improves flow, safety, and long-term reliability."
+            },
+            {
+              "title": "Remodel support",
+              "text": "Coordinated plumbing for kitchen and bathroom renovations from start to finish."
+            }
+          ],
+          "bidCtaText": "Request a quote for your next plumbing installation from our professional, experienced plumbing company today!",
+          "servicesHeading": "Installation Services",
+          "servicesList": [
+            "Fixture Installation",
+            "Water Heater Installation",
+            "Pipe Replacement",
+            "Bathroom Remodel Support",
+            "Kitchen Plumbing Install",
+            "Valve Installation",
+            "Disposal Installation",
+            "Code-Compliant Upgrades"
+          ]
+        }
+      },
+      {
+        "slug": "repairs",
+        "title": "Repairs",
+        "tagline": "Services",
+        "image": "/img/service-2.jpg",
+        "imageAlt": "Technician repairing pipes",
+        "icon": "M4 20h16M9 4l2.5 5.5L14 4m-1 8h4m-6 4h8",
+        "href": "/services/repairs",
+        "pageType": "detail",
+        "label": "plumbing repairs",
+        "headline": "Reliable Plumbing Repairs Done Right",
+        "intro": "Drips, clogs, and worn parts don't have to disrupt your day. We diagnose the root cause and deliver durable repairs that restore comfort and efficiency.",
+        "badgeValue": "Same Day",
+        "badgeLabel": "Most Repairs",
+        "highlights": [
+          "Faucet & toilet repairs",
+          "Pipe and joint fixes",
+          "Drain unclogging",
+          "Valve replacements"
+        ],
+        "features": [
+          {
+            "title": "Accurate Diagnosis",
+            "description": "We find the real problem so you don't pay for temporary fixes that fail again."
+          },
+          {
+            "title": "Quality Parts",
+            "description": "Repairs use dependable materials chosen for longevity and performance."
+          },
+          {
+            "title": "Clean Workmanship",
+            "description": "We protect your floors and finish the job with a tidy, respectful approach."
+          },
+          {
+            "title": "Transparent Pricing",
+            "description": "You'll know the cost before work starts — no surprises at the end."
+          }
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Diagnose",
+            "description": "A thorough inspection identifies the issue and the best repair path."
+          },
+          {
+            "step": "02",
+            "title": "Fix",
+            "description": "We complete the repair efficiently with minimal disruption to your home."
+          },
+          {
+            "step": "03",
+            "title": "Confirm",
+            "description": "We retest everything and walk you through what was done."
+          }
+        ],
+        "ctaTitle": "Need a Plumbing Repair?",
+        "ctaText": "Schedule service today and get your plumbing back on track.",
+        "ctaButtonLabel": "Book Repair",
+        "ctaButtonHref": "/quote",
+        "page": {
+          "label": "repair services",
+          "title": "Need Reliable Plumbing Repairs?",
+          "image": "/img/service-2.jpg",
+          "imageAlt": "Technician repairing pipes",
+          "intro": "Drips, clogs, and worn parts do not have to disrupt your day. Small issues often grow into bigger damage when ignored. Our repair team diagnoses the root cause, explains options clearly, and completes durable fixes that restore comfort and efficiency without unnecessary upselling.",
+          "industriesTitle": "Repairs We Specialize In Are:",
+          "industriesIntro": "From minor fixture issues to hidden pipe problems, we restore dependable performance across kitchens, bathrooms, and utility spaces.",
+          "industries": [
+            "Faucet Repairs",
+            "Toilet Repairs",
+            "Pipe & Joint Fixes",
+            "Drain Unclogging",
+            "Valve Replacements",
+            "Shower Cartridge Fixes",
+            "Water Heater Repairs",
+            "Sump Pump Repairs",
+            "Garbage Disposal Fixes",
+            "Running Toilet Fixes",
+            "Low Pressure Solutions",
+            "Leak Spot Repairs"
+          ],
+          "experienceTitle": "Extensive Experience for Plumbing Repairs",
+          "experienceText": "Customers appreciate accurate diagnosis, tidy work areas, and repairs that last. When you call for repair service, we focus on:",
+          "experiencePoints": [
+            {
+              "title": "Accurate diagnosis",
+              "text": "We find the real problem so you avoid temporary fixes that fail again."
+            },
+            {
+              "title": "Quality parts",
+              "text": "Repairs use dependable materials chosen for longevity and performance."
+            },
+            {
+              "title": "Clean workmanship",
+              "text": "We protect floors and finish respectfully in lived-in spaces."
+            },
+            {
+              "title": "Transparent pricing",
+              "text": "You know the cost before work starts — no surprises at the end."
+            }
+          ],
+          "bidCtaText": "Schedule your plumbing repair with our professional, experienced plumbing company today!",
+          "servicesHeading": "Repair Services",
+          "servicesList": [
+            "Faucet & Toilet Repair",
+            "Pipe Repair",
+            "Drain Clearing",
+            "Valve Replacement",
+            "Water Heater Repair",
+            "Leak Repair",
+            "Pressure Troubleshooting",
+            "Fixture Part Replacement"
+          ]
+        }
+      },
+      {
+        "slug": "support-24-7",
+        "title": "24/7 Support",
+        "tagline": "Services",
+        "image": "/img/service-3.jpg",
+        "imageAlt": "Emergency plumbing support team",
+        "icon": "M12 1.5c-5.8 0-10.5 4.7-10.5 10.5S6.2 22.5 12 22.5 22.5 17.8 22.5 12 17.8 1.5 12 1.5Zm0 6v6l4 2",
+        "href": "/services/support-24-7",
+        "pageType": "detail",
+        "label": "24/7 support",
+        "headline": "Around-the-Clock Plumbing Support",
+        "intro": "Questions, urgent issues, or after-hours help — our support team is available day and night so you're never left waiting when plumbing problems strike.",
+        "badgeValue": "365",
+        "badgeLabel": "Days Available",
+        "highlights": [
+          "Always-on phone support",
+          "Priority emergency dispatch",
+          "Guidance before a visit",
+          "Follow-up after service"
+        ],
+        "features": [
+          {
+            "title": "Live Assistance",
+            "description": "Talk to a real team member who can guide next steps and schedule help."
+          },
+          {
+            "title": "Priority Booking",
+            "description": "Urgent requests are escalated so the right technician reaches you faster."
+          },
+          {
+            "title": "Clear Communication",
+            "description": "Updates on arrival windows, repair progress, and recommended next steps."
+          },
+          {
+            "title": "Customer Care",
+            "description": "Friendly, professional support before, during, and after every service call."
+          }
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Reach Out",
+            "description": "Call or submit a request anytime — nights, weekends, and holidays included."
+          },
+          {
+            "step": "02",
+            "title": "Get Guidance",
+            "description": "We help you take safe first steps while arranging professional support."
+          },
+          {
+            "step": "03",
+            "title": "Resolve",
+            "description": "A plumber is scheduled or dispatched based on urgency and availability."
+          }
+        ],
+        "ctaTitle": "Need Help Right Now?",
+        "ctaText": "Our support line is open 24/7 for emergencies and service questions.",
+        "ctaButtonLabel": "Contact Support",
+        "ctaButtonHref": "/contact",
+        "page": {
+          "label": "24/7 support services",
+          "title": "Need Plumbing Support Any Time of Day?",
+          "image": "/img/service-3.jpg",
+          "imageAlt": "Emergency plumbing support team",
+          "intro": "Questions, urgent issues, or after-hours help should never leave you waiting. Our support team is available around the clock so you can get clear guidance, priority scheduling, and fast escalation when plumbing problems strike. From first call to follow-up, we keep communication simple and reliable.",
+          "industriesTitle": "Support Options We Provide Are:",
+          "industriesIntro": "Whether you need advice before a visit or urgent dispatch overnight, our always-on support covers homes and businesses every day of the year.",
+          "industries": [
+            "Live Phone Assistance",
+            "After-Hours Booking",
+            "Weekend Support",
+            "Holiday Call Handling",
+            "Priority Dispatch",
+            "Emergency Escalation",
+            "Service Follow-Up",
+            "Repair Status Updates",
+            "Quote Guidance",
+            "Maintenance Reminders",
+            "Same-Day Scheduling",
+            "Customer Care Check-Ins"
+          ],
+          "experienceTitle": "Extensive Experience for Customer Support",
+          "experienceText": "Customers value fast answers, friendly service, and clear next steps. Our 24/7 support process typically includes:",
+          "experiencePoints": [
+            {
+              "title": "Live assistance",
+              "text": "Talk with a real team member who can guide safe first steps and schedule help."
+            },
+            {
+              "title": "Priority booking",
+              "text": "Urgent requests are escalated so the right technician reaches you faster."
+            },
+            {
+              "title": "Clear communication",
+              "text": "You receive updates on timing, progress, and recommended next actions."
+            },
+            {
+              "title": "Ongoing care",
+              "text": "We follow up so issues are resolved and you know who to call next time."
+            }
+          ],
+          "bidCtaText": "Need help right now? Reach our professional support team any time — day or night!",
+          "servicesHeading": "Support Services",
+          "servicesList": [
+            "24/7 Phone Support",
+            "Emergency Dispatch",
+            "Priority Scheduling",
+            "After-Hours Help",
+            "Service Follow-Up",
+            "Quote Assistance",
+            "Maintenance Guidance",
+            "Customer Care"
+          ]
+        }
       }
     ]
   },
@@ -892,11 +1512,26 @@
         "location": "Chicago, Illinois",
         "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
         "skills": [
-          { "name": "Business Leadership", "percent": 98 },
-          { "name": "Project Management", "percent": 95 },
-          { "name": "Commercial Plumbing", "percent": 92 },
-          { "name": "Team Development", "percent": 96 },
-          { "name": "Customer Relations", "percent": 97 }
+          {
+            "name": "Business Leadership",
+            "percent": 98
+          },
+          {
+            "name": "Project Management",
+            "percent": 95
+          },
+          {
+            "name": "Commercial Plumbing",
+            "percent": 92
+          },
+          {
+            "name": "Team Development",
+            "percent": 96
+          },
+          {
+            "name": "Customer Relations",
+            "percent": 97
+          }
         ],
         "experience": [
           {
@@ -959,11 +1594,26 @@
         "location": "Chicago, Illinois",
         "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
         "skills": [
-          { "name": "Residential Repairs", "percent": 96 },
-          { "name": "Repiping", "percent": 93 },
-          { "name": "Fixture Installation", "percent": 91 },
-          { "name": "Water Pressure Issues", "percent": 89 },
-          { "name": "Customer Service", "percent": 94 }
+          {
+            "name": "Residential Repairs",
+            "percent": 96
+          },
+          {
+            "name": "Repiping",
+            "percent": 93
+          },
+          {
+            "name": "Fixture Installation",
+            "percent": 91
+          },
+          {
+            "name": "Water Pressure Issues",
+            "percent": 89
+          },
+          {
+            "name": "Customer Service",
+            "percent": 94
+          }
         ],
         "experience": [
           {
@@ -1026,11 +1676,26 @@
         "location": "Chicago, Illinois",
         "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
         "skills": [
-          { "name": "Leak Detection", "percent": 95 },
-          { "name": "Pipe Installation", "percent": 90 },
-          { "name": "Drain Cleaning", "percent": 92 },
-          { "name": "Water Heater Repair", "percent": 88 },
-          { "name": "Emergency Plumbing", "percent": 96 }
+          {
+            "name": "Leak Detection",
+            "percent": 95
+          },
+          {
+            "name": "Pipe Installation",
+            "percent": 90
+          },
+          {
+            "name": "Drain Cleaning",
+            "percent": 92
+          },
+          {
+            "name": "Water Heater Repair",
+            "percent": 88
+          },
+          {
+            "name": "Emergency Plumbing",
+            "percent": 96
+          }
         ],
         "experience": [
           {
@@ -1093,11 +1758,26 @@
         "location": "Chicago, Illinois",
         "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
         "skills": [
-          { "name": "Drain Cleaning", "percent": 97 },
-          { "name": "Sewer Line Inspection", "percent": 94 },
-          { "name": "Hydro-Jetting", "percent": 93 },
-          { "name": "Root Removal", "percent": 90 },
-          { "name": "Preventive Maintenance", "percent": 88 }
+          {
+            "name": "Drain Cleaning",
+            "percent": 97
+          },
+          {
+            "name": "Sewer Line Inspection",
+            "percent": 94
+          },
+          {
+            "name": "Hydro-Jetting",
+            "percent": 93
+          },
+          {
+            "name": "Root Removal",
+            "percent": 90
+          },
+          {
+            "name": "Preventive Maintenance",
+            "percent": 88
+          }
         ],
         "experience": [
           {
@@ -1160,11 +1840,26 @@
         "location": "Chicago, Illinois",
         "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
         "skills": [
-          { "name": "Water Heater Installation", "percent": 95 },
-          { "name": "Tankless Systems", "percent": 92 },
-          { "name": "Gas Line Connections", "percent": 88 },
-          { "name": "System Diagnostics", "percent": 91 },
-          { "name": "Energy Efficiency Upgrades", "percent": 89 }
+          {
+            "name": "Water Heater Installation",
+            "percent": 95
+          },
+          {
+            "name": "Tankless Systems",
+            "percent": 92
+          },
+          {
+            "name": "Gas Line Connections",
+            "percent": 88
+          },
+          {
+            "name": "System Diagnostics",
+            "percent": 91
+          },
+          {
+            "name": "Energy Efficiency Upgrades",
+            "percent": 89
+          }
         ],
         "experience": [
           {
@@ -1227,11 +1922,26 @@
         "location": "Chicago, Illinois",
         "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
         "skills": [
-          { "name": "Gas Line Installation", "percent": 96 },
-          { "name": "Leak Testing", "percent": 94 },
-          { "name": "Code Compliance", "percent": 97 },
-          { "name": "Appliance Hookups", "percent": 90 },
-          { "name": "Pressure Regulation", "percent": 92 }
+          {
+            "name": "Gas Line Installation",
+            "percent": 96
+          },
+          {
+            "name": "Leak Testing",
+            "percent": 94
+          },
+          {
+            "name": "Code Compliance",
+            "percent": 97
+          },
+          {
+            "name": "Appliance Hookups",
+            "percent": 90
+          },
+          {
+            "name": "Pressure Regulation",
+            "percent": 92
+          }
         ],
         "experience": [
           {
@@ -1294,11 +2004,26 @@
         "location": "Chicago, Illinois",
         "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
         "skills": [
-          { "name": "Commercial Installations", "percent": 94 },
-          { "name": "Backflow Prevention", "percent": 91 },
-          { "name": "Grease Trap Service", "percent": 93 },
-          { "name": "Restroom Renovations", "percent": 89 },
-          { "name": "Preventive Maintenance", "percent": 90 }
+          {
+            "name": "Commercial Installations",
+            "percent": 94
+          },
+          {
+            "name": "Backflow Prevention",
+            "percent": 91
+          },
+          {
+            "name": "Grease Trap Service",
+            "percent": 93
+          },
+          {
+            "name": "Restroom Renovations",
+            "percent": 89
+          },
+          {
+            "name": "Preventive Maintenance",
+            "percent": 90
+          }
         ],
         "experience": [
           {
@@ -1361,11 +2086,26 @@
         "location": "Chicago, Illinois",
         "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
         "skills": [
-          { "name": "Emergency Repairs", "percent": 98 },
-          { "name": "Burst Pipe Response", "percent": 96 },
-          { "name": "Flood Mitigation", "percent": 92 },
-          { "name": "Team Coordination", "percent": 94 },
-          { "name": "After-Hours Service", "percent": 97 }
+          {
+            "name": "Emergency Repairs",
+            "percent": 98
+          },
+          {
+            "name": "Burst Pipe Response",
+            "percent": 96
+          },
+          {
+            "name": "Flood Mitigation",
+            "percent": 92
+          },
+          {
+            "name": "Team Coordination",
+            "percent": 94
+          },
+          {
+            "name": "After-Hours Service",
+            "percent": 97
+          }
         ],
         "experience": [
           {
@@ -1739,27 +2479,52 @@
     "items": [
       {
         "icon": "location",
-        "text": ["123 Plumbing Street", "Plumbville, CA 90210"]
+        "text": [
+          "123 Plumbing Street",
+          "Plumbville, CA 90210"
+        ]
       },
       {
         "icon": "phone",
-        "text": ["123 456 7890"]
+        "text": [
+          "123 456 7890"
+        ]
       },
       {
         "icon": "email",
-        "text": ["info@plumbio.com"]
+        "text": [
+          "info@plumbio.com"
+        ]
       },
       {
         "icon": "clock",
-        "text": ["Mon - Sat: 8 AM - 6 PM", "Sunday: Closed"]
+        "text": [
+          "Mon - Sat: 8 AM - 6 PM",
+          "Sunday: Closed"
+        ]
       }
     ],
     "socials": [
-      { "icon": "fb", "href": "#" },
-      { "icon": "tw", "href": "#" },
-      { "icon": "ig", "href": "#" },
-      { "icon": "in", "href": "#" },
-      { "icon": "yt", "href": "#" }
+      {
+        "icon": "fb",
+        "href": "#"
+      },
+      {
+        "icon": "tw",
+        "href": "#"
+      },
+      {
+        "icon": "ig",
+        "href": "#"
+      },
+      {
+        "icon": "in",
+        "href": "#"
+      },
+      {
+        "icon": "yt",
+        "href": "#"
+      }
     ],
     "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373531531664!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1628678070381!5m2!1sen!2sau"
   },
@@ -2101,7 +2866,500 @@
     "phoneHref": "tel:1234567890",
     "button": {
       "label": "Request a Quote",
-      "href": "/contact"
+      "href": "/quote"
+    }
+  },
+  "contactBanner": {
+    "title": "Contact Us",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Contact us page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Contact Us",
+        "href": "/contact"
+      }
+    ]
+  },
+  "contactPage": {
+    "label": "contact us",
+    "backgroundTitle": "Contact",
+    "title": "Get in Touch",
+    "guarantee": "Our team proudly offers an on-time guarantee and a 100% customer satisfaction guarantee.",
+    "description": "Request a quote for any of our services, get to know how to manage your current bookings online, get information about our franchise opportunities, offer us a business partnership or give feedback.",
+    "emails": [
+      {
+        "label": "Service Requests",
+        "value": "needhelp@plumbio.com"
+      },
+      {
+        "label": "Accounts Payable & Receivable",
+        "value": "payinfo@plumbio.com"
+      },
+      {
+        "label": "Sales Manager & Consulting",
+        "value": "sales@plumbio.com"
+      }
+    ],
+    "followTitle": "Follow us",
+    "form": {
+      "title": "Send Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "E-mail",
+      "phonePlaceholder": "Phone",
+      "messagePlaceholder": "Message",
+      "buttonLabel": "Send Message",
+      "successTitle": "Message Received!",
+      "successMessage": "Thank you for contacting us. We will reach out to you shortly."
+    }
+  },
+  "quoteBanner": {
+    "title": "Get A Quote",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Get a quote page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Get A Quote",
+        "href": "/quote"
+      }
+    ]
+  },
+  "quotePage": {
+    "sidebar": {
+      "title": "Why Request a Quote?",
+      "features": [
+        {
+          "icon": "custom",
+          "title": "Customized Plumbing Solutions",
+          "description": "We understand your needs and provide the perfect solution."
+        },
+        {
+          "icon": "pricing",
+          "title": "No Hidden Charges",
+          "description": "Transparent pricing with no surprises."
+        },
+        {
+          "icon": "trusted",
+          "title": "Trusted & Experienced",
+          "description": "Professional plumbers you can rely on."
+        },
+        {
+          "icon": "flexible",
+          "title": "Flexible & Convenient",
+          "description": "Services that fit your schedule and budget."
+        }
+      ],
+      "helpTitle": "Need Help?",
+      "helpItems": [
+        {
+          "icon": "email",
+          "value": "info@plumbio.com"
+        },
+        {
+          "icon": "phone",
+          "value": "123 456 7890"
+        },
+        {
+          "icon": "clock",
+          "value": "Mon - Sat: 8:00 AM - 6:00 PM"
+        }
+      ]
+    },
+    "form": {
+      "title": "Request a Quote",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name",
+          "required": true
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Enter your email",
+          "required": true
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "Enter your phone number",
+          "required": true
+        },
+        "serviceType": {
+          "label": "Service Type",
+          "placeholder": "Select a service",
+          "required": true,
+          "options": [
+            "Residential Plumbing",
+            "Commercial Plumbing",
+            "Emergency Plumbing",
+            "Water Heater Services",
+            "Drain Cleaning",
+            "Leak Detection"
+          ]
+        },
+        "propertyType": {
+          "label": "Property Type",
+          "placeholder": "Select property type",
+          "required": true,
+          "options": [
+            "House",
+            "Apartment",
+            "Office",
+            "Retail",
+            "Industrial"
+          ]
+        },
+        "location": {
+          "label": "Location",
+          "placeholder": "Enter your location",
+          "required": true
+        },
+        "frequency": {
+          "label": "How Often Do You Need Service?",
+          "placeholder": "Select frequency",
+          "required": true,
+          "options": [
+            "One-time",
+            "Monthly",
+            "Quarterly",
+            "As needed"
+          ]
+        },
+        "preferredDate": {
+          "label": "Preferred Date",
+          "placeholder": "Select a date",
+          "required": false
+        },
+        "requirements": {
+          "label": "Additional Requirements",
+          "placeholder": "Tell us more about your plumbing needs...",
+          "required": false
+        }
+      },
+      "agreePrefix": "I agree to the",
+      "termsLabel": "Terms & Conditions",
+      "termsHref": "#",
+      "andLabel": "and",
+      "privacyLabel": "Privacy Policy",
+      "privacyHref": "#",
+      "buttonLabel": "Get My Quote",
+      "successTitle": "Quote Received!",
+      "successMessage": "Thank you for your quote request. We will contact you shortly with an estimate."
+    }
+  },
+  "enquiryBanner": {
+    "title": "Enquiry",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Enquiry page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Enquiry",
+        "href": "/enquiry"
+      }
+    ]
+  },
+  "enquiryPage": {
+    "sidebar": {
+      "title": "Why Choose Us?",
+      "features": [
+        {
+          "icon": "award",
+          "title": "Experienced Professionals",
+          "description": "Skilled and trusted plumbers dedicated to quality service."
+        },
+        {
+          "icon": "pricing",
+          "title": "Affordable Pricing",
+          "description": "Competitive rates with clear, upfront estimates."
+        },
+        {
+          "icon": "clock",
+          "title": "Fast Response",
+          "description": "Quick scheduling and 24/7 emergency support."
+        },
+        {
+          "icon": "shield",
+          "title": "Licensed & Insured",
+          "description": "Fully licensed, insured, and code-compliant work."
+        }
+      ],
+      "helpTitle": "Need Help?",
+      "helpItems": [
+        {
+          "icon": "phone",
+          "value": "123 456 7890"
+        },
+        {
+          "icon": "email",
+          "value": "info@plumbio.com"
+        }
+      ]
+    },
+    "form": {
+      "title": "Request a Quote",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name",
+          "required": true
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Enter your email",
+          "required": true
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "Enter your phone number",
+          "required": true
+        },
+        "serviceType": {
+          "label": "Service Type",
+          "placeholder": "Select a service",
+          "required": true,
+          "options": [
+            "Residential Plumbing",
+            "Commercial Plumbing",
+            "Emergency Plumbing",
+            "Water Heater Services",
+            "Drain Cleaning",
+            "Leak Detection"
+          ]
+        },
+        "propertyType": {
+          "label": "Property Type",
+          "placeholder": "Select property type",
+          "required": true,
+          "options": [
+            "House",
+            "Apartment",
+            "Office",
+            "Retail",
+            "Industrial"
+          ]
+        },
+        "location": {
+          "label": "Location",
+          "placeholder": "Enter your location",
+          "required": true
+        },
+        "frequency": {
+          "label": "How Often Do You Need Service?",
+          "placeholder": "Select frequency",
+          "required": true,
+          "options": [
+            "One-time",
+            "Monthly",
+            "Quarterly",
+            "As needed"
+          ]
+        },
+        "preferredDate": {
+          "label": "Preferred Date",
+          "placeholder": "Select a date",
+          "required": false
+        },
+        "requirements": {
+          "label": "Additional Requirements",
+          "placeholder": "Tell us more about your enquiry...",
+          "required": false
+        }
+      },
+      "agreePrefix": "I agree to the",
+      "termsLabel": "Terms & Conditions",
+      "termsHref": "#",
+      "andLabel": "and",
+      "privacyLabel": "Privacy Policy",
+      "privacyHref": "#",
+      "buttonLabel": "Get My Quote",
+      "successTitle": "Enquiry Received!",
+      "successMessage": "Thank you for your enquiry. We will contact you shortly."
+    }
+  },
+  "sitemapBanner": {
+    "title": "Sitemap",
+    "backgroundImage": "/img/banner/Page_banner.jpeg",
+    "backgroundImageAlt": "Sitemap page banner background",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Sitemap",
+        "href": "/sitemap"
+      }
+    ]
+  },
+  "sitemapPage": {
+    "columns": [
+      {
+        "icon": "home",
+        "title": "Main Pages",
+        "links": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "Industries We Serve",
+            "href": "/industries"
+          },
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/contact"
+          },
+          {
+            "label": "Get A Quote",
+            "href": "/quote"
+          }
+        ]
+      },
+      {
+        "icon": "services",
+        "title": "Our Services",
+        "links": [
+          {
+            "label": "Residential Plumbing",
+            "href": "/services/residential"
+          },
+          {
+            "label": "Commercial Plumbing",
+            "href": "/services/commercial"
+          },
+          {
+            "label": "Emergency Plumbing",
+            "href": "/services/emergency"
+          },
+          {
+            "label": "Installation",
+            "href": "/services/installation"
+          },
+          {
+            "label": "Repairs",
+            "href": "/services/repairs"
+          },
+          {
+            "label": "24/7 Support",
+            "href": "/services/support-24-7"
+          }
+        ]
+      },
+      {
+        "icon": "industries",
+        "title": "Industries",
+        "links": [
+          {
+            "label": "Commercial Buildings",
+            "href": "/industries"
+          },
+          {
+            "label": "Schools & Colleges",
+            "href": "/industries"
+          },
+          {
+            "label": "Healthcare Facilities",
+            "href": "/industries"
+          },
+          {
+            "label": "Retail Stores",
+            "href": "/industries"
+          },
+          {
+            "label": "Industrial Facilities",
+            "href": "/industries"
+          },
+          {
+            "label": "Hotels & Hospitality",
+            "href": "/industries"
+          }
+        ]
+      },
+      {
+        "icon": "company",
+        "title": "Company",
+        "links": [
+          {
+            "label": "Why Choose Us",
+            "href": "/about"
+          },
+          {
+            "label": "Our Team",
+            "href": "/team"
+          },
+          {
+            "label": "Testimonials",
+            "href": "/testimonials"
+          },
+          {
+            "label": "Projects",
+            "href": "/projects"
+          },
+          {
+            "label": "FAQs",
+            "href": "/faq"
+          },
+          {
+            "label": "Awards",
+            "href": "/awards"
+          }
+        ]
+      },
+      {
+        "icon": "legal",
+        "title": "More",
+        "links": [
+          {
+            "label": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "label": "Enquiry",
+            "href": "/enquiry"
+          },
+          {
+            "label": "Sitemap",
+            "href": "/sitemap"
+          },
+          {
+            "label": "Terms & Conditions",
+            "href": "#"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "#"
+          }
+        ]
+      }
+    ],
+    "helpBar": {
+      "title": "Need Help?",
+      "text": "Can't find what you are looking for? We are here to help!",
+      "phone": "123 456 7890",
+      "phoneHref": "tel:1234567890",
+      "hours": "Mon - Sat: 8:00 AM - 6:00 PM",
+      "email": "info@plumbio.com",
+      "emailNote": "We reply within 24 hours",
+      "buttonLabel": "Contact Us",
+      "buttonHref": "/contact"
     }
   },
   "footer": {
@@ -2111,31 +3369,76 @@
       {
         "title": "Quick Links",
         "links": [
-          { "label": "About Us", "href": "/about" },
-          { "label": "Services", "href": "/services" },
-          { "label": "Industries We Serve", "href": "/industries" },
-          { "label": "Projects", "href": "/projects" },
-          { "label": "Blog", "href": "/blog" },
-          { "label": "Contact Us", "href": "/contact" }
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "Services",
+            "href": "/services"
+          },
+          {
+            "label": "Industries We Serve",
+            "href": "/industries"
+          },
+          {
+            "label": "Projects",
+            "href": "/projects"
+          },
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/contact"
+          }
         ]
       },
       {
         "title": "Our Services",
         "links": [
-          { "label": "Residential Plumbing", "href": "#" },
-          { "label": "Commercial Plumbing", "href": "#" },
-          { "label": "Emergency Plumbing", "href": "#" },
-          { "label": "Water Cleanup", "href": "#" },
-          { "label": "Water Heater Services", "href": "#" }
+          {
+            "label": "Residential Plumbing",
+            "href": "/services/residential"
+          },
+          {
+            "label": "Commercial Plumbing",
+            "href": "/services/commercial"
+          },
+          {
+            "label": "Emergency Plumbing",
+            "href": "/services/emergency"
+          },
+          {
+            "label": "Installation",
+            "href": "/services/installation"
+          },
+          {
+            "label": "Repairs",
+            "href": "/services/repairs"
+          }
         ]
       },
       {
         "title": "Support",
         "links": [
-          { "label": "FAQs", "href": "/faq" },
-          { "label": "Service Policy", "href": "#" },
-          { "label": "Terms & Conditions", "href": "#" },
-          { "label": "Sitemap", "href": "#" }
+          {
+            "label": "FAQs",
+            "href": "/faq"
+          },
+          {
+            "label": "Get A Quote",
+            "href": "/quote"
+          },
+          {
+            "label": "Enquiry",
+            "href": "/enquiry"
+          },
+          {
+            "label": "Sitemap",
+            "href": "/sitemap"
+          }
         ]
       }
     ],

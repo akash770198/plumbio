@@ -1,14 +1,22 @@
+import { ContactPage } from "@/components/ContactPage";
 import { Header } from "@/components/Header";
+import { PageBanner } from "@/components/PageBanner";
+import { site } from "@/data";
 
 export default function Page() {
+  const { contactBanner } = site;
+
   return (
     <>
       <Header />
-      <main className="bg-white">
-        <div className="px-6 py-28 lg:px-12">
-          <h1 className="section-title">Contact</h1>
-          <p className="section-desc mt-4">This page is coming next.</p>
-        </div>
+      <main className="block">
+        <PageBanner
+          title={contactBanner.title}
+          breadcrumbs={contactBanner.breadcrumbs}
+          backgroundImage={contactBanner.backgroundImage}
+          backgroundImageAlt={contactBanner.backgroundImageAlt}
+        />
+        <ContactPage />
       </main>
     </>
   );
