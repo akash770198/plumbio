@@ -125,7 +125,7 @@
     },
     "slides": [
       {
-        "image": "/img/hero-wrench.jpg",
+        "image": "/img/banner/Hero_Plumbing4.png",
         "imageAlt": "Gloved hand holding a red pipe wrench and brass fittings",
         "titleLines": [
           "Exceptional, Punctual &",
@@ -134,7 +134,7 @@
         "lead": "We provide reliable plumbing solutions for homes and businesses — on time, every time."
       },
       {
-        "image": "/img/banner/Plumbing_Hero4.jpg",
+        "image": "/img/banner/Plumbing_Hero2.jpg",
         "imageAlt": "Professional plumbing service hero background",
         "titleLines": [
           "Trusted Experts for",
@@ -143,7 +143,7 @@
         "lead": "From routine maintenance to complex installations, our licensed plumbers deliver clean, lasting results."
       },
       {
-        "image": "/img/banner/Plumbing_Hero2.jpg",
+        "image": "/img/banner/Plumbing_Hero4.jpg",
         "imageAlt": "Licensed plumber on a residential service call",
         "titleLines": [
           "24/7 Emergency",
@@ -891,7 +891,9 @@
       "title": "Need a Plumbing Partner for Your Industry?",
       "text": "We're here to help you maintain reliable, safe, and efficient plumbing systems with our expert services.",
       "buttonLabel": "Get a Free Quote",
-      "buttonHref": "/contact"
+      "buttonHref": "/contact",
+      "titleBefore": "Need a Plumbing Partner for",
+      "titleAccent": "Your Industry?"
     }
   },
   "projectsBanner": {
@@ -1409,7 +1411,9 @@
         "thumbnail": "/img/testimonial-4.jpeg",
         "alt": "Customer testimonial video 4"
       }
-    ]
+    ],
+    "titleBefore": "Satisfied Clients Videos",
+    "titleAccent": "About Our Work"
   },
   "testimonials": {
     "label": "TESTIMONIALS",
@@ -2150,7 +2154,9 @@
           }
         ]
       }
-    ]
+    ],
+    "titleBefore": "Expert Plumber You",
+    "titleAccent": "Can Trust"
   },
   "awardsBanner": {
     "title": "Awards",
@@ -2293,7 +2299,9 @@
         "label": "Contact Us",
         "href": "/contact"
       }
-    }
+    },
+    "titleBefore": "Frequently Asked",
+    "titleAccent": "Questions"
   },
   "blog": {
     "label": "OUR BLOG",
@@ -2458,8 +2466,12 @@
           "title": "How Can I Fix a Loose Outlet?",
           "href": "/blog/fix-loose-outlet"
         }
-      ]
-    }
+      ],
+      "headingBefore": "Blog",
+      "headingAccent": "details"
+    },
+    "titleBefore": "Latest Plumbing Tips &",
+    "titleAccent": "Blog"
   },
   "ctaSection": {
     "subtitle": "Need Help? We're Just a Call Away",
@@ -2526,7 +2538,9 @@
         "href": "#"
       }
     ],
-    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373531531664!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1628678070381!5m2!1sen!2sau"
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373531531664!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1628678070381!5m2!1sen!2sau",
+    "titleBefore": "Get in",
+    "titleAccent": "Touch"
   },
   "pricingBanner": {
     "title": "Our Prices",
@@ -2913,8 +2927,12 @@
       "messagePlaceholder": "Message",
       "buttonLabel": "Send Message",
       "successTitle": "Message Received!",
-      "successMessage": "Thank you for contacting us. We will reach out to you shortly."
-    }
+      "successMessage": "Thank you for contacting us. We will reach out to you shortly.",
+      "titleBefore": "Send",
+      "titleAccent": "Message"
+    },
+    "titleBefore": "Get in",
+    "titleAccent": "Touch"
   },
   "quoteBanner": {
     "title": "Get A Quote",
@@ -2970,7 +2988,9 @@
           "icon": "clock",
           "value": "Mon - Sat: 8:00 AM - 6:00 PM"
         }
-      ]
+      ],
+      "titleBefore": "Why Request a",
+      "titleAccent": "Quote?"
     },
     "form": {
       "title": "Request a Quote",
@@ -3050,7 +3070,9 @@
       "privacyHref": "#",
       "buttonLabel": "Get My Quote",
       "successTitle": "Quote Received!",
-      "successMessage": "Thank you for your quote request. We will contact you shortly with an estimate."
+      "successMessage": "Thank you for your quote request. We will contact you shortly with an estimate.",
+      "titleBefore": "Request a",
+      "titleAccent": "Quote"
     }
   },
   "enquiryBanner": {
@@ -3103,7 +3125,9 @@
           "icon": "email",
           "value": "info@plumbio.com"
         }
-      ]
+      ],
+      "titleBefore": "Why Choose",
+      "titleAccent": "Us?"
     },
     "form": {
       "title": "Request a Quote",
@@ -3183,7 +3207,9 @@
       "privacyHref": "#",
       "buttonLabel": "Get My Quote",
       "successTitle": "Enquiry Received!",
-      "successMessage": "Thank you for your enquiry. We will contact you shortly."
+      "successMessage": "Thank you for your enquiry. We will contact you shortly.",
+      "titleBefore": "Request a",
+      "titleAccent": "Quote"
     }
   },
   "sitemapBanner": {

@@ -12,6 +12,7 @@ import { AwardsSection } from "@/components/AwardsSection";
 import { FaqSection } from "@/components/FaqSection";
 import { BlogSection } from "@/components/BlogSection";
 import { CtaSection } from "@/components/CtaSection";
+import { ContactSection } from "@/components/ContactSection";
 import { site } from "@/data";
 
 export default function HomePage() {
@@ -47,6 +48,7 @@ export default function HomePage() {
         </div>
         <BlogSection/>
         <CtaSection/>
+        <ContactSection />
       </main>
     </>
   );

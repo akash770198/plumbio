@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 interface Review {
@@ -32,6 +33,8 @@ interface ReviewsSectionProps {
   videoTestimonials: {
     label: string;
     title: string;
+    titleBefore: string;
+    titleAccent: string;
     description: string;
     cta: {
       label: string;
@@ -166,9 +169,11 @@ export function ReviewsSection({
                 <p className="section-label mb-4 text-[#1e6fd0]">
                   {videoTestimonials.label}
                 </p>
-                <h2 className="section-title mb-6">
-                  {videoTestimonials.title}
-                </h2>
+                <AccentTitle
+                  className="mb-6"
+                  before={videoTestimonials.titleBefore}
+                  accent={videoTestimonials.titleAccent}
+                />
                 <p className="section-desc mb-8">
                   {videoTestimonials.description}
                 </p>

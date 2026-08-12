@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 const GALLERY_IMAGES = [
@@ -93,10 +94,12 @@ export function AboutCompany({
             <p className="section-label">
               About Our Company
             </p>
-            <h2 className="section-title mt-3">
-              Delivering Quality Work<br />
-              That Lasts
-            </h2>
+            <AccentTitle
+              className="mt-3"
+              before="Delivering Quality Work"
+              accent="That Lasts"
+              breakBeforeAccent
+            />
             <p className="section-desc mt-4">
               We combine expertise, advanced tools, and a commitment to excellence to deliver
               plumbing solutions you can rely on.
@@ -140,9 +143,12 @@ export function AboutCompany({
             </p>
             <span className="h-[1.5px] w-14 bg-[#0051d4]" />
           </div>
-          <h3 className="section-title mb-8 text-center">
-            Plumbing Services for Every Industry
-          </h3>
+          <AccentTitle
+            as="h3"
+            className="mb-8 text-center"
+            before="Plumbing Services for"
+            accent="Every Industry"
+          />
 
           {/* 6-Col Solutions */}
           <div className="grid grid-cols-2 divide-x divide-[#dde3f0] overflow-hidden rounded-xl border border-[#dde3f0] md:grid-cols-3 lg:grid-cols-6">

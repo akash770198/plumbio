@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { site } from "@/data";
+import { AccentTitleLines } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 export function Testimonials() {
@@ -81,11 +82,7 @@ export function Testimonials() {
             </p>
           </div>
 
-          <h2 className="section-title mt-3">
-            {testimonials.titleLines[0]}
-            <br />
-            {testimonials.titleLines[1]}
-          </h2>
+          <AccentTitleLines className="mt-3" lines={testimonials.titleLines} />
 
           <div className="mt-4 flex gap-0.5">
             {Array.from({ length: t.rating }).map((_, i) => (

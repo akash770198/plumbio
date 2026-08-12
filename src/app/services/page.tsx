@@ -1,3 +1,4 @@
+import { CtaSection } from "@/components/CtaSection";
 import { Header } from "@/components/Header";
 import { PageBanner } from "@/components/PageBanner";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -29,6 +30,8 @@ export default function Page() {
           className="relative overflow-hidden bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]"
           services={services}
         />
+        <CtaSection />
+        <div aria-hidden className="h-[3.25rem] bg-white lg:h-[3.75rem]" />
       </main>
     </>
   );

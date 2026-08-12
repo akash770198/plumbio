@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { site } from "@/data";
+import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 const ICONS: Record<string, ReactNode> = {
@@ -103,18 +104,18 @@ export function IndustriesWeServe() {
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#e8f3ff] text-[#1e6fd0] transition duration-300 group-hover:bg-[#d9ecff] group-hover:text-[#0051d4]">
                     <IndustryIcon name={item.icon} />
                   </span>
-                  <h3 className="pt-2 text-[18px] font-extrabold leading-snug text-[#0a1f5c] transition duration-300 group-hover:text-[#0051d4]">
+                  <h3 className="section-title pt-2 text-[clamp(18px,1.5vw,20px)] transition duration-300 group-hover:text-[#0051d4]">
                     {item.title}
                   </h3>
                 </div>
 
-                <p className="mt-4 flex-1 text-[14px] leading-[1.7] text-[#555]">
+                <p className="section-desc mt-4 flex-1">
                   {item.description}
                 </p>
 
                 <Link
                   href={item.href}
-                  className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#1e6fd0] transition hover:gap-2.5 hover:text-[#0a1f5c]"
+                  className="section-desc mt-5 inline-flex items-center gap-1.5 font-bold text-[#1e6fd0] transition hover:gap-2.5 hover:text-[#0a1f5c]"
                 >
                   {data.learnMoreLabel}
                   <svg
@@ -141,9 +142,11 @@ export function IndustriesWeServe() {
               </div>
 
               <div className="min-w-0 flex-1 text-center lg:text-left">
-                <h3 className="section-title">
-                  {data.cta.title}
-                </h3>
+                <AccentTitle
+                  as="h3"
+                  before={data.cta.titleBefore}
+                  accent={data.cta.titleAccent}
+                />
                 <p className="section-desc mt-2">
                   {data.cta.text}
                 </p>
@@ -151,7 +154,7 @@ export function IndustriesWeServe() {
 
               <Link
                 href={data.cta.buttonHref}
-                className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#0a3d9c] px-6 py-3.5 text-[14px] font-bold text-white transition hover:bg-[#083285]"
+                className="section-desc inline-flex shrink-0 items-center gap-2 rounded-md bg-[#0a3d9c] px-6 py-3.5 font-bold text-white transition hover:bg-[#083285]"
               >
                 {data.cta.buttonLabel}
                 <svg

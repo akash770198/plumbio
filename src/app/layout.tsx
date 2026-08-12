@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Figtree, Mrs_Saint_Delafield } from "next/font/google";
 import { site } from "@/data";
 import { SmoothScroll } from "@/components/SmoothScroll";
-import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 // Allow side-effect import of CSS in this Next.js layout file for bundling.
 import "./globals.css";
@@ -31,7 +30,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SmoothScroll />
         <div className="w-full bg-white">
           {children}
-          <ContactSection />
           <Footer />
         </div>
       </body>

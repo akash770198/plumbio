@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { site } from "@/data";
+import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 type FaqItem = (typeof site.faq.items)[number];
@@ -130,7 +131,11 @@ function FaqCard({
           <FaqIcon name={item.icon} className="h-5 w-5" />
         </span>
 
-        <span className="min-w-0 flex-1 text-[15px] font-bold leading-snug sm:text-[16px]">
+        <span
+          className={`min-w-0 flex-1 font-bold leading-snug ${
+            primaryOpen ? "section-desc text-white" : "section-desc text-[#0a1f5c]"
+          }`}
+        >
           {item.question}
         </span>
 
@@ -150,7 +155,7 @@ function FaqCard({
       >
         <div className="overflow-hidden">
           <div className="flex items-start gap-4 bg-[#eef6ff] px-5 py-5 sm:px-6 sm:py-6">
-            <p className="min-w-0 flex-1 text-[14px] leading-[1.75] text-[#666] sm:text-[15px]">
+            <p className="section-desc min-w-0 flex-1">
               {item.answer}
             </p>
             <div className="hidden shrink-0 text-[#1e6fd0] opacity-90 sm:block">
@@ -224,9 +229,11 @@ export function FaqSection({ className }: { className?: string }) {
               <p className="section-label">{faq.label}</p>
               <span className="h-[2px] w-10 bg-[#1e6fd0]" />
             </div>
-            <h2 className="section-title mt-4">
-              {faq.title}
-            </h2>
+            <AccentTitle
+              className="mt-4"
+              before={faq.titleBefore}
+              accent={faq.titleAccent}
+            />
             <p className="section-desc mx-auto mt-4 max-w-2xl">
               {faq.description}
             </p>
@@ -257,10 +264,10 @@ export function FaqSection({ className }: { className?: string }) {
                   </svg>
                 </div>
                 <div className="text-white">
-                  <p className="text-[13px] font-medium text-white/85">
+                  <p className="section-desc text-white/85">
                     {faq.cta.helpEyebrow}
                   </p>
-                  <p className="text-[clamp(20px,2vw,26px)] font-extrabold leading-tight">
+                  <p className="section-title mt-1 text-[clamp(22px,2vw,28px)] text-white">
                     {faq.cta.helpTitle}
                   </p>
                 </div>
@@ -270,15 +277,15 @@ export function FaqSection({ className }: { className?: string }) {
 
               <div className="flex flex-1 items-center gap-4 lg:px-8">
                 <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-[#0a3d9c]">
-                  <span className="text-[11px] font-extrabold leading-none">24/7</span>
+                  <span className="text-[11px] font-bold leading-none">24/7</span>
                 </div>
                 <div className="text-white">
-                  <p className="text-[13px] font-medium text-white/85">
+                  <p className="section-desc text-white/85">
                     {faq.cta.callLabel}
                   </p>
                   <a
                     href={faq.cta.phoneHref}
-                    className="text-[clamp(20px,2vw,26px)] font-extrabold leading-tight transition hover:opacity-90"
+                    className="section-title mt-1 block text-[clamp(22px,2vw,28px)] text-white transition hover:opacity-90"
                   >
                     {faq.cta.phone}
                   </a>
@@ -290,7 +297,7 @@ export function FaqSection({ className }: { className?: string }) {
               <div className="flex shrink-0 lg:pl-8">
                 <Link
                   href={faq.cta.button.href}
-                  className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3.5 text-[15px] font-bold text-[#0a3d9c] transition hover:bg-[#eef5ff]"
+                  className="section-desc inline-flex items-center gap-2 rounded-md bg-white px-6 py-3.5 font-bold text-[#0a3d9c] transition hover:bg-[#eef5ff]"
                 >
                   {faq.cta.button.label}
                   <svg

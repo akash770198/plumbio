@@ -51,11 +51,7 @@ export function Hero() {
       )}
 
       <div className="relative z-10 flex w-full items-center">
-        <div
-          className={`w-full px-[var(--page-gutter)] md:pr-12 ${
-            index === 0 ? "md:pl-[36%]" : "md:pl-[var(--page-gutter)]"
-          }`}
-        >
+        <div className="w-full px-[var(--page-gutter)] md:pr-12">
           <Reveal key={`title-${index}`}>
             <h1 className="text-[clamp(34px,4.5vw,52px)] font-bold leading-[1.08] tracking-[-0.015em] text-white">
               {slide.titleLines.map((line) => (

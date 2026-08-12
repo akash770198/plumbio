@@ -47,7 +47,7 @@ export function AwardsSection({ className }: { className?: string }) {
             {/* Title */}
             <h2 className="section-title mt-5">
               {awards.title.normal}{" "}
-              <span className="text-[#0051d4]">{awards.title.highlight}</span>
+              <span className="text-[#1e6fd0]">{awards.title.highlight}</span>
             </h2>
 
             <p className="section-desc mx-auto mt-5 max-w-2xl">

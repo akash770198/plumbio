@@ -119,22 +119,22 @@ function CouponCard({
                 backgroundRepeat: "repeat-y",
               }}
             />
-            <span className="relative z-[1] text-[clamp(28px,2.6vw,34px)] font-extrabold leading-none transition-transform duration-300 group-hover:scale-105">
+            <span className="section-title relative z-[1] text-[clamp(28px,2.6vw,34px)] leading-none text-white transition-transform duration-300 group-hover:scale-105">
               {coupon.amount}
             </span>
-            <span className="relative z-[1] mt-1 text-[13px] font-bold tracking-wide">
+            <span className="section-desc relative z-[1] mt-1 font-bold tracking-wide text-white">
               {coupon.amountSuffix}
             </span>
           </div>
 
           <div className="flex min-w-0 flex-1 flex-col items-center justify-center px-5 py-6 text-center sm:px-7">
-            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#1e6fd0]">
+            <p className="section-label text-[#1e6fd0]">
               {coupon.tag}
             </p>
-            <h3 className="mt-2 text-[20px] font-extrabold text-[#111] transition-colors duration-300 group-hover:text-[#0a3d9c] sm:text-[22px]">
+            <h3 className="section-title mt-2 text-[clamp(18px,1.6vw,22px)] transition-colors duration-300 group-hover:text-[#0a3d9c]">
               {coupon.title}
             </h3>
-            <p className="mt-2 max-w-[280px] text-[14px] leading-[1.65] text-[#666] sm:text-[15px]">
+            <p className="section-desc mt-2 max-w-[280px]">
               {coupon.description}
             </p>
           </div>
@@ -142,13 +142,13 @@ function CouponCard({
 
         {/* Full-width white footer */}
         <div className="flex items-center justify-between gap-3 border-t border-[#eceff3] bg-white px-5 py-3.5 sm:px-6">
-          <p className="text-[13px] text-[#666] sm:text-[14px]">
+          <p className="section-desc">
             * Expires: {coupon.expires}
           </p>
           <button
             type="button"
             onClick={() => window.print()}
-            className="inline-flex shrink-0 items-center gap-1.5 text-[13px] font-semibold text-[#1e6fd0] transition-all duration-300 hover:gap-2.5 hover:text-[#0a3d9c] sm:text-[14px]"
+            className="section-desc inline-flex shrink-0 items-center gap-1.5 font-bold text-[#1e6fd0] transition-all duration-300 hover:gap-2.5 hover:text-[#0a3d9c]"
           >
             {printLabel}
             <svg
@@ -309,29 +309,29 @@ export function PricingSection() {
                       <PlanIcon name={plan.icon} />
                     </div>
 
-                    <h3 className="mt-5 text-center text-[clamp(20px,1.8vw,24px)] font-extrabold text-[#0a1f5c] transition-colors duration-300 group-hover:text-[#0a3d9c]">
+                    <h3 className="section-title mt-5 text-center text-[clamp(20px,1.8vw,24px)] transition-colors duration-300 group-hover:text-[#0a3d9c]">
                       {plan.name}
                     </h3>
 
                     <ul className="mt-6 flex flex-1 flex-col gap-3.5">
                       {plan.features.map((feature) => (
-                        <li key={feature} className="group/item flex items-start gap-3 text-[15px] text-[#555]">
+                        <li key={feature} className="group/item flex items-start gap-3">
                           <CheckIcon />
-                          <span>{feature}</span>
+                          <span className="section-desc">{feature}</span>
                         </li>
                       ))}
                     </ul>
 
                     <div className="mt-7 border-t border-[#eceff3] pt-6 text-center">
-                      <p className="text-[clamp(28px,3vw,34px)] font-extrabold leading-none text-[#1e6fd0] transition-transform duration-300 group-hover:scale-[1.03]">
+                      <p className="section-title text-[clamp(28px,3vw,34px)] leading-none text-[#1e6fd0] transition-transform duration-300 group-hover:scale-[1.03]">
                         {plan.price}
-                        <span className="ml-1 text-[15px] font-medium text-[#888]">
+                        <span className="section-desc ml-1 font-medium text-[#888]">
                           {plan.period}
                         </span>
                       </p>
                       <Link
                         href={plan.cta.href}
-                        className="mt-5 inline-flex w-full items-center justify-center rounded-md bg-[#0a3d9c] px-5 py-3.5 text-[15px] font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#083285] hover:shadow-lg"
+                        className="section-desc mt-5 inline-flex w-full items-center justify-center rounded-md bg-[#0a3d9c] px-5 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#083285] hover:shadow-lg"
                       >
                         {plan.cta.label}
                       </Link>
@@ -452,9 +452,9 @@ export function PricingSection() {
                 </p>
                 <ul className="mt-7 flex flex-col gap-3.5">
                   {hourlyRatePricing.highlights.map((item) => (
-                    <li key={item} className="group/item flex items-start gap-3 text-[15px] font-medium text-[#0a1f5c] transition-transform duration-300 hover:translate-x-1">
+                    <li key={item} className="group/item flex items-start gap-3 transition-transform duration-300 hover:translate-x-1">
                       <CheckIcon />
-                      <span>{item}</span>
+                      <span className="section-desc font-bold text-brand">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -475,17 +475,17 @@ export function PricingSection() {
                           i < activeRates.length - 1 ? "border-b border-[#edf0f5]" : ""
                         }`}
                       >
-                        <span className="text-[15px] text-[#666] transition-colors duration-300 group-hover:text-[#0a3d9c]">
+                        <span className="section-desc transition-colors duration-300 group-hover:text-[#0a3d9c]">
                           {row.service}
                         </span>
-                        <span className="shrink-0 text-[15px] font-bold text-[#1e6fd0] transition-transform duration-300 group-hover:scale-105">
+                        <span className="section-desc shrink-0 font-bold text-[#1e6fd0] transition-transform duration-300 group-hover:scale-105">
                           {row.rate}
                         </span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <p className="mt-3 text-right text-[13px] italic text-[#888]">
+                <p className="section-desc mt-3 text-right italic text-[#888]">
                   {hourlyRatePricing.disclaimer}
                 </p>
               </div>
@@ -503,17 +503,17 @@ export function PricingSection() {
                 </div>
 
                 <div className="min-w-0 flex-1 text-center text-white lg:text-left">
-                  <p className="text-[14px] font-medium text-white/90">{pricingCta.eyebrow}</p>
-                  <p className="mt-0.5 text-[clamp(22px,2.2vw,28px)] font-extrabold leading-tight">
+                  <p className="section-desc text-white/90">{pricingCta.eyebrow}</p>
+                  <p className="section-title mt-0.5 text-[clamp(22px,2.2vw,28px)] text-white">
                     {pricingCta.title}
                   </p>
                 </div>
 
                 <div className="text-center text-white lg:text-left">
-                  <p className="text-[14px] font-medium text-white/90">{pricingCta.callLabel}</p>
+                  <p className="section-desc text-white/90">{pricingCta.callLabel}</p>
                   <a
                     href={pricingCta.phoneHref}
-                    className="mt-0.5 block text-[clamp(22px,2.2vw,28px)] font-extrabold leading-tight transition-all duration-300 hover:scale-[1.03] hover:opacity-95"
+                    className="section-title mt-0.5 block text-[clamp(22px,2.2vw,28px)] text-white transition-all duration-300 hover:scale-[1.03] hover:opacity-95"
                   >
                     {pricingCta.phone}
                   </a>
@@ -521,7 +521,7 @@ export function PricingSection() {
 
                 <Link
                   href={pricingCta.button.href}
-                  className="inline-flex shrink-0 items-center gap-2 rounded-md bg-white px-6 py-3.5 text-[15px] font-bold text-[#1e6fd0] transition-all duration-300 hover:-translate-y-0.5 hover:gap-3 hover:bg-[#eef5ff] hover:shadow-md"
+                  className="section-desc inline-flex shrink-0 items-center gap-2 rounded-md bg-white px-6 py-3.5 font-bold text-[#1e6fd0] transition-all duration-300 hover:-translate-y-0.5 hover:gap-3 hover:bg-[#eef5ff] hover:shadow-md"
                 >
                   {pricingCta.button.label}
                   <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden>

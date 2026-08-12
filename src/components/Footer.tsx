@@ -5,9 +5,9 @@ export function Footer() {
   const { footer } = site;
 
   return (
-    <footer className="bg-[#003c96] pt-16 text-white md:pt-24">
+    <footer className="bg-[#003c96] pt-12 text-white md:pt-16">
       <div className="shell">
-        <div className="grid gap-10 pb-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-8">
+        <div className="grid gap-8 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-8">
           
           {/* Column 1: About */}
           <div className="lg:pr-4">
@@ -29,7 +29,7 @@ export function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="mb-6 text-[18px] font-bold">
+            <h4 className="mb-6 text-[18px] font-bold text-white">
               {footer.columns[0].title}
             </h4>
             <ul className="flex flex-col gap-4">
@@ -48,7 +48,7 @@ export function Footer() {
 
           {/* Column 3: Services */}
           <div>
-            <h4 className="mb-6 text-[18px] font-bold">
+            <h4 className="mb-6 text-[18px] font-bold text-white">
               {footer.columns[1].title}
             </h4>
             <ul className="flex flex-col gap-4">
@@ -67,7 +67,7 @@ export function Footer() {
 
           {/* Column 4: Support */}
           <div>
-            <h4 className="mb-6 text-[18px] font-bold">
+            <h4 className="mb-6 text-[18px] font-bold text-white">
               {footer.columns[2].title}
             </h4>
             <ul className="flex flex-col gap-4">
@@ -86,7 +86,7 @@ export function Footer() {
 
           {/* Column 5: Newsletter */}
           <div>
-            <h4 className="mb-6 text-[18px] font-bold">
+            <h4 className="mb-6 text-[18px] font-bold text-white">
               {footer.newsletter.title}
             </h4>
             <p className="mb-6 text-[15px] leading-relaxed text-[#c2d6f9]">
@@ -115,8 +115,8 @@ export function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="bg-[#002b6b] py-6 text-center">
-        <p className="text-[15px] font-medium text-[#c2d6f9]">
+      <div className="bg-[#002b6b] py-4 text-center">
+        <p className="text-[14px] font-medium text-[#c2d6f9]">
           {footer.copyright}
         </p>
       </div>

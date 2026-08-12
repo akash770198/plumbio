@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { site } from "@/data";
+import { AccentTitleLines } from "./AccentTitle";
 import { BadgeIcon, Icon, VerifiedIcon } from "./Icon";
 import { Reveal } from "./Reveal";
 
@@ -19,11 +20,7 @@ export function About({ className }: { className?: string }) {
             </p>
 
             {/* heading */}
-            <h2 className="section-title mt-3">
-              {about.titleLines.map((line) => (
-                <span key={line} className="block">{line}</span>
-              ))}
-            </h2>
+            <AccentTitleLines className="mt-3" lines={about.titleLines} />
 
             {/* body */}
             <p className="section-desc mt-4">

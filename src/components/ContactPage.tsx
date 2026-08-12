@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { site } from "@/data";
+import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 const SOCIAL_ICONS = {
@@ -61,7 +62,11 @@ export function ContactPage() {
                 <p className="section-label">{data.label}</p>
               </div>
 
-              <h2 className="section-title mt-4">{data.title}</h2>
+              <AccentTitle
+                className="mt-4"
+                before={data.titleBefore}
+                accent={data.titleAccent}
+              />
 
               <p className="mt-5 text-[15px] font-bold leading-[1.65] text-[#0a1f5c]">
                 {data.guarantee}
@@ -138,7 +143,11 @@ export function ContactPage() {
                 </div>
               ) : (
                 <>
-                  <h3 className="section-title">{data.form.title}</h3>
+                  <AccentTitle
+                    as="h3"
+                    before={data.form.titleBefore}
+                    accent={data.form.titleAccent}
+                  />
 
                   <form className="mt-7 space-y-4" onSubmit={handleSubmit}>
                     <input

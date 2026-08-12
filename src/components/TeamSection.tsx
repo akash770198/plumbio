@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data";
+import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 type TeamSectionProps = {
@@ -50,9 +51,11 @@ export function TeamSection({
               <p className="section-label">{team.label}</p>
               <span className="h-[2px] w-10 bg-[#1e6fd0]" />
             </div>
-            <h2 className="section-title mt-4">
-              {team.title}
-            </h2>
+            <AccentTitle
+              className="mt-4"
+              before={team.titleBefore}
+              accent={team.titleAccent}
+            />
           </div>
         </Reveal>
 

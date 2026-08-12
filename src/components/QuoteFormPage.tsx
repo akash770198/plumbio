@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { site } from "@/data";
+import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 type QuoteLikePage = typeof site.quotePage;
@@ -133,9 +134,11 @@ export function QuoteFormPage({ data }: { data: QuoteLikePage }) {
               <aside className="h-full bg-[#eef4fb] p-6 sm:p-8 lg:p-9">
                 <div className="flex items-center gap-3">
                   <span className="h-[2px] w-8 bg-[#1e6fd0]" />
-                  <h2 className="section-title text-[clamp(22px,2.2vw,28px)]">
-                    {sidebar.title}
-                  </h2>
+                  <AccentTitle
+                    className="text-[clamp(22px,2.2vw,28px)]"
+                    before={sidebar.titleBefore}
+                    accent={sidebar.titleAccent}
+                  />
                 </div>
 
                 <ul className="mt-8 space-y-6">
@@ -199,9 +202,11 @@ export function QuoteFormPage({ data }: { data: QuoteLikePage }) {
                   <>
                     <div className="flex items-center gap-3">
                       <span className="h-[2px] w-8 bg-[#1e6fd0]" />
-                      <h2 className="section-title text-[clamp(22px,2.2vw,28px)]">
-                        {form.title}
-                      </h2>
+                      <AccentTitle
+                        className="text-[clamp(22px,2.2vw,28px)]"
+                        before={form.titleBefore}
+                        accent={form.titleAccent}
+                      />
                     </div>
 
                     <form className="mt-8" onSubmit={handleSubmit}>

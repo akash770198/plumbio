@@ -1,4 +1,5 @@
 import { site } from "@/data";
+import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 const ICONS = {
@@ -73,9 +74,11 @@ export function ContactSection() {
             <h4 className="mb-2 section-label">
               {contactInfo.label}
             </h4>
-            <h2 className="section-title mb-10">
-              {contactInfo.title}
-            </h2>
+            <AccentTitle
+              className="mb-10"
+              before={contactInfo.titleBefore}
+              accent={contactInfo.titleAccent}
+            />
 
             <div className="mb-10 flex flex-col gap-6">
               {contactInfo.items.map((item, index) => {

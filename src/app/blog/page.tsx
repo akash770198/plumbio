@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AccentTitle } from "@/components/AccentTitle";
 import { Header } from "@/components/Header";
 import { BlogSection } from "@/components/BlogSection";
 import { PageBanner } from "@/components/PageBanner";
@@ -58,7 +59,7 @@ function MetaLine({
   comments: string;
 }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] font-medium text-[#6b7a9a]">
+    <div className="section-desc flex flex-wrap items-center gap-x-4 gap-y-2 font-medium text-[#6b7a9a]">
       {date ? (
         <span className="inline-flex items-center gap-2">
           <CalendarIcon />
@@ -66,7 +67,7 @@ function MetaLine({
         </span>
       ) : null}
       <span>
-        by <span className="font-semibold text-[#0051d4]">{author}</span>
+        by <span className="font-bold text-[#0051d4]">{author}</span>
       </span>
       <span>/</span>
       <span>{comments}</span>
@@ -81,9 +82,11 @@ function BlogDetails() {
     <section className="bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]">
       <div className="shell">
         <Reveal>
-          <h2 className="section-title text-center">
-            {details.heading}
-          </h2>
+          <AccentTitle
+            className="text-center"
+            before={details.headingBefore}
+            accent={details.headingAccent}
+          />
         </Reveal>
 
         {/* Full shell width — same left/right gutters as other pages */}
@@ -119,13 +122,13 @@ function BlogDetails() {
                   {details.intro}
                 </p>
 
-                <blockquote className="relative mt-8 border-l-4 border-[#1f65b1] bg-[#f3f5f8] px-7 py-7 text-[15px] leading-[1.75] text-[#666] sm:px-9 sm:py-8">
+                <blockquote className="section-desc relative mt-8 border-l-4 border-[#1f65b1] bg-[#f3f5f8] px-7 py-7 sm:px-9 sm:py-8">
                   <p>{details.quote}</p>
-                  <footer className="mt-4 text-[14px]">
-                    <span className="font-extrabold text-[#0051a8]">
+                  <footer className="section-desc mt-4">
+                    <span className="font-bold text-[#0051a8]">
                       - {details.quoteAuthor}
                     </span>
-                    <span className="ml-1 text-[12px] text-[#888]">
+                    <span className="ml-1 text-[#888]">
                       {details.quoteRole}
                     </span>
                   </footer>
@@ -177,7 +180,7 @@ function BlogDetails() {
           <aside className="min-w-0 space-y-8">
             <Reveal delay={100}>
               <div className="bg-white p-7 shadow-[0_14px_35px_rgba(4,65,148,0.08)] sm:p-9">
-                <h3 className="text-[clamp(22px,2vw,28px)] font-extrabold leading-tight text-[#0a1f5c]">
+                <h3 className="section-title text-[clamp(22px,2vw,28px)]">
                   Search
                 </h3>
                 <label className="mt-5 flex h-12 items-center bg-[#f7f7f9] px-5 text-[#0051a8]">
@@ -185,7 +188,7 @@ function BlogDetails() {
                   <input
                     type="search"
                     placeholder={details.searchPlaceholder}
-                    className="min-w-0 flex-1 bg-transparent text-[15px] text-[#6b7280] outline-none placeholder:text-[#6b7280]"
+                    className="section-desc min-w-0 flex-1 bg-transparent text-[#6b7280] outline-none placeholder:text-[#6b7280]"
                   />
                   <SearchIcon />
                 </label>
@@ -194,7 +197,7 @@ function BlogDetails() {
 
             <Reveal delay={180}>
               <div className="bg-white p-7 shadow-[0_14px_35px_rgba(4,65,148,0.08)] sm:p-9">
-                <h3 className="text-[clamp(22px,2vw,28px)] font-extrabold leading-tight text-[#0a1f5c]">
+                <h3 className="section-title text-[clamp(22px,2vw,28px)]">
                   {details.recentPostsTitle}
                 </h3>
                 <div className="mt-6 space-y-8">
@@ -210,17 +213,17 @@ function BlogDetails() {
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                           />
                           <div className="absolute bottom-[-1px] left-0 flex h-[54px] w-[54px] flex-col items-center justify-center rounded-tr-[28px] bg-[#1f65b1] text-white">
-                            <span className="text-[12px] font-bold leading-none">
+                            <span className="section-desc text-[12px] font-bold leading-none text-white">
                               {post.dateMonth}
                             </span>
-                            <span className="text-[22px] font-extrabold leading-none">
+                            <span className="section-title text-[22px] leading-none text-white">
                               {post.dateDay}
                             </span>
                           </div>
                         </div>
                         <div className="mt-3">
                           <MetaLine author={post.author} comments={post.comments} />
-                          <h4 className="mt-3 text-[18px] font-extrabold leading-[1.35] text-[#0a1f5c] transition-colors group-hover:text-[#0051d4] sm:text-[20px]">
+                          <h4 className="section-title mt-3 text-[clamp(18px,1.6vw,20px)] transition-colors group-hover:text-[#0051d4]">
                             {post.title}
                           </h4>
                         </div>

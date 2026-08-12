@@ -1,4 +1,5 @@
 import { AwardsSection } from "@/components/AwardsSection";
+import { ContactSection } from "@/components/ContactSection";
 import { CtaSection } from "@/components/CtaSection";
 import { Header } from "@/components/Header";
 import { PageBanner } from "@/components/PageBanner";
@@ -28,6 +29,7 @@ export default function Page() {
         <AwardsSection className="bg-[#fbfcff] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]" />
         <SectionDivider />
         <CtaSection />
+        <ContactSection />
       </main>
     </>
   );

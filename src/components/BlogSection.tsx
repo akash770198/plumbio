@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data";
+import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
 type BlogItem = (typeof site.blog.items)[number];
@@ -63,10 +64,11 @@ export function BlogSection({
             </div>
 
             {/* Title */}
-            <h2 className="section-title mt-4">
-              <span className="text-black">{blog.title.split(" ").slice(0, 2).join(" ")}</span>{" "}
-              {blog.title.split(" ").slice(2).join(" ")}
-            </h2>
+            <AccentTitle
+              className="mt-4"
+              before={blog.titleBefore}
+              accent={blog.titleAccent}
+            />
 
             <p className="section-desc mx-auto mt-5 max-w-2xl">
               {blog.description}
@@ -107,11 +109,11 @@ export function BlogSection({
                 <div className="flex flex-1 flex-col px-7 pb-8 pt-3">
                   
                   {/* Meta (Category & Date) */}
-                  <div className="mb-4 flex items-center justify-between text-[13px] font-bold">
-                    <span className="rounded bg-[#0051d4] px-3 py-1 uppercase text-white">
+                  <div className="mb-4 flex items-center justify-between">
+                    <span className="section-label rounded bg-[#0051d4] px-3 py-1 text-[11px] tracking-[0.1em] text-white">
                       {item.category}
                     </span>
-                    <span className="flex items-center gap-2 text-[#6b7a9a]">
+                    <span className="section-desc flex items-center gap-2 font-bold text-[#6b7a9a]">
                       <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                         <line x1="16" y1="2" x2="16" y2="6" />
@@ -123,12 +125,15 @@ export function BlogSection({
                   </div>
 
                   {/* Title */}
-                  <Link href={item.link} className="mb-4 block text-[20px] font-extrabold leading-[1.3] text-[#0a1f5c] transition-colors hover:text-[#0051d4]">
+                  <Link
+                    href={item.link}
+                    className="section-title mb-4 block text-[clamp(18px,1.6vw,20px)] transition-colors hover:text-[#0051d4]"
+                  >
                     {item.title}
                   </Link>
 
                   {/* Excerpt */}
-                  <p className="mb-6 text-[15px] leading-[1.7] text-[#6b7a9a]">
+                  <p className="section-desc mb-6">
                     {item.excerpt}
                   </p>
 
@@ -136,7 +141,7 @@ export function BlogSection({
                   <div className="mt-auto">
                     <Link
                       href={item.link}
-                      className="inline-flex items-center gap-2 text-[15px] font-bold text-[#0051d4] transition-opacity hover:opacity-80"
+                      className="section-desc inline-flex items-center gap-2 font-bold text-[#0051d4] transition-opacity hover:opacity-80"
                     >
                       Read More
                       <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current transition-transform group-hover:translate-x-1" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

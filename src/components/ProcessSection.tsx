@@ -39,15 +39,9 @@ export function ProcessSection() {
             </div>
 
             <h2 className="section-title mt-6">
-              <span className="text-[#082b7a]">
-                {process.title[0]}{" "}
-              </span>
-              <span className="text-blue-600">
-                {process.title[1]}
-              </span>
-              <span className="text-[#082b7a]">
-                {" "}{process.title[2]}
-              </span>
+              {process.title[0]}{" "}
+              <span className="text-[#1e6fd0]">{process.title[1]}</span>{" "}
+              {process.title[2]}
             </h2>
 
             <div className="mx-auto mt-5 h-[4px] w-16 rounded-full bg-blue-600" />
