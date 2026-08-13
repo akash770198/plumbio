@@ -27,7 +27,13 @@
 :root {
   --ease: cubic-bezier(0.22, 0.68, 0.32, 1);
   /* Matches navbar left/right gutter — shared by all non-hero sections */
-  --page-gutter: 1.75rem;
+  --page-gutter: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --page-gutter: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -109,10 +115,12 @@
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
+    overflow-x: clip;
   }
 
   body {
     margin: 0;
+    overflow-x: clip;
     font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.7;

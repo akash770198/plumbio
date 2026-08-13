@@ -122,7 +122,7 @@ export function ContactSection() {
         {/* Right Column: Map */}
         <div className="w-full lg:w-[65%] xl:w-[70%]">
           <Reveal delay={200}>
-            <div className="relative h-[400px] w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm md:h-[500px]">
+            <div className="relative h-[260px] w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm sm:h-[360px] md:h-[500px]">
               <iframe
                 src={contactInfo.mapUrl}
                 width="100%"

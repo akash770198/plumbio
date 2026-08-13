@@ -1,13 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { site } from "@/data";
-import { Icon, LogoMark } from "./Icon";
+import { Icon } from "./Icon";
 
 export function Header() {
-  const { topbar, nav, header } = site;
+  const { topbar, nav, header, site: siteInfo } = site;
   const [open, setOpen] = useState(false);
   const [openSub, setOpenSub] = useState(false);
   const pathname = usePathname();
@@ -21,11 +22,17 @@ export function Header() {
       {/* Left Column: Logo Block — blue runs to the viewport edge; content aligns with --page-gutter */}
       <Link
         href="/"
-        className="flex shrink-0 items-center gap-3 bg-brand py-3 pl-[var(--page-gutter)] pr-6 lg:pr-8"
+        className="flex shrink-0 items-center gap-2 bg-brand py-3 pl-[var(--page-gutter)] pr-3 sm:gap-3 sm:pr-5 lg:pr-8"
       >
-        <LogoMark className="h-[50px] w-[50px] text-white" />
-        <span className="text-[30px] font-bold leading-none tracking-[-0.015em] text-white">
-          Plumbio
+        <Image
+          src={siteInfo.logo}
+          alt={`${siteInfo.name} logo`}
+          width={50}
+          height={50}
+          className="h-9 w-9 object-contain sm:h-[50px] sm:w-[50px]"
+        />
+        <span className="hidden text-[22px] font-bold leading-none tracking-[-0.015em] text-white sm:inline sm:text-[30px]">
+          {siteInfo.name}
         </span>
       </Link>
 
@@ -160,8 +167,14 @@ export function Header() {
       >
         <div className="mb-6 flex items-center justify-between">
           <span className="flex items-center gap-2">
-            <LogoMark className="h-9 w-9 text-brand" />
-            <span className="text-[22px] font-bold text-brand">Plumbio</span>
+            <Image
+              src={siteInfo.logo}
+              alt={`${siteInfo.name} logo`}
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain"
+            />
+            <span className="text-[22px] font-bold text-brand">{siteInfo.name}</span>
           </span>
           <button
             onClick={() => setOpen(false)}

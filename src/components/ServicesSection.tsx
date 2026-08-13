@@ -101,8 +101,8 @@ export function ServicesSection({
                     </span>
                   </div>
 
-                  <div className="absolute -bottom-[20px] left-0 z-10 flex h-[110px] w-[calc(100%_-_32px)] items-center bg-white pl-[100px] pr-[72px] shadow-[0_10px_22px_rgba(5,48,102,0.14)] transition-all duration-300 group-hover:shadow-[0_16px_32px_rgba(5,48,102,0.22)]">
-                    <span className="absolute -top-[20px] left-[16px] grid h-[90px] w-[72px] place-items-center pt-2 text-white drop-shadow-[0_7px_8px_rgba(0,77,151,0.2)] transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-105">
+                  <div className="absolute -bottom-[16px] left-0 z-10 flex h-[96px] w-[calc(100%_-_16px)] items-center bg-white pl-[84px] pr-14 shadow-[0_10px_22px_rgba(5,48,102,0.14)] transition-all duration-300 group-hover:shadow-[0_16px_32px_rgba(5,48,102,0.22)] sm:-bottom-[20px] sm:h-[110px] sm:w-[calc(100%_-_32px)] sm:pl-[100px] sm:pr-[72px]">
+                    <span className="absolute -top-[16px] left-3 grid h-[76px] w-[60px] place-items-center pt-2 text-white drop-shadow-[0_7px_8px_rgba(0,77,151,0.2)] transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-105 sm:-top-[20px] sm:left-4 sm:h-[90px] sm:w-[72px]">
                       <svg
                         viewBox="0 0 88 108"
                         aria-hidden
@@ -110,32 +110,29 @@ export function ServicesSection({
                       >
                         <path d="M44 0C38 17 0 38 0 65c0 25 19 43 44 43s44-18 44-43C88 38 50 17 44 0Z" />
                       </svg>
-                      <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden
-                        className="relative z-10 h-[38px] w-[38px] fill-none stroke-current"
-                        strokeWidth="1.35"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d={service.icon} />
-                      </svg>
+                      <Image
+                        src={service.icon}
+                        alt=""
+                        width={38}
+                        height={38}
+                        className="relative z-10 h-7 w-7 object-contain sm:h-[38px] sm:w-[38px]"
+                      />
                     </span>
-                    <div className="min-w-0">
-                      <h3 className="text-[24px] font-bold leading-none text-brand transition-colors duration-300 group-hover:text-[#0a3d9c]">
+                    <div className="min-w-0 pr-1">
+                      <h3 className="truncate text-[clamp(18px,4vw,24px)] font-bold leading-none text-brand transition-colors duration-300 group-hover:text-[#0a3d9c]">
                         {service.title}
                       </h3>
-                      <p className="mt-2 text-[16px] leading-none text-[#43a3dc] transition-colors duration-300 group-hover:text-[#1e6fd0]">
+                      <p className="mt-1.5 truncate text-[14px] leading-none text-[#43a3dc] transition-colors duration-300 group-hover:text-[#1e6fd0] sm:mt-2 sm:text-[16px]">
                         {service.tagline ?? "Services"}
                       </p>
                     </div>
                     <span
                       aria-hidden
-                      className="absolute right-4 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-[#d7e6f7] bg-[#eef6ff] text-[#1e6fd0] transition-all duration-300 group-hover:border-[#1e6fd0] group-hover:bg-[#1e6fd0] group-hover:text-white group-hover:shadow-[0_8px_18px_rgba(30,111,208,0.35)]"
+                      className="absolute right-2 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-[#d7e6f7] bg-[#eef6ff] text-[#1e6fd0] transition-all duration-300 group-hover:border-[#1e6fd0] group-hover:bg-[#1e6fd0] group-hover:text-white group-hover:shadow-[0_8px_18px_rgba(30,111,208,0.35)] sm:right-4 sm:h-11 sm:w-11"
                     >
                       <svg
                         viewBox="0 0 24 24"
-                        className="h-5 w-5 fill-none stroke-current transition-transform duration-300 group-hover:translate-x-0.5"
+                        className="h-4 w-4 fill-none stroke-current transition-transform duration-300 group-hover:translate-x-0.5 sm:h-5 sm:w-5"
                         strokeWidth="2.25"
                         strokeLinecap="round"
                         strokeLinejoin="round"

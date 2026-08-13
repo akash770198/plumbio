@@ -52,25 +52,25 @@ export function CtaSection() {
           </p>
 
           {/* Phone Number with Lines */}
-          <div className="mb-10 flex items-center justify-center gap-6">
-            <span className="h-[1px] w-12 bg-white/30 md:w-24" />
+          <div className="mb-10 flex flex-wrap items-center justify-center gap-3 sm:gap-6">
+            <span className="hidden h-[1px] w-12 bg-white/30 sm:block md:w-24" />
             
             <a
               href={ctaSection.phoneHref}
-              className="group flex items-center gap-3 transition-transform hover:scale-105"
+              className="group flex items-center gap-2 transition-transform hover:scale-105 sm:gap-3"
             >
               {/* Phone Icon */}
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#044fc2]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#044fc2] sm:h-10 sm:w-10">
                 <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" stroke="currentColor" strokeWidth="0">
                   <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" />
                 </svg>
               </div>
-              <span className="text-[28px] font-extrabold md:text-[34px]">
+              <span className="text-[22px] font-extrabold sm:text-[28px] md:text-[34px]">
                 {ctaSection.phone}
               </span>
             </a>
 
-            <span className="h-[1px] w-12 bg-white/30 md:w-24" />
+            <span className="hidden h-[1px] w-12 bg-white/30 sm:block md:w-24" />
           </div>
 
           {/* Button */}

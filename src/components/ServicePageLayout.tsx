@@ -192,8 +192,8 @@ export function ServicePageLayout({
             </Reveal>
 
             <Reveal delay={80}>
-              <div className="relative mt-10 mb-16 overflow-visible sm:mb-20">
-                <div className="relative flex min-h-[150px] items-center overflow-hidden bg-[#0b5bd3] px-6 py-9 pr-[42%] sm:min-h-[170px] sm:px-9 sm:pr-[44%] lg:min-h-[180px]">
+              <div className="relative mt-10 mb-10 overflow-hidden sm:mb-16 sm:overflow-visible lg:mb-20">
+                <div className="relative flex min-h-[150px] items-center overflow-hidden bg-[#0b5bd3] px-5 py-8 pr-5 sm:min-h-[170px] sm:px-9 sm:pr-[44%] lg:min-h-[180px]">
                   <div
                     aria-hidden
                     className="pointer-events-none absolute inset-0 opacity-40"
@@ -212,7 +212,7 @@ export function ServicePageLayout({
                   </p>
                 </div>
 
-                <div className="pointer-events-none absolute bottom-[-52px] right-[-8px] z-10 w-[56%] max-w-[380px] sm:bottom-[-64px] sm:right-[-12px] sm:w-[54%] lg:max-w-[440px]">
+                <div className="pointer-events-none relative z-10 mx-auto mt-4 w-[72%] max-w-[300px] sm:absolute sm:bottom-[-64px] sm:right-[-12px] sm:mx-0 sm:mt-0 sm:w-[54%] sm:max-w-[380px] lg:max-w-[440px]">
                   {data.bidCta.vanImage ? (
                     <div className="relative w-full">
                       <div

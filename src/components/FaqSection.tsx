@@ -57,14 +57,12 @@ function FaqIcon({ name, className = "h-5 w-5" }: { name: string; className?: st
           <path d="M12 8v6" />
         </svg>
       );
-    case "faucet":
+    case "pipe":
       return (
         <svg {...props}>
-          <path d="M8 10V7a2 2 0 012-2h1" />
-          <path d="M14 5h2a2 2 0 012 2v3" />
-          <path d="M6 10h12v2H6z" />
-          <path d="M10 12v4a2 2 0 002 2h0" />
-          <path d="M12 18v1" />
+          <path d="M7 8h10v8H7z" />
+          <path d="M10 8V5M14 8V5M10 19v-3M14 19v-3" />
+          <path d="M9 12h6" />
         </svg>
       );
     case "toilet":
@@ -82,12 +80,11 @@ function FaqIcon({ name, className = "h-5 w-5" }: { name: string; className?: st
           <circle cx="12" cy="11" r="2.5" />
         </svg>
       );
-    case "hand-drop":
+    case "wrench":
       return (
         <svg {...props}>
-          <path d="M8.5 11V8.5a1.5 1.5 0 113 0V11" />
-          <path d="M7 11c0 3.5 2.2 6.5 5 6.5s5-3 5-6.5" />
-          <path d="M12 5.5v1.5" />
+          <path d="M9.5 6.5a4 4 0 015.6 4.9L19 16l-3 3-4.6-3.9A4 4 0 019.5 6.5z" />
+          <path d="M8 15.5 5.5 18" />
         </svg>
       );
     default:

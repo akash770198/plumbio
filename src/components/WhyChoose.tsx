@@ -80,15 +80,14 @@ export function WhyChoose({ className }: { className?: string }) {
         />
       </div>
 
-      {/* White wave + trust badges (z-20) — sits over plumber waist */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[220px] lg:h-[300px]">
+      {/* Desktop white wave + trust badges */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 hidden h-[300px] lg:block">
         <svg
           className="absolute inset-0 h-full w-full"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none"
           aria-hidden
         >
-          {/* White: rise from center → straight → ends at right edge */}
           <path
             fill="#ffffff"
             d="M720 320
@@ -99,20 +98,20 @@ export function WhyChoose({ className }: { className?: string }) {
           />
         </svg>
 
-        <div className="shell pointer-events-auto absolute inset-x-0 bottom-0 flex h-[96px] items-end pb-4 lg:h-[110px] lg:items-center lg:pb-0 lg:pt-6">
-          <div className="ml-auto flex w-full max-w-[520px] -translate-x-2 -translate-y-6 items-stretch justify-between lg:-translate-x-4 lg:-translate-y-10">
+        <div className="shell pointer-events-auto absolute inset-x-0 bottom-0 flex h-[110px] items-center pt-6">
+          <div className="ml-auto flex w-full max-w-[560px] translate-x-5 -translate-y-10 items-stretch justify-between">
             {whyChoose.stats.map((stat, i) => (
               <div
                 key={stat.title}
-                className={`flex flex-1 flex-col items-center justify-center px-1.5 text-center lg:px-3 ${
+                className={`flex flex-1 flex-col items-center justify-center px-3 text-center ${
                   i > 0 ? "border-l border-[#d5deee]" : ""
                 }`}
               >
                 <FeatureIcon
                   name={stat.icon}
-                  className="mb-1.5 h-5 w-5 text-[#002870] lg:h-5 lg:w-5"
+                  className="mb-1.5 h-6 w-6 text-[#002870]"
                 />
-                <p className="text-[10px] font-bold leading-[1.25] text-[#002870] lg:text-[11px]">
+                <p className="text-[12px] font-bold leading-[1.3] text-[#002870]">
                   {stat.title}
                   {stat.value ? (
                     <>
@@ -127,15 +126,13 @@ export function WhyChoose({ className }: { className?: string }) {
         </div>
       </div>
 
-      {/* Left copy — top aligns with plumber (same top-12) */}
-      <div className="shell relative z-30 flex flex-col lg:min-h-[560px] lg:flex-row lg:items-start lg:pb-28">
+      {/* Left copy + mobile image/stats */}
+      <div className="shell relative z-30 flex flex-col pb-10 lg:min-h-[560px] lg:flex-row lg:items-start lg:pb-28">
         <div className="relative w-full lg:w-[48%] lg:pr-4">
           <Reveal>
             <div className="flex items-center gap-3">
               <span className="block h-[2px] w-8 bg-[#20b2ff]" />
-              <p className="section-label">
-                {whyChoose.label}
-              </p>
+              <p className="section-label">{whyChoose.label}</p>
             </div>
 
             <h2 className="section-title mt-3 text-white">
@@ -155,44 +152,48 @@ export function WhyChoose({ className }: { className?: string }) {
 
             <ul className="mt-6 flex max-w-[500px] flex-col divide-y divide-[#ffffff20]">
               {whyChoose.features.map((feature) => (
-                <li key={feature.title} className="flex items-center gap-5 py-4 first:pt-0">
-                  <span className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[12px] bg-[#0051d4] text-white shadow-lg">
+                <li key={feature.title} className="flex items-center gap-4 py-4 first:pt-0 sm:gap-5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] bg-[#0051d4] text-white shadow-lg sm:h-[52px] sm:w-[52px]">
                     {feature.iconType === "image" ? (
                       <Image
                         src={feature.icon}
                         alt={feature.title}
                         width={32}
                         height={32}
-                        className="h-8 w-8"
+                        className="h-7 w-7 sm:h-8 sm:w-8"
                       />
                     ) : (
-                      <FeatureIcon name={feature.icon} className="h-6 w-6" />
+                      <FeatureIcon name={feature.icon} className="h-5 w-5 sm:h-6 sm:w-6" />
                     )}
                   </span>
-                  <span className="text-[18px] font-bold text-white">{feature.title}</span>
+                  <span className="text-[16px] font-bold text-white sm:text-[18px]">
+                    {feature.title}
+                  </span>
                 </li>
               ))}
             </ul>
 
-            <div className="relative mt-5 max-w-[500px] overflow-hidden rounded-[12px] border border-[#1b4a9a] bg-[#051c50] p-6 shadow-xl">
+            <div className="relative mt-5 max-w-[500px] overflow-hidden rounded-[12px] border border-[#1b4a9a] bg-[#051c50] p-5 shadow-xl sm:p-6">
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#20b2ff]/10 to-transparent" />
-              <div className="relative z-10 flex items-start gap-5">
-                <span className="flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-xl bg-[#20b2ff] text-white shadow-[0_0_15px_rgba(32,178,255,0.4)]">
+              <div className="relative z-10 flex items-start gap-4 sm:gap-5">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#20b2ff] text-white shadow-[0_0_15px_rgba(32,178,255,0.4)] sm:h-[62px] sm:w-[62px]">
                   {whyChoose.highlightCard.iconType === "image" ? (
                     <Image
                       src={whyChoose.highlightCard.icon}
                       alt={whyChoose.highlightCard.title}
                       width={40}
                       height={40}
-                      className="h-10 w-10"
+                      className="h-9 w-9 sm:h-10 sm:w-10"
                     />
                   ) : (
-                    <FeatureIcon name={whyChoose.highlightCard.icon} className="h-8 w-8" />
+                    <FeatureIcon name={whyChoose.highlightCard.icon} className="h-7 w-7 sm:h-8 sm:w-8" />
                   )}
                 </span>
                 <div className="pt-0.5">
-                  <h3 className="text-[19px] font-bold text-white">{whyChoose.highlightCard.title}</h3>
-                  <p className="mt-1.5 text-[15px] leading-relaxed text-white/80">
+                  <h3 className="text-[17px] font-bold text-white sm:text-[19px]">
+                    {whyChoose.highlightCard.title}
+                  </h3>
+                  <p className="mt-1.5 text-[14px] leading-relaxed text-white/80 sm:text-[15px]">
                     {whyChoose.highlightCard.text}
                   </p>
                 </div>
@@ -202,7 +203,7 @@ export function WhyChoose({ className }: { className?: string }) {
         </div>
 
         {/* Mobile plumber */}
-        <div className="relative z-10 mt-6 flex w-full justify-center lg:hidden">
+        <div className="relative z-10 mt-8 flex w-full justify-center lg:hidden">
           <Image
             src={whyChoose.image}
             alt={whyChoose.imageAlt}
@@ -212,6 +213,30 @@ export function WhyChoose({ className }: { className?: string }) {
             className="h-auto w-[88%] max-w-[480px] object-contain drop-shadow-2xl"
             priority
           />
+        </div>
+
+        {/* Mobile stats — in flow under image */}
+        <div className="relative z-20 mt-6 grid grid-cols-2 gap-3 rounded-xl bg-white p-4 sm:grid-cols-4 lg:hidden">
+          {whyChoose.stats.map((stat) => (
+            <div
+              key={stat.title}
+              className="flex flex-col items-center justify-center px-1 py-2 text-center"
+            >
+              <FeatureIcon
+                name={stat.icon}
+                className="mb-1.5 h-6 w-6 text-[#002870]"
+              />
+              <p className="text-[11px] font-bold leading-[1.3] text-[#002870]">
+                {stat.title}
+                {stat.value ? (
+                  <>
+                    <br />
+                    {stat.value}
+                  </>
+                ) : null}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

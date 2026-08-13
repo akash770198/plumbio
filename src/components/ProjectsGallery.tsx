@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { site } from "@/data";
 import { Reveal } from "./Reveal";
 
@@ -35,11 +35,66 @@ function FeatureIcon({ name }: { name: string }) {
 export function ProjectsGallery() {
   const { projectsGallery: data } = site;
   const [activeFilter, setActiveFilter] = useState(data.filters[0]);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const filtered =
     activeFilter === "All Projects"
       ? data.items
       : data.items.filter((item) => item.category === activeFilter);
+
+  const currentItem = selectedIndex !== null ? filtered[selectedIndex] ?? null : null;
+
+  useEffect(() => {
+    if (selectedIndex === null) return;
+
+    if (filtered.length === 0) {
+      setSelectedIndex(null);
+      return;
+    }
+
+    if (selectedIndex >= filtered.length) {
+      setSelectedIndex(filtered.length - 1);
+    }
+  }, [filtered.length, selectedIndex]);
+
+  useEffect(() => {
+    if (selectedIndex === null) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelectedIndex(null);
+      if (event.key === "ArrowLeft") {
+        setSelectedIndex((prev) => {
+          if (prev === null) return filtered.length > 0 ? filtered.length - 1 : null;
+          return prev === 0 ? filtered.length - 1 : prev - 1;
+        });
+      }
+      if (event.key === "ArrowRight") {
+        setSelectedIndex((prev) => {
+          if (prev === null) return 0;
+          return prev === filtered.length - 1 ? 0 : prev + 1;
+        });
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [filtered.length, selectedIndex]);
+
+  const showPrevious = () => {
+    if (selectedIndex === null || filtered.length === 0) return;
+    setSelectedIndex((prev) => (prev === 0 ? filtered.length - 1 : (prev ?? 0) - 1));
+  };
+
+  const showNext = () => {
+    if (selectedIndex === null || filtered.length === 0) return;
+    setSelectedIndex((prev) => (prev === filtered.length - 1 ? 0 : (prev ?? 0) + 1));
+  };
 
   return (
     <section className="bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
@@ -88,15 +143,27 @@ export function ProjectsGallery() {
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {filtered.map((item, index) => (
             <Reveal key={`${item.image}-${item.category}-${index}`} delay={(index % 4) * 40}>
-              <article className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-[#eef2f7]">
-                <Image
-                  src={item.image}
-                  alt={item.alt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition duration-500 group-hover:scale-[1.04]"
-                />
-              </article>
+              <button
+                type="button"
+                onClick={() => setSelectedIndex(index)}
+                className="group relative block w-full overflow-hidden rounded-xl bg-[#eef2f7] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1e6fd0]"
+                aria-label={`Open project image ${index + 1}`}
+              >
+                <article className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                  />
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent px-3 py-3 sm:px-4">
+                    <span className="block text-left text-[10px] font-semibold uppercase tracking-[0.2em] text-white sm:text-[11px]">
+                      {item.category}
+                    </span>
+                  </div>
+                </article>
+              </button>
             </Reveal>
           ))}
         </div>
@@ -148,6 +215,63 @@ export function ProjectsGallery() {
           </div>
         </Reveal>
       </div>
+
+      {currentItem && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-2 sm:p-4 lg:p-6"
+          onClick={() => setSelectedIndex(null)}
+        >
+          <div
+            className="relative h-full w-full max-w-[100vw]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedIndex(null)}
+              className="absolute right-3 top-3 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-xl font-bold text-[#0a3d9c] shadow-lg transition hover:bg-white"
+              aria-label="Close project image"
+            >
+              ×
+            </button>
+
+            <button
+              type="button"
+              onClick={showPrevious}
+              className="absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#0a3d9c] shadow-lg transition hover:bg-white"
+              aria-label="Previous project image"
+            >
+              ←
+            </button>
+
+            <button
+              type="button"
+              onClick={showNext}
+              className="absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#0a3d9c] shadow-lg transition hover:bg-white"
+              aria-label="Next project image"
+            >
+              →
+            </button>
+
+            <div className="flex h-full w-full items-center justify-center">
+              <div className="relative h-[92vh] w-[95vw] overflow-hidden rounded-2xl bg-[#050b16] shadow-2xl">
+                <Image
+                  src={currentItem.image}
+                  alt={currentItem.alt}
+                  fill
+                  className="object-contain"
+                  priority
+                  sizes="100vw"
+                />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent px-4 py-4 sm:px-6 sm:py-5">
+                  <p className="text-left text-[11px] font-semibold uppercase tracking-[0.28em] text-white sm:text-[12px] lg:text-[13px]">
+                    {currentItem.category}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

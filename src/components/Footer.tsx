@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data";
 
 export function Footer() {
-  const { footer } = site;
+  const { footer, site: siteInfo } = site;
 
   return (
     <footer className="bg-[#003c96] pt-12 text-white md:pt-16">
@@ -11,15 +12,16 @@ export function Footer() {
           
           {/* Column 1: About */}
           <div className="lg:pr-4">
-            <Link href="/" className="mb-6 flex items-center gap-3">
-              {/* Logo SVG matching the image roughly (a stylized drop and pipe) */}
-              <svg viewBox="0 0 24 24" className="h-10 w-10 fill-none stroke-white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
-                <path d="M12 10v6" />
-                <path d="M9 13h6" />
-              </svg>
-              <span className="text-[26px] font-bold tracking-wide">
-                {footer.logoText}
+            <Link href="/" className="mb-6 flex h-10 items-center gap-3">
+              <Image
+                src={siteInfo.logo}
+                alt={`${siteInfo.name} logo`}
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
+              <span className="text-[26px] font-bold tracking-wide leading-none">
+                {siteInfo.name}
               </span>
             </Link>
             <p className="text-[15px] leading-relaxed text-[#c2d6f9]">
@@ -29,7 +31,7 @@ export function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="mb-6 text-[18px] font-bold text-white">
+            <h4 className="mb-6 flex h-10 items-center text-[18px] font-bold text-white">
               {footer.columns[0].title}
             </h4>
             <ul className="flex flex-col gap-4">
@@ -48,7 +50,7 @@ export function Footer() {
 
           {/* Column 3: Services */}
           <div>
-            <h4 className="mb-6 text-[18px] font-bold text-white">
+            <h4 className="mb-6 flex h-10 items-center text-[18px] font-bold text-white">
               {footer.columns[1].title}
             </h4>
             <ul className="flex flex-col gap-4">
@@ -67,7 +69,7 @@ export function Footer() {
 
           {/* Column 4: Support */}
           <div>
-            <h4 className="mb-6 text-[18px] font-bold text-white">
+            <h4 className="mb-6 flex h-10 items-center text-[18px] font-bold text-white">
               {footer.columns[2].title}
             </h4>
             <ul className="flex flex-col gap-4">
@@ -86,7 +88,7 @@ export function Footer() {
 
           {/* Column 5: Newsletter */}
           <div>
-            <h4 className="mb-6 text-[18px] font-bold text-white">
+            <h4 className="mb-6 flex h-10 items-center text-[18px] font-bold text-white">
               {footer.newsletter.title}
             </h4>
             <p className="mb-6 text-[15px] leading-relaxed text-[#c2d6f9]">

@@ -204,7 +204,7 @@ export function ReviewsSection({
                   </div>
                 </div>
 
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-4">
                   {videoTestimonials.videos.map((video, index) => (
                     <div
                       key={index}
@@ -217,9 +217,9 @@ export function ReviewsSection({
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors duration-300 group-hover:bg-black/40">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-600 sm:h-10 sm:w-10">
                           <svg
-                            className="ml-0.5 h-4 w-4 text-white"
+                            className="ml-0.5 h-3.5 w-3.5 text-white sm:h-4 sm:w-4"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                           >

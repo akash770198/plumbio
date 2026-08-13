@@ -101,17 +101,17 @@ function CouponCard({
     <Reveal delay={delay} as="article" className="group h-full">
       <div className="flex h-full min-h-[280px] flex-col overflow-hidden rounded-xl bg-white shadow-[0_10px_30px_rgba(10,31,92,0.10)] transition-all duration-300 ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_18px_40px_rgba(10,31,92,0.16)]">
         {/* Top: blue stub + offer copy */}
-        <div className="flex min-h-0 flex-1">
-          <div className="relative flex w-[140px] shrink-0 flex-col items-center justify-center bg-[#1e6fd0] px-2 text-center text-white transition-colors duration-300 group-hover:bg-[#0f5fc4] sm:w-[170px]">
-            {/* Left ticket notch */}
-            <span className="absolute left-0 top-1/2 z-10 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f7f9fc]" />
+        <div className="flex min-h-0 flex-1 flex-col sm:flex-row">
+          <div className="relative flex w-full shrink-0 flex-col items-center justify-center bg-[#1e6fd0] px-3 py-6 text-center text-white transition-colors duration-300 group-hover:bg-[#0f5fc4] sm:w-[140px] sm:py-0 md:w-[170px]">
+            {/* Left ticket notch — desktop only */}
+            <span className="absolute left-0 top-1/2 z-10 hidden h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f7f9fc] sm:block" />
             {/* Perforation circles at top/bottom of blue–white join */}
-            <span className="absolute right-0 top-0 z-10 h-3.5 w-3.5 translate-x-1/2 -translate-y-1/2 rounded-full bg-white" />
-            <span className="absolute bottom-0 right-0 z-10 h-3.5 w-3.5 translate-x-1/2 translate-y-1/2 rounded-full bg-white" />
+            <span className="absolute right-0 top-0 z-10 hidden h-3.5 w-3.5 translate-x-1/2 -translate-y-1/2 rounded-full bg-white sm:block" />
+            <span className="absolute bottom-0 right-0 z-10 hidden h-3.5 w-3.5 translate-x-1/2 translate-y-1/2 rounded-full bg-white sm:block" />
             {/* Dashed perforation */}
             <div
               aria-hidden
-              className="absolute inset-y-3 right-0 w-[2px]"
+              className="absolute inset-y-3 right-0 hidden w-[2px] sm:block"
               style={{
                 backgroundImage:
                   "linear-gradient(to bottom, #fff 50%, transparent 0)",
@@ -127,7 +127,7 @@ function CouponCard({
             </span>
           </div>
 
-          <div className="flex min-w-0 flex-1 flex-col items-center justify-center px-5 py-6 text-center sm:px-7">
+          <div className="flex min-w-0 flex-1 flex-col items-center justify-center px-4 py-5 text-center sm:px-7 sm:py-6">
             <p className="section-label text-[#1e6fd0]">
               {coupon.tag}
             </p>
@@ -141,7 +141,7 @@ function CouponCard({
         </div>
 
         {/* Full-width white footer */}
-        <div className="flex items-center justify-between gap-3 border-t border-[#eceff3] bg-white px-5 py-3.5 sm:px-6">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#eceff3] bg-white px-4 py-3.5 sm:px-6">
           <p className="section-desc">
             * Expires: {coupon.expires}
           </p>

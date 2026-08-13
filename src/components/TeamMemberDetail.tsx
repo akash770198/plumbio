@@ -164,18 +164,20 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
                     priority
                   />
                 </div>
-                <div className="absolute bottom-5 left-5 flex items-center gap-3 rounded-xl bg-[#0a3d9c] px-4 py-3 text-white shadow-lg">
-                  <div className="grid h-10 w-10 place-items-center rounded-lg bg-white/15">
+                <div className="absolute bottom-3 left-3 flex max-w-[calc(100%-1.5rem)] items-center gap-2 rounded-xl bg-[#0a3d9c] px-3 py-2.5 text-white shadow-lg sm:bottom-5 sm:left-5 sm:gap-3 sm:px-4 sm:py-3">
+                  <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-white/15 sm:h-10 sm:w-10">
                     <svg viewBox="0 0 24 24" className="h-5 w-5 fill-none stroke-current" strokeWidth="1.8" aria-hidden>
                       <circle cx="12" cy="8" r="4" />
                       <path d="M6 20v-1a6 6 0 0112 0v1" />
                     </svg>
                   </div>
-                  <div>
-                    <p className="section-title text-[22px] leading-none text-white">
+                  <div className="min-w-0">
+                    <p className="section-title text-[18px] leading-none text-white sm:text-[22px]">
                       {member.yearsExperience}
                     </p>
-                    <p className="section-desc mt-1 text-white/85">Years Experience</p>
+                    <p className="section-desc mt-1 text-[12px] text-white/85 sm:text-[inherit]">
+                      Years Experience
+                    </p>
                   </div>
                 </div>
               </div>

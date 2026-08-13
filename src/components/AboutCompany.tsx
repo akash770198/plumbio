@@ -116,14 +116,14 @@ export function AboutCompany({
           </Reveal>
 
           {/* Right: 4-Panel Image Grid */}
-          <Reveal delay={100} className="flex flex-1 gap-2">
+          <Reveal delay={100} className="grid flex-1 grid-cols-2 gap-2 sm:grid-cols-4">
             {GALLERY_IMAGES.map((img, i) => (
-              <div key={i} className="relative aspect-[3/4] flex-1 overflow-hidden rounded-xl">
+              <div key={i} className="relative aspect-[3/4] overflow-hidden rounded-xl">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  sizes="25vw"
+                  sizes="(max-width: 640px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>

@@ -112,7 +112,7 @@ export function BlogSection({
                 <div className="flex flex-1 flex-col px-7 pb-8 pt-3">
                   
                   {/* Meta (Category & Date) */}
-                  <div className="mb-4 flex items-center justify-between">
+                  <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                     <span className="section-label rounded bg-[#0051d4] px-3 py-1 text-[11px] tracking-[0.1em] text-white">
                       {item.category}
                     </span>

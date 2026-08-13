@@ -51,13 +51,17 @@ export function About({ className }: { className?: string }) {
           </Reveal>
 
           {/* ── Middle: Photo ── */}
-          <Reveal delay={100} className="relative min-h-[440px] overflow-hidden rounded-xl lg:aspect-[0.86] lg:min-h-0">
+          <Reveal
+            delay={100}
+            className="relative aspect-[4/5] w-full overflow-hidden rounded-xl sm:aspect-[3/4] lg:h-full lg:min-h-[440px] lg:aspect-auto"
+          >
             <Image
               src={about.image}
               alt={about.imageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 38vw"
-              className="object-cover object-center"
+              className="object-cover object-[center_20%] lg:object-center"
+              priority
             />
           </Reveal>
 
