@@ -7,30 +7,31 @@ import { Reveal } from "./Reveal";
 
 const SOCIAL_ICONS = {
   fb: (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+    <svg viewBox="0 0 24 24" className="h-6 w-6 stroke-current" fill="none" strokeWidth="2" aria-hidden>
       <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
     </svg>
   ),
   tw: (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
-      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+    <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current" aria-hidden>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.31l7.733-8.835L2.25 2.25h6.814l4.6 6.084 5.38-6.084zM17.002 18.807h1.844L6.844 3.556H4.939l12.063 15.251z" />
     </svg>
   ),
   in: (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+    <svg viewBox="0 0 24 24" className="h-6 w-6 stroke-current" fill="none" strokeWidth="2" aria-hidden>
       <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z" />
     </svg>
   ),
   ig: (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+    <svg viewBox="0 0 24 24" className="h-6 w-6 stroke-current" fill="none" strokeWidth="2" aria-hidden>
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
     </svg>
   ),
   yt: (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+    <svg viewBox="0 0 24 24" className="h-6 w-6 stroke-current" fill="none" strokeWidth="2" aria-hidden>
       <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.6C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z" />
-      <path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="#fff" />
+      <path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="currentColor" />
     </svg>
   ),
 };
@@ -110,7 +111,7 @@ export function ContactPage() {
                       key={social.icon}
                       href={social.href}
                       aria-label={social.icon}
-                      className="grid h-11 w-11 place-items-center rounded-md bg-[#e8edf5] text-[#6b7a9a] transition hover:bg-[#1e6fd0] hover:text-white"
+                      className="grid h-14 w-14 place-items-center rounded-md bg-[#e8edf5] text-[#1e6fd0] transition hover:bg-[#1e6fd0] hover:text-white"
                     >
                       {SOCIAL_ICONS[social.icon as keyof typeof SOCIAL_ICONS]}
                     </a>

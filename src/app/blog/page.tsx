@@ -6,14 +6,7 @@ import { BlogSection } from "@/components/BlogSection";
 import { PageBanner } from "@/components/PageBanner";
 import { Reveal } from "@/components/Reveal";
 import { site } from "@/data";
-
-function SectionDivider() {
-  return (
-    <div aria-hidden className="section-divider">
-      <span className="section-divider-line" />
-    </div>
-  );
-}
+import { SECTION_LIGHT, SECTION_PAD } from "@/lib/section-styles";
 
 function CalendarIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
@@ -79,7 +72,7 @@ function BlogDetails() {
   const { details } = site.blog;
 
   return (
-    <section className="bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]">
+    <section className={`bg-white ${SECTION_PAD}`}>
       <div className="shell">
         <Reveal>
           <AccentTitle
@@ -254,10 +247,9 @@ export default function Page() {
           backgroundImageAlt={blogBanner.backgroundImageAlt}
         />
         <BlogSection
-          className="relative overflow-hidden bg-[#fafbfc] pt-[3.25rem] pb-0 lg:pt-[3.75rem]"
+          className={`relative overflow-hidden ${SECTION_LIGHT} ${SECTION_PAD}`}
           items={site.blog.pageItems}
         />
-        <SectionDivider />
         <BlogDetails />
       </main>
     </>

@@ -17,10 +17,12 @@ export function ServicesSection({
   className,
   services,
   limit,
+  showButton,
 }: {
   className?: string;
   services?: ServiceCard[];
   limit?: number;
+  showButton?: boolean;
 }) {
   const { servicesCatalog } = site;
   const catalogItems = servicesCatalog.items.map((item) => ({
@@ -34,6 +36,8 @@ export function ServicesSection({
 
   const displayCount = limit ?? servicesCatalog.homeDisplayCount;
   const list = (services ?? catalogItems).slice(0, services ? services.length : displayCount);
+  const shouldShowButton =
+    showButton ?? (!services && catalogItems.length > list.length);
 
   return (
     <section
@@ -145,6 +149,29 @@ export function ServicesSection({
             </Reveal>
           ))}
         </div>
+
+        {shouldShowButton && servicesCatalog.button ? (
+          <Reveal delay={200}>
+            <div className="mt-12 flex justify-center pb-1">
+              <Link
+                href={servicesCatalog.button.href}
+                className="inline-flex items-center gap-3 rounded-lg bg-[#0051d4] px-7 py-4 text-[15px] font-semibold text-white transition-all hover:bg-[#0041b0] hover:gap-4"
+              >
+                {servicesCatalog.button.label}
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4 fill-none stroke-current"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </Reveal>
+        ) : null}
       </div>
     </section>
   );

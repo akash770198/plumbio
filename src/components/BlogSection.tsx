@@ -9,12 +9,15 @@ type BlogItem = (typeof site.blog.items)[number];
 export function BlogSection({
   className,
   items,
+  showButton,
 }: {
   className?: string;
   items?: BlogItem[];
+  showButton?: boolean;
 }) {
   const { blog } = site;
   const blogItems = items ?? blog.items;
+  const shouldShowButton = showButton ?? !items;
 
   return (
     <section
@@ -155,7 +158,29 @@ export function BlogSection({
             </Reveal>
           ))}
         </div>
-        
+
+        {shouldShowButton && blog.button ? (
+          <Reveal delay={200}>
+            <div className="mt-12 flex justify-center">
+              <Link
+                href={blog.button.href}
+                className="inline-flex items-center gap-3 rounded-lg bg-[#0051d4] px-7 py-4 text-[15px] font-semibold text-white transition-all hover:bg-[#0041b0] hover:gap-4"
+              >
+                {blog.button.label}
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4 fill-none stroke-current"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </Reveal>
+        ) : null}
       </div>
     </section>
   );

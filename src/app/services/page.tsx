@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { PageBanner } from "@/components/PageBanner";
 import { ServicesSection } from "@/components/ServicesSection";
 import { site } from "@/data";
+import { SECTION_LIGHT, SECTION_PAD } from "@/lib/section-styles";
 
 export default function Page() {
   const { servicesBanner, servicesCatalog } = site;
@@ -27,7 +28,7 @@ export default function Page() {
           backgroundImageAlt={servicesBanner.backgroundImageAlt}
         />
         <ServicesSection
-          className="relative overflow-hidden bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]"
+          className={`relative overflow-hidden ${SECTION_LIGHT} ${SECTION_PAD}`}
           services={services}
         />
         <CtaSection />

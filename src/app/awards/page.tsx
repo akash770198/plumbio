@@ -4,14 +4,7 @@ import { CtaSection } from "@/components/CtaSection";
 import { Header } from "@/components/Header";
 import { PageBanner } from "@/components/PageBanner";
 import { site } from "@/data";
-
-function SectionDivider() {
-  return (
-    <div aria-hidden className="section-divider">
-      <span className="section-divider-line" />
-    </div>
-  );
-}
+import { SECTION_LIGHT, SECTION_PAD } from "@/lib/section-styles";
 
 export default function Page() {
   const { awardsBanner } = site;
@@ -26,8 +19,7 @@ export default function Page() {
           backgroundImage={awardsBanner.backgroundImage}
           backgroundImageAlt={awardsBanner.backgroundImageAlt}
         />
-        <AwardsSection className="bg-[#fbfcff] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]" />
-        <SectionDivider />
+        <AwardsSection className={`${SECTION_LIGHT} ${SECTION_PAD}`} />
         <CtaSection />
         <ContactSection />
       </main>

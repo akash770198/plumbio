@@ -41,7 +41,7 @@ export default async function Page({ params }: PageProps) {
           backgroundImageAlt={site.blogBanner.backgroundImageAlt}
         />
 
-        <section className="bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
+        <section className="bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
           <div className="shell">
             <Reveal>
               <article className="mx-auto max-w-4xl">

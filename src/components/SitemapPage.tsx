@@ -52,7 +52,7 @@ export function SitemapPage() {
   const { sitemapPage: data } = site;
 
   return (
-    <section className="bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
+    <section className="bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
       <div className="shell">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-8">
           {data.columns.map((column, index) => (

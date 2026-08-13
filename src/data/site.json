@@ -220,6 +220,10 @@
     ],
     "description": "While certain plumbing issues, such as a minor toilet clog, can be quickly addressed with do-it-yourself methods, most plumbing problems require the assistance of a professional.",
     "homeDisplayCount": 3,
+    "button": {
+      "label": "View All Services",
+      "href": "/services"
+    },
     "items": [
       {
         "slug": "residential",
@@ -1154,24 +1158,29 @@
     "description": "We combine skilled workmanship, modern tools, and a customer-focused approach to deliver plumbing services you can rely on.",
     "features": [
       {
-        "icon": "shield",
+        "icon": "/icons/security.png",
+        "iconType": "image",
         "title": "Experienced & Certified Plumbers"
       },
       {
-        "icon": "wrench",
+        "icon": "/icons/setting.png",
+        "iconType": "image",
         "title": "Upfront Pricing – No Hidden Charges"
       },
       {
-        "icon": "clock",
+        "icon": "/icons/clock.png",
+        "iconType": "image",
         "title": "Fast Response & On-Time Service"
       },
       {
-        "icon": "thumb",
+        "icon": "/icons/thumb.png",
+        "iconType": "image",
         "title": "100% Satisfaction Guarantee"
       }
     ],
     "highlightCard": {
-      "icon": "shield",
+      "icon": "/icons/shield.png",
+      "iconType": "image",
       "title": "Your Satisfaction is Our Priority",
       "text": "We go above and beyond to ensure every job is done right — the first time."
     },
@@ -1212,25 +1221,29 @@
         "number": "01",
         "title": "Book Online",
         "description": "Schedule your service easily in just a few clicks.",
-        "icon": "clipboard"
+        "icon": "/icons/list.png",
+        "iconType": "image"
       },
       {
         "number": "02",
         "title": "We Arrive",
         "description": "Our expert plumbers arrive on time and ready to help.",
-        "icon": "wrench"
+        "icon": "/icons/cross-wrench.png",
+        "iconType": "image"
       },
       {
         "number": "03",
         "title": "Fix & Solve",
         "description": "We diagnose the issue and get the job done right.",
-        "icon": "pipe"
+        "icon": "/icons/pipe.png",
+        "iconType": "image"
       },
       {
         "number": "04",
         "title": "You Relax",
         "description": "Enjoy hassle-free plumbing and complete peace of mind.",
-        "icon": "thumb"
+        "icon": "/icons/thumb.png",
+        "iconType": "image"
       }
     ]
   },
@@ -1496,6 +1509,18 @@
       "phone": "123 456 7890",
       "phoneHref": "tel:1234567890",
       "buttonLabel": "Call 123 456 7890"
+    },
+    "detailSocial": {
+      "label": "FOLLOW ME",
+      "titleBefore": "Connect on",
+      "titleAccent": "Social",
+      "description": "Stay connected for plumbing tips, project updates, and company news."
+    },
+    "pageSocial": {
+      "label": "FOLLOW US",
+      "titleBefore": "Connect on",
+      "titleAccent": "Social",
+      "description": "Stay connected for plumbing tips, project updates, and company news."
     },
     "members": [
       {
@@ -2236,7 +2261,7 @@
         "question": "What do you charge for services?",
         "answer": "Our pricing depends on the type of service, complexity, and time required. We provide transparent estimates before work begins so you know exactly what to expect with no hidden charges.",
         "icon": "wallet",
-        "defaultOpen": true,
+        "defaultOpen": false,
         "openStyle": "primary"
       },
       {
@@ -2271,7 +2296,7 @@
         "question": "Are all new toilets water saving toilet suites?",
         "answer": "Most modern toilets are designed to meet water-efficiency standards. Dual-flush and low-flow models significantly reduce water use while maintaining strong flushing performance.",
         "icon": "toilet",
-        "defaultOpen": true,
+        "defaultOpen": false,
         "openStyle": "default"
       },
       {
@@ -2307,6 +2332,10 @@
     "label": "OUR BLOG",
     "title": "Latest Plumbing Tips & Blog",
     "description": "Expert advice, how-to guides, and helpful tips to keep your plumbing systems running smoothly.",
+    "button": {
+      "label": "View All Blogs",
+      "href": "/blog"
+    },
     "items": [
       {
         "category": "PLUMBING TIPS",

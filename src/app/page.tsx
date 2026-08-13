@@ -14,6 +14,7 @@ import { BlogSection } from "@/components/BlogSection";
 import { CtaSection } from "@/components/CtaSection";
 import { ContactSection } from "@/components/ContactSection";
 import { site } from "@/data";
+import { SECTION_LIGHT, SECTION_PAD } from "@/lib/section-styles";
 
 export default function HomePage() {
   return (
@@ -22,32 +23,30 @@ export default function HomePage() {
       <main className="block">
         <Hero />
         <TrustedBy />
-        <About />
-        <div aria-hidden className="section-divider">
-          <span className="section-divider-line" />
+        <About className={`bg-white pt-5 pb-[3.25rem] lg:pt-6 lg:pb-[3.75rem]`} />
+        <ServicesSection
+          className={`relative overflow-hidden ${SECTION_LIGHT} ${SECTION_PAD}`}
+        />
+        <WhyChoose />
+        <ProcessSection
+          className={`relative overflow-hidden ${SECTION_LIGHT} ${SECTION_PAD}`}
+        />
+        <AboutCompany />
+        <div className={`${SECTION_LIGHT} pt-[3.25rem] lg:pt-[3.75rem]`}>
+          <Testimonials />
         </div>
-        <ServicesSection />
-        <WhyChoose/>
-        <div aria-hidden className="section-divider">
-          <span className="section-divider-line" />
-        </div>
-        <ProcessSection/>
-        <AboutCompany/>
-        <Testimonials/>
-        <TeamSection limit={site.team.homeDisplayCount} />
-        <div aria-hidden className="section-divider">
-          <span className="section-divider-line" />
-        </div>
-        <AwardsSection/>
-        <div aria-hidden className="section-divider">
-          <span className="section-divider-line" />
-        </div>
-        <FaqSection/>
-        <div aria-hidden className="section-divider">
-          <span className="section-divider-line" />
-        </div>
-        <BlogSection/>
-        <CtaSection/>
+        <TeamSection
+          limit={site.team.homeDisplayCount}
+          className={`relative overflow-hidden ${SECTION_LIGHT} ${SECTION_PAD}`}
+        />
+        <AwardsSection className={`bg-white ${SECTION_PAD}`} />
+        <FaqSection
+          className={`relative overflow-hidden ${SECTION_LIGHT} ${SECTION_PAD}`}
+        />
+        <BlogSection
+          className={`relative overflow-hidden bg-white ${SECTION_PAD}`}
+        />
+        <CtaSection />
         <ContactSection />
       </main>
     </>

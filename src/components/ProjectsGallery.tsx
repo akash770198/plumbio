@@ -42,7 +42,7 @@ export function ProjectsGallery() {
       : data.items.filter((item) => item.category === activeFilter);
 
   return (
-    <section className="bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
+    <section className="bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
       <div className="shell">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">

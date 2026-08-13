@@ -72,7 +72,7 @@ export function ReviewsSection({
   return (
     <div className="w-full">
       {/* ── Reviews Section ── */}
-      <section className="relative overflow-hidden bg-white pt-[3.25rem] pb-0 lg:pt-[3.75rem]">
+      <section className="relative overflow-hidden bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
         <div
           aria-hidden
           className="pointer-events-none absolute left-1/2 top-4 -translate-x-1/2 select-none whitespace-nowrap text-[clamp(80px,12vw,160px)] font-extrabold leading-none tracking-tight text-[#f0f2f7]"
@@ -149,12 +149,8 @@ export function ReviewsSection({
         </div>
       </section>
 
-      <div aria-hidden className="section-divider">
-        <span className="section-divider-line" />
-      </div>
-
       {/* ── Video Testimonials Section ── */}
-      <section className="relative overflow-hidden bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]">
+      <section className="relative overflow-hidden bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
         <div
           aria-hidden
           className="pointer-events-none absolute left-8 top-4 select-none whitespace-nowrap text-[clamp(80px,12vw,160px)] font-extrabold leading-none tracking-tight text-[#f0f2f7] lg:left-14"

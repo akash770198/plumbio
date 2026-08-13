@@ -133,7 +133,7 @@ export function AboutCompany({
       </div>
 
       {/* ── Solutions For Row ── */}
-      <div className="border-t border-[#e8edf5] bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
+      <div className="bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
         <Reveal className="shell">
           {/* Title */}
           <div className="mb-5 flex items-center justify-center gap-4">

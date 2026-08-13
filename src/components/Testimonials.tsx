@@ -6,7 +6,7 @@ import { site } from "@/data";
 import { AccentTitleLines } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
-export function Testimonials() {
+export function Testimonials({ className }: { className?: string }) {
   const { testimonials } = site;
   const items = testimonials.items;
   const [current, setCurrent] = useState(0);
@@ -16,7 +16,12 @@ export function Testimonials() {
   const t = items[current];
 
   return (
-    <section className="relative h-[560px] w-full overflow-hidden bg-white lg:h-[580px]">
+    <section
+      className={
+        className ??
+        "relative h-[560px] w-full overflow-hidden bg-white lg:h-[580px]"
+      }
+    >
       {/* Right-side bands: top blue / middle white / bottom blue */}
       <div className="absolute inset-0 z-0 flex flex-col">
         <div className="relative h-[72px] w-full bg-[#0458d6] lg:h-[80px]">

@@ -76,24 +76,23 @@ export function Header() {
                     ? pathname === "/"
                     : pathname.startsWith(item.href);
 
+                const navLinkClass = [
+                  "relative inline-flex items-center gap-1 pb-1.5 text-[15px] font-semibold text-brand",
+                  "after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-full after:origin-left after:rounded-full after:bg-[#1e6fd0] after:transition-transform after:duration-200",
+                  active
+                    ? "after:scale-x-100"
+                    : "after:scale-x-0 group-hover:after:scale-x-100",
+                ].join(" ");
+
                 return (
                   <li key={item.label} className="group relative">
                     {hasChildren ? (
-                      <span
-                        className={`flex cursor-default items-center gap-1 text-[15px] font-semibold ${
-                          active ? "text-brand" : "text-brand hover:text-brand-deep"
-                        }`}
-                      >
+                      <span className={`${navLinkClass} cursor-default`}>
                         {item.label}
                         <Icon name="chevron" className="h-[12px] w-[12px]" />
                       </span>
                     ) : (
-                      <Link
-                        href={item.href}
-                        className={`flex items-center gap-1 text-[15px] font-semibold transition-colors ${
-                          active ? "text-brand" : "text-brand hover:text-brand-deep"
-                        }`}
-                      >
+                      <Link href={item.href} className={navLinkClass}>
                         {item.label}
                       </Link>
                     )}

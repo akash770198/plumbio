@@ -64,7 +64,7 @@ export function TermsPage() {
   const { termsPage: data } = site;
 
   return (
-    <section className="bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
+    <section className="bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
       <div className="shell">
         <Reveal>
           <div className="flex flex-col gap-4 rounded-2xl border border-[#e6ebf2] bg-white px-5 py-5 sm:flex-row sm:items-center sm:gap-0 sm:px-7 sm:py-6">

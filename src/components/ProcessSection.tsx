@@ -1,12 +1,18 @@
+import Image from "next/image";
 import { site } from "@/data";
 import { Reveal } from "./Reveal";
 import { Icon } from "./Icon";
 
-export function ProcessSection() {
+export function ProcessSection({ className }: { className?: string }) {
   const { process } = site;
 
   return (
-    <section className="relative overflow-hidden bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]">
+    <section
+      className={
+        className ??
+        "relative overflow-hidden bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]"
+      }
+    >
 
       {/* background dots */}
       <div className="absolute left-0 top-28 h-72 w-72 rounded-full bg-[radial-gradient(circle,#dbeafe_2px,transparent_2px)] [background-size:14px_14px] opacity-60" />
@@ -83,10 +89,20 @@ export function ProcessSection() {
                   {/* icon */}
 
                   <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full border-[8px] border-white bg-gradient-to-b from-[#2b73ff] to-[#0047d8] shadow-[0_18px_35px_rgba(0,82,255,.25)]">
-                    <Icon
-                      name={step.icon}
-                      className="h-14 w-14 text-white"
-                    />
+                    {step.iconType === "image" ? (
+                      <Image
+                        src={step.icon}
+                        alt={step.title}
+                        width={56}
+                        height={56}
+                        className="h-14 w-14"
+                      />
+                    ) : (
+                      <Icon
+                        name={step.icon}
+                        className="h-14 w-14 text-white"
+                      />
+                    )}
                   </div>
 
                   {/* pointer */}

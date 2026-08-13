@@ -69,7 +69,7 @@ export function WhyChoose({ className }: { className?: string }) {
         Frame runs from content top to near section bottom so the FULL image
         fits with object-contain — nothing cropped; wave only covers the waist.
       */}
-      <div className="pointer-events-none absolute bottom-0 right-[var(--page-gutter)] top-12 z-10 hidden w-[min(560px,52%)] -translate-x-8 xl:-translate-x-12 lg:block">
+      <div className="pointer-events-none absolute bottom-0 right-[var(--page-gutter)] top-12 z-10 hidden w-[min(560px,52%)] translate-x-2 xl:translate-x-4 lg:block">
         <Image
           src={whyChoose.image}
           alt={whyChoose.imageAlt}
@@ -81,46 +81,38 @@ export function WhyChoose({ className }: { className?: string }) {
       </div>
 
       {/* White wave + trust badges (z-20) — sits over plumber waist */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[180px] lg:h-[220px]">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[220px] lg:h-[300px]">
         <svg
           className="absolute inset-0 h-full w-full"
-          viewBox="0 0 1440 220"
+          viewBox="0 0 1440 320"
           preserveAspectRatio="none"
           aria-hidden
         >
-          <path
-            fill="#1a4faa"
-            fillOpacity="0.28"
-            d="M0 175
-               C 220 205, 420 210, 620 165
-               C 860 110, 1040 55, 1220 42
-               C 1320 36, 1390 44, 1440 56
-               L1440 220 L0 220 Z"
-          />
+          {/* White: rise from center → straight → ends at right edge */}
           <path
             fill="#ffffff"
-            d="M0 188
-               C 180 210, 360 214, 540 180
-               C 760 132, 960 68, 1160 46
-               C 1280 34, 1365 38, 1440 54
-               L1440 220 L0 220 Z"
+            d="M720 320
+               C 775 320, 825 242, 870 198
+               C 895 175, 925 168, 970 168
+               L1440 168
+               L1440 320 Z"
           />
         </svg>
 
-        <div className="shell pointer-events-auto absolute inset-x-0 bottom-0 flex h-[100px] items-end pb-5 lg:h-[118px] lg:items-center lg:pb-0 lg:pt-8">
-          <div className="ml-auto flex w-full max-w-[700px] items-stretch justify-between">
+        <div className="shell pointer-events-auto absolute inset-x-0 bottom-0 flex h-[96px] items-end pb-4 lg:h-[110px] lg:items-center lg:pb-0 lg:pt-6">
+          <div className="ml-auto flex w-full max-w-[520px] -translate-x-2 -translate-y-6 items-stretch justify-between lg:-translate-x-4 lg:-translate-y-10">
             {whyChoose.stats.map((stat, i) => (
               <div
                 key={stat.title}
-                className={`flex flex-1 flex-col items-center justify-center px-2 text-center lg:px-5 ${
+                className={`flex flex-1 flex-col items-center justify-center px-1.5 text-center lg:px-3 ${
                   i > 0 ? "border-l border-[#d5deee]" : ""
                 }`}
               >
                 <FeatureIcon
                   name={stat.icon}
-                  className="mb-2 h-7 w-7 text-[#002870] lg:h-8 lg:w-8"
+                  className="mb-1.5 h-5 w-5 text-[#002870] lg:h-5 lg:w-5"
                 />
-                <p className="text-[12px] font-bold leading-[1.25] text-[#002870] lg:text-[13px]">
+                <p className="text-[10px] font-bold leading-[1.25] text-[#002870] lg:text-[11px]">
                   {stat.title}
                   {stat.value ? (
                     <>
@@ -165,7 +157,17 @@ export function WhyChoose({ className }: { className?: string }) {
               {whyChoose.features.map((feature) => (
                 <li key={feature.title} className="flex items-center gap-5 py-4 first:pt-0">
                   <span className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[12px] bg-[#0051d4] text-white shadow-lg">
-                    <FeatureIcon name={feature.icon} className="h-6 w-6" />
+                    {feature.iconType === "image" ? (
+                      <Image
+                        src={feature.icon}
+                        alt={feature.title}
+                        width={32}
+                        height={32}
+                        className="h-8 w-8"
+                      />
+                    ) : (
+                      <FeatureIcon name={feature.icon} className="h-6 w-6" />
+                    )}
                   </span>
                   <span className="text-[18px] font-bold text-white">{feature.title}</span>
                 </li>
@@ -176,7 +178,17 @@ export function WhyChoose({ className }: { className?: string }) {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#20b2ff]/10 to-transparent" />
               <div className="relative z-10 flex items-start gap-5">
                 <span className="flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-xl bg-[#20b2ff] text-white shadow-[0_0_15px_rgba(32,178,255,0.4)]">
-                  <FeatureIcon name={whyChoose.highlightCard.icon} className="h-8 w-8" />
+                  {whyChoose.highlightCard.iconType === "image" ? (
+                    <Image
+                      src={whyChoose.highlightCard.icon}
+                      alt={whyChoose.highlightCard.title}
+                      width={40}
+                      height={40}
+                      className="h-10 w-10"
+                    />
+                  ) : (
+                    <FeatureIcon name={whyChoose.highlightCard.icon} className="h-8 w-8" />
+                  )}
                 </span>
                 <div className="pt-0.5">
                   <h3 className="text-[19px] font-bold text-white">{whyChoose.highlightCard.title}</h3>

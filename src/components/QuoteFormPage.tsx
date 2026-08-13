@@ -129,7 +129,7 @@ export function QuoteFormPage({ data }: { data: QuoteLikePage }) {
     <section className="bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
       <div className="shell">
         <div className="overflow-hidden rounded-2xl border border-[#e8edf5] bg-white shadow-[0_10px_36px_rgba(10,31,92,0.06)]">
-          <div className="grid lg:grid-cols-[minmax(280px,0.9fr)_minmax(0,1.4fr)]">
+          <div className="grid items-start lg:grid-cols-[minmax(280px,0.9fr)_minmax(0,1.4fr)]">
             <Reveal>
               <aside className="h-full bg-[#eef4fb] p-6 sm:p-8 lg:p-9">
                 <div className="flex items-center gap-3">

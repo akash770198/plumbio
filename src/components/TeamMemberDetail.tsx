@@ -2,33 +2,11 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data";
+import { AccentTitle } from "./AccentTitle";
+import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
 
 type TeamMember = (typeof site.team.members)[number];
-
-const SOCIAL_ICONS = {
-  fb: (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
-      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-    </svg>
-  ),
-  tw: (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
-      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-    </svg>
-  ),
-  in: (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
-      <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z" />
-    </svg>
-  ),
-  ig: (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
-    </svg>
-  ),
-};
 
 function CertIcon({ name }: { name: string }) {
   const props = {
@@ -125,16 +103,41 @@ function SectionCard({
     <div
       className={`rounded-xl border border-[#e8edf5] bg-white p-6 shadow-[0_8px_28px_rgba(10,31,92,0.05)] sm:p-8 ${className ?? ""}`}
     >
-      <h3 className="text-[22px] font-extrabold text-[#0a1f5c]">{title}</h3>
+      <h3 className="section-title text-[clamp(20px,1.8vw,24px)]">{title}</h3>
       <span className="mt-3 block h-[3px] w-10 rounded-full bg-[#1e6fd0]" />
       <div className="mt-6">{children}</div>
     </div>
   );
 }
 
+function SocialLinks({ size = "md" }: { size?: "md" | "lg" }) {
+  const { topbar } = site;
+  const box =
+    size === "lg"
+      ? "h-12 w-12"
+      : "h-10 w-10";
+  const icon = size === "lg" ? "h-5 w-5" : "h-4 w-4";
+
+  return (
+    <div className="flex flex-wrap gap-3">
+      {topbar.socials.map((social) => (
+        <a
+          key={social.label}
+          href={social.href}
+          aria-label={social.label}
+          className={`grid ${box} place-items-center rounded-full border border-[#1e6fd0] text-[#1e6fd0] transition hover:bg-[#1e6fd0] hover:text-white`}
+        >
+          <Icon name={social.icon} className={icon} />
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export function TeamMemberDetail({ member }: { member: TeamMember }) {
-  const { team, topbar } = site;
+  const { team } = site;
   const cta = team.detailCta;
+  const social = team.detailSocial;
   const ctaDescription = cta.description.replace("{name}", member.name.split(" ")[0]);
 
   const contactItems = [
@@ -169,8 +172,10 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-[22px] font-extrabold leading-none">{member.yearsExperience}</p>
-                    <p className="text-[12px] font-medium text-white/85">Years Experience</p>
+                    <p className="section-title text-[22px] leading-none text-white">
+                      {member.yearsExperience}
+                    </p>
+                    <p className="section-desc mt-1 text-white/85">Years Experience</p>
                   </div>
                 </div>
               </div>
@@ -180,39 +185,31 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
                   <span className="h-[2px] w-8 bg-[#1e6fd0]" />
                   <p className="section-label">{member.roleLabel}</p>
                 </div>
-                <h1 className="section-title mt-4">
-                  {member.name}
-                </h1>
+                <h1 className="section-title mt-4">{member.name}</h1>
                 <p className="section-desc mt-5 max-w-xl">{member.bio}</p>
 
                 <ul className="mt-8 space-y-4">
                   {contactItems.map((item) => (
-                    <li key={item.type} className="flex items-center gap-3 text-[15px] text-[#444]">
+                    <li key={item.type} className="flex items-center gap-3">
                       <ContactIcon type={item.type} />
                       {item.href ? (
-                        <a href={item.href} className="transition hover:text-[#1e6fd0]">
+                        <a
+                          href={item.href}
+                          className="section-desc transition hover:text-[#1e6fd0]"
+                        >
                           {item.value}
                         </a>
                       ) : (
-                        <span>{item.value}</span>
+                        <span className="section-desc">{item.value}</span>
                       )}
                     </li>
                   ))}
                 </ul>
 
                 <div className="mt-8">
-                  <p className="text-[15px] font-bold text-[#0a1f5c]">Follow On:</p>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    {topbar.socials.map((social) => (
-                      <a
-                        key={social.label}
-                        href={social.href}
-                        aria-label={social.label}
-                        className="grid h-10 w-10 place-items-center rounded-full border border-[#1e6fd0] text-[#1e6fd0] transition hover:bg-[#1e6fd0] hover:text-white"
-                      >
-                        {SOCIAL_ICONS[social.icon as keyof typeof SOCIAL_ICONS]}
-                      </a>
-                    ))}
+                  <p className="section-desc font-bold text-brand">Follow On:</p>
+                  <div className="mt-4">
+                    <SocialLinks />
                   </div>
                 </div>
               </div>
@@ -237,7 +234,7 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
                   <p className="font-[family-name:var(--font-signature)] text-[34px] leading-none text-[#1e6fd0]">
                     {member.name}
                   </p>
-                  <p className="mt-2 text-[15px] font-bold capitalize text-[#0a1f5c]">
+                  <p className="section-desc mt-2 font-bold capitalize text-brand">
                     {member.roleLabel.toLowerCase()}
                   </p>
                 </div>
@@ -250,8 +247,10 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
                   {member.skills.map((skill) => (
                     <div key={skill.name}>
                       <div className="mb-2 flex items-center justify-between gap-4">
-                        <span className="text-[14px] font-bold text-[#0a1f5c]">{skill.name}</span>
-                        <span className="text-[14px] font-bold text-[#1e6fd0]">{skill.percent}%</span>
+                        <span className="section-desc font-bold text-brand">{skill.name}</span>
+                        <span className="section-desc font-bold text-[#1e6fd0]">
+                          {skill.percent}%
+                        </span>
                       </div>
                       <div className="h-[6px] overflow-hidden rounded-full bg-[#e8edf5]">
                         <div
@@ -277,10 +276,12 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
                   {member.experience.map((item) => (
                     <div key={`${item.period}-${item.title}`} className="relative">
                       <span className="absolute -left-6 top-1.5 h-3 w-3 rounded-full bg-[#1e6fd0]" />
-                      <p className="text-[13px] font-bold text-[#1e6fd0]">{item.period}</p>
-                      <h4 className="mt-1 text-[16px] font-extrabold text-[#0a1f5c]">{item.title}</h4>
-                      <p className="text-[14px] font-bold text-[#0a1f5c]">{item.company}</p>
-                      <p className="mt-2 text-[14px] leading-[1.75] text-[#666]">{item.description}</p>
+                      <p className="section-label text-[#1e6fd0]">{item.period}</p>
+                      <h4 className="section-title mt-1 text-[clamp(16px,1.4vw,18px)]">
+                        {item.title}
+                      </h4>
+                      <p className="section-desc mt-0.5 font-bold text-brand">{item.company}</p>
+                      <p className="section-desc mt-2">{item.description}</p>
                     </div>
                   ))}
                 </div>
@@ -299,8 +300,10 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
                         <CertIcon name={cert.icon} />
                       </div>
                       <div>
-                        <h4 className="text-[15px] font-extrabold text-[#0a1f5c]">{cert.title}</h4>
-                        <p className="mt-1 text-[13px] leading-relaxed text-[#666]">{cert.subtitle}</p>
+                        <h4 className="section-title text-[clamp(15px,1.3vw,17px)]">
+                          {cert.title}
+                        </h4>
+                        <p className="section-desc mt-1">{cert.subtitle}</p>
                       </div>
                     </div>
                   ))}
@@ -308,6 +311,23 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
               </SectionCard>
             </Reveal>
           </div>
+
+          <Reveal delay={100}>
+            <div className="mt-6 rounded-xl border border-[#e8edf5] bg-[#f7f9fc] p-6 shadow-[0_8px_28px_rgba(10,31,92,0.05)] sm:p-8 lg:p-10">
+              <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between">
+                <div className="max-w-xl">
+                  <p className="section-label">{social.label}</p>
+                  <AccentTitle
+                    className="mt-3"
+                    before={social.titleBefore}
+                    accent={social.titleAccent}
+                  />
+                  <p className="section-desc mt-3">{social.description}</p>
+                </div>
+                <SocialLinks size="lg" />
+              </div>
+            </div>
+          </Reveal>
 
           <Reveal delay={120}>
             <div
@@ -326,14 +346,14 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
                   </svg>
                 </div>
                 <div className="flex-1 text-white">
-                  <h3 className="text-[clamp(24px,2.5vw,32px)] font-extrabold leading-tight">
+                  <h3 className="section-title text-[clamp(24px,2.5vw,32px)] text-white">
                     {cta.title}
                   </h3>
-                  <p className="mt-2 text-[15px] text-white/90">{ctaDescription}</p>
+                  <p className="section-desc mt-2 text-white/90">{ctaDescription}</p>
                 </div>
                 <Link
                   href={cta.phoneHref}
-                  className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-white px-6 py-3.5 text-[15px] font-bold text-[#0a3d9c] transition hover:bg-[#eef5ff]"
+                  className="section-desc inline-flex shrink-0 items-center gap-3 rounded-lg bg-white px-6 py-3.5 font-bold text-[#0a3d9c] transition hover:bg-[#eef5ff]"
                 >
                   <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden>
                     <path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.4 1.4 0 011.5-.34 11.4 11.4 0 003.5.56 1.4 1.4 0 011.4 1.4V20a1.4 1.4 0 01-1.4 1.4A17.4 17.4 0 012.6 4 1.4 1.4 0 014 2.6h3.2A1.4 1.4 0 018.6 4a11.4 11.4 0 00.56 3.5 1.4 1.4 0 01-.34 1.5L6.6 10.8z" />

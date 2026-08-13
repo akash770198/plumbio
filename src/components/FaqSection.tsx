@@ -128,7 +128,7 @@ function FaqCard({
             primaryOpen ? "bg-white text-[#0a3d9c]" : "bg-[#eef6ff] text-[#1e6fd0]"
           }`}
         >
-          <FaqIcon name={item.icon} className="h-5 w-5" />
+          <FaqIcon name={item.icon} className="h-7 w-7" />
         </span>
 
         <span

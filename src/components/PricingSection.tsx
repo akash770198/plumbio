@@ -263,7 +263,7 @@ export function PricingSection() {
       </section>
 
       {/* ── Service Plans ── */}
-      <section className="bg-[#f3f5f8] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
+      <section className="bg-white pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
         <div className="shell">
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">

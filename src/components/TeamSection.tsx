@@ -73,8 +73,8 @@ export function TeamSection({
                   />
                 </div>
                 <div className="relative px-5 py-5">
-                  <h3 className="text-[18px] font-extrabold text-[#0a1f5c]">{member.name}</h3>
-                  <p className="mt-2 text-[14px] text-[#6b7a9a]">{member.designation}</p>
+                  <h3 className="section-title text-[clamp(17px,1.5vw,18px)]">{member.name}</h3>
+                  <p className="section-desc mt-2">{member.designation}</p>
                   {linkToDetail && (
                     <span
                       aria-hidden
