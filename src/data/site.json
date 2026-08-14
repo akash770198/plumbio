@@ -232,7 +232,7 @@
         "tagline": "Services",
         "image": "/img/service-residential-hd.png",
         "imageAlt": "Plumber repairing residential pipework",
-        "icon": "/icons/services/Residential.png",
+        "icon": "/icons/services/Residentials.png",
         "href": "/services/residential",
         "pageType": "detail",
         "label": "residential plumbing",
