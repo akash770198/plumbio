@@ -369,7 +369,7 @@
         "tagline": "Services",
         "image": "/img/service-emergency-hd.png",
         "imageAlt": "Emergency water cleanup",
-        "icon": "/icons/services/Emergency.png",
+        "icon": "/icons/services/Emergency_icon.png",
         "href": "/services/emergency",
         "pageType": "detail",
         "label": "emergency plumbing",
