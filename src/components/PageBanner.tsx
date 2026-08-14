@@ -16,21 +16,23 @@ interface PageBannerProps {
 export function PageBanner({
   title,
   breadcrumbs,
-  backgroundImage = "/img/banner/Page_banner.jpeg",
-  backgroundImageAlt = "Page banner background",
+  backgroundImage,
+  backgroundImageAlt,
 }: PageBannerProps) {
   return (
     <section className="w-full overflow-hidden bg-white">
       {/* Mobile: compact full-bleed banner (no stacked frames eating height) */}
       <div className="relative h-[100px] w-full overflow-hidden sm:h-[120px] lg:hidden">
-        <Image
-          src={backgroundImage}
-          alt={backgroundImageAlt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
+        {backgroundImage && (
+          <Image
+            src={backgroundImage}
+            alt={backgroundImageAlt || title}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-r from-[#062f6d]/80 via-[#0a3c83]/65 to-[#0c4b9d]/45" />
         <div className="absolute left-0 top-0 z-20 h-full w-2.5 bg-[#4aa8ef]" />
 
@@ -77,14 +79,16 @@ export function PageBanner({
         </div>
 
         <div className="relative mx-[36px] h-[240px] overflow-hidden">
-          <Image
-            src={backgroundImage}
-            alt={backgroundImageAlt}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
+          {backgroundImage && (
+            <Image
+              src={backgroundImage}
+              alt={backgroundImageAlt || title}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-[#062f6d]/90 via-[#0a3c83]/75 to-[#0c4b9d]/65" />
 
           <div className="relative z-10 flex h-full flex-col justify-center px-12">
