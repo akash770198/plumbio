@@ -149,7 +149,7 @@ export function ServicePageLayout({
 
       <p className="section-desc mt-8">{data.intro}</p>
 
-      <h3 className="section-title mt-16">{data.industriesTitle}</h3>
+      <h3 className={`section-title ${hideReasons ? 'mt-16' : 'mt-9'}`}>{data.industriesTitle}</h3>
       <p className="section-desc mt-4">{data.industriesIntro}</p>
 
       <div className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
@@ -177,7 +177,7 @@ export function ServicePageLayout({
       <h3 className={`section-title ${hideReasons ? 'mt-0' : 'mt-12'}`}>{data.experienceTitle}</h3>
       <p className="section-desc mt-4">{data.experienceText}</p>
 
-      <ul className="mt-6 flex flex-col gap-3.5">
+      <ul className="mt-6 flex flex-col gap-3.5 max-sm:pl-4">
         {data.experiencePoints.map((point) => (
           <li key={point.title} className="flex items-start gap-2.5">
             <ArrowIcon className="mt-1 h-4 w-4 shrink-0 text-[#0a1f5c]" />
@@ -287,14 +287,14 @@ export function ServicePageLayout({
         {data.servicesHeading}
       </h3>
 
-      <ul className="mt-5 bg-[#f4f6f8] px-6 py-2">
+      <ul className="mt-5 bg-[#f4f6f8] py-2 max-sm:px-4 sm:px-6">
         {data.servicesList.map((item) => (
           <li key={item.label} className="border-b border-[#e6eaef] last:border-b-0">
             <Link
               href={item.href}
-              className="flex items-center gap-3 py-3.5 text-[15px] font-bold text-[#0a1f5c] transition hover:text-[#0051d4]"
+              className="flex py-3.5 text-[15px] font-bold text-[#0a1f5c] transition hover:text-[#0051d4] max-sm:gap-2.5 sm:gap-3 max-sm:items-start sm:items-center"
             >
-              <ArrowIcon className="h-4 w-4 shrink-0 text-[#3aa0f0]" />
+              <ArrowIcon className="h-4 w-4 shrink-0 text-[#3aa0f0] max-sm:mt-1 sm:mt-0" />
               {item.label}
             </Link>
           </li>
