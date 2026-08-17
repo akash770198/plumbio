@@ -15,9 +15,12 @@ export function About({ data, className }: SectionProps<ServicesAboutData>) {
           {/* ── Left: Copy ── */}
           <Reveal className="flex h-full flex-col justify-between lg:py-1 lg:pr-2">
             {/* label */}
-            <p className="section-label">
-              {about.label}
-            </p>
+            <div className="flex items-center gap-3">
+              <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
+              <p className="section-label">
+                {about.label}
+              </p>
+            </div>
 
             {/* heading */}
             <AccentTitleLines className="mt-3" lines={about.titleLines} />
