@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/data";
+import { site, SectionProps, ServicesBlogData } from "@/data";
 import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
@@ -10,12 +10,12 @@ export function BlogSection({
   className,
   items,
   showButton,
+  data,
 }: {
-  className?: string;
   items?: BlogItem[];
   showButton?: boolean;
-}) {
-  const { blog } = site;
+} & SectionProps<ServicesBlogData> = {}) {
+  const blog = data?.blog || site.blog;
   const blogItems = items ?? blog.items;
   const shouldShowButton = showButton ?? !items;
 

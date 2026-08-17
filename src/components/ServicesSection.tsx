@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/data";
+import { site, SectionProps, ServicesCatalogData } from "@/data";
 import { AccentTitleLines } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
@@ -18,13 +18,13 @@ export function ServicesSection({
   services,
   limit,
   showButton,
+  data,
 }: {
-  className?: string;
   services?: ServiceCard[];
   limit?: number;
   showButton?: boolean;
-}) {
-  const { servicesCatalog } = site;
+} & SectionProps<ServicesCatalogData> = {}) {
+  const servicesCatalog = data || site.servicesCatalog;
   const catalogItems = servicesCatalog.items.map((item) => ({
     title: item.title,
     image: item.image,

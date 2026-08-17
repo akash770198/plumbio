@@ -1287,17 +1287,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Inspect",
                     "description": "We assess the issue and explain clear repair options before any work begins."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Repair",
                     "description": "Licensed plumbers complete the job carefully with quality parts and clean work areas."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Test",
                     "description": "We test the system thoroughly so you can enjoy reliable performance right away."
                   }
@@ -1424,17 +1424,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Call",
                     "description": "Tell us what happened and we dispatch the nearest available emergency plumber."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Stabilize",
                     "description": "We shut off water if needed, contain damage, and identify the source."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Restore",
                     "description": "Permanent repairs bring your plumbing back to safe, reliable operation."
                   }
@@ -1539,17 +1539,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Plan",
                     "description": "We review your layout, recommend the right products, and confirm the scope."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Install",
                     "description": "Clean, careful installation with attention to finish quality and code standards."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Verify",
                     "description": "Final testing ensures every connection is secure and performing correctly."
                   }
@@ -1654,17 +1654,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Diagnose",
                     "description": "A thorough inspection identifies the issue and the best repair path."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Fix",
                     "description": "We complete the repair efficiently with minimal disruption to your home."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Confirm",
                     "description": "We retest everything and walk you through what was done."
                   }
@@ -1741,7 +1741,7 @@
                 "label": "24/7 support",
                 "headline": "Around-the-Clock Plumbing Support",
                 "intro": "Questions, urgent issues, or after-hours help — our support team is available day and night so you're never left waiting when plumbing problems strike.",
-                "badgeValue": "365",
+                "badgeValue": 365,
                 "badgeLabel": "Days Available",
                 "highlights": [
                   "Always-on phone support",
@@ -1769,17 +1769,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Reach Out",
                     "description": "Call or submit a request anytime — nights, weekends, and holidays included."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Get Guidance",
                     "description": "We help you take safe first steps while arranging professional support."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Resolve",
                     "description": "A plumber is scheduled or dispatched based on urgency and availability."
                   }
@@ -1899,17 +1899,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Inspect",
                     "description": "We assess the issue and explain clear repair options before any work begins."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Repair",
                     "description": "Licensed plumbers complete the job carefully with quality parts and clean work areas."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Test",
                     "description": "We test the system thoroughly so you can enjoy reliable performance right away."
                   }
@@ -2036,17 +2036,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Call",
                     "description": "Tell us what happened and we dispatch the nearest available emergency plumber."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Stabilize",
                     "description": "We shut off water if needed, contain damage, and identify the source."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Restore",
                     "description": "Permanent repairs bring your plumbing back to safe, reliable operation."
                   }
@@ -2151,17 +2151,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Plan",
                     "description": "We review your layout, recommend the right products, and confirm the scope."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Install",
                     "description": "Clean, careful installation with attention to finish quality and code standards."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Verify",
                     "description": "Final testing ensures every connection is secure and performing correctly."
                   }
@@ -2266,17 +2266,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Diagnose",
                     "description": "A thorough inspection identifies the issue and the best repair path."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Fix",
                     "description": "We complete the repair efficiently with minimal disruption to your home."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Confirm",
                     "description": "We retest everything and walk you through what was done."
                   }
@@ -2353,7 +2353,7 @@
                 "label": "24/7 support",
                 "headline": "Around-the-Clock Plumbing Support",
                 "intro": "Questions, urgent issues, or after-hours help — our support team is available day and night so you're never left waiting when plumbing problems strike.",
-                "badgeValue": "365",
+                "badgeValue": 365,
                 "badgeLabel": "Days Available",
                 "highlights": [
                   "Always-on phone support",
@@ -2381,17 +2381,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Reach Out",
                     "description": "Call or submit a request anytime — nights, weekends, and holidays included."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Get Guidance",
                     "description": "We help you take safe first steps while arranging professional support."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Resolve",
                     "description": "A plumber is scheduled or dispatched based on urgency and availability."
                   }
@@ -2511,17 +2511,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Inspect",
                     "description": "We assess the issue and explain clear repair options before any work begins."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Repair",
                     "description": "Licensed plumbers complete the job carefully with quality parts and clean work areas."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Test",
                     "description": "We test the system thoroughly so you can enjoy reliable performance right away."
                   }
@@ -2648,17 +2648,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Call",
                     "description": "Tell us what happened and we dispatch the nearest available emergency plumber."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Stabilize",
                     "description": "We shut off water if needed, contain damage, and identify the source."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Restore",
                     "description": "Permanent repairs bring your plumbing back to safe, reliable operation."
                   }
@@ -2763,17 +2763,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Plan",
                     "description": "We review your layout, recommend the right products, and confirm the scope."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Install",
                     "description": "Clean, careful installation with attention to finish quality and code standards."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Verify",
                     "description": "Final testing ensures every connection is secure and performing correctly."
                   }
@@ -2878,17 +2878,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Diagnose",
                     "description": "A thorough inspection identifies the issue and the best repair path."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Fix",
                     "description": "We complete the repair efficiently with minimal disruption to your home."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Confirm",
                     "description": "We retest everything and walk you through what was done."
                   }
@@ -2965,7 +2965,7 @@
                 "label": "24/7 support",
                 "headline": "Around-the-Clock Plumbing Support",
                 "intro": "Questions, urgent issues, or after-hours help — our support team is available day and night so you're never left waiting when plumbing problems strike.",
-                "badgeValue": "365",
+                "badgeValue": 365,
                 "badgeLabel": "Days Available",
                 "highlights": [
                   "Always-on phone support",
@@ -2993,17 +2993,17 @@
                 ],
                 "process": [
                   {
-                    "step": "01",
+                    "step": 1,
                     "title": "Reach Out",
                     "description": "Call or submit a request anytime — nights, weekends, and holidays included."
                   },
                   {
-                    "step": "02",
+                    "step": 2,
                     "title": "Get Guidance",
                     "description": "We help you take safe first steps while arranging professional support."
                   },
                   {
-                    "step": "03",
+                    "step": 3,
                     "title": "Resolve",
                     "description": "A plumber is scheduled or dispatched based on urgency and availability."
                   }
@@ -3357,28 +3357,28 @@
             ],
             "steps": [
               {
-                "number": "01",
+                "number": 1,
                 "title": "Book Online",
                 "description": "Schedule your service easily in just a few clicks.",
                 "icon": "/icons/list.png",
                 "iconType": "image"
               },
               {
-                "number": "02",
+                "number": 2,
                 "title": "We Arrive",
                 "description": "Our expert plumbers arrive on time and ready to help.",
                 "icon": "/icons/cross-wrench.png",
                 "iconType": "image"
               },
               {
-                "number": "03",
+                "number": 3,
                 "title": "Fix & Solve",
                 "description": "We diagnose the issue and get the job done right.",
                 "icon": "/icons/pipe.png",
                 "iconType": "image"
               },
               {
-                "number": "04",
+                "number": 4,
                 "title": "You Relax",
                 "description": "Enjoy hassle-free plumbing and complete peace of mind.",
                 "icon": "/icons/thumb.png",
@@ -3395,28 +3395,28 @@
             ],
             "steps": [
               {
-                "number": "01",
+                "number": 1,
                 "title": "Book Online",
                 "description": "Schedule your service easily in just a few clicks.",
                 "icon": "/icons/list.png",
                 "iconType": "image"
               },
               {
-                "number": "02",
+                "number": 2,
                 "title": "We Arrive",
                 "description": "Our expert plumbers arrive on time and ready to help.",
                 "icon": "/icons/cross-wrench.png",
                 "iconType": "image"
               },
               {
-                "number": "03",
+                "number": 3,
                 "title": "Fix & Solve",
                 "description": "We diagnose the issue and get the job done right.",
                 "icon": "/icons/pipe.png",
                 "iconType": "image"
               },
               {
-                "number": "04",
+                "number": 4,
                 "title": "You Relax",
                 "description": "Enjoy hassle-free plumbing and complete peace of mind.",
                 "icon": "/icons/thumb.png",
@@ -3433,28 +3433,28 @@
             ],
             "steps": [
               {
-                "number": "01",
+                "number": 1,
                 "title": "Book Online",
                 "description": "Schedule your service easily in just a few clicks.",
                 "icon": "/icons/list.png",
                 "iconType": "image"
               },
               {
-                "number": "02",
+                "number": 2,
                 "title": "We Arrive",
                 "description": "Our expert plumbers arrive on time and ready to help.",
                 "icon": "/icons/cross-wrench.png",
                 "iconType": "image"
               },
               {
-                "number": "03",
+                "number": 3,
                 "title": "Fix & Solve",
                 "description": "We diagnose the issue and get the job done right.",
                 "icon": "/icons/pipe.png",
                 "iconType": "image"
               },
               {
-                "number": "04",
+                "number": 4,
                 "title": "You Relax",
                 "description": "Enjoy hassle-free plumbing and complete peace of mind.",
                 "icon": "/icons/thumb.png",
@@ -4989,7 +4989,7 @@
                 "recentPosts": [
                   {
                     "dateMonth": "Nov",
-                    "dateDay": "18",
+                    "dateDay": 18,
                     "image": "/img/plumbing_problems.jpeg",
                     "imageAlt": "Pipe wrench and plumbing fittings",
                     "author": "Admin",
@@ -4999,7 +4999,7 @@
                   },
                   {
                     "dateMonth": "Nov",
-                    "dateDay": "18",
+                    "dateDay": 18,
                     "image": "/img/blog-3.jpg",
                     "imageAlt": "Kitchen faucet running while hands are washed",
                     "author": "Admin",

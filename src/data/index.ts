@@ -1,7 +1,52 @@
 import siteData from "@/data/site.json";
 
+// ── Root Schema Types ──
 export type RawSiteData = typeof siteData;
+export type ServicesSchema = typeof siteData.Services;
+export type ServicesSections = ServicesSchema["sections"];
+export type ServicesTemplateComponents = ServicesSchema["templateComponents"];
 
+// ── Universal SectionProps Interface (ai-builder Standard) ──
+export interface SectionProps<T = any> {
+  data?: T;
+  className?: string;
+  contentClassName?: string;
+  variant?: string;
+  isEditable?: boolean;
+  onUpdate?: (newData: Partial<T>) => void;
+}
+
+// ── Strongly Typed Section Variant Data Models ──
+export type ServicesTopbarData = ServicesSections["Topbar"]["variants"]["ServicesTopbar1"];
+export type ServicesHeaderData = ServicesSections["Header"]["variants"]["ServicesHeader1"];
+export type ServicesHeroData = ServicesSections["Hero"]["variants"]["ServicesHero1"];
+export type ServicesTrustedByData = ServicesSections["TrustedBy"]["variants"]["ServicesTrustedBy1"];
+export type ServicesPageBannerData = ServicesSections["PageBanner"]["variants"]["ServicesInnerBanner1"];
+export type ServicesAboutData = ServicesSections["About"]["variants"]["ServicesAbout1"];
+export type ServicesCatalogData = ServicesSections["ServicesCatalog"]["variants"]["ServicesCatalog1"];
+export type ServicesCommercialData = ServicesSections["CommercialServices"]["variants"]["ServicesCommercial1"];
+export type ServicesWhyChooseData = ServicesSections["WhyChooseUs"]["variants"]["ServicesWhyChooseUs1"];
+export type ServicesProcessData = ServicesSections["Process"]["variants"]["ServicesProcess1"];
+export type ServicesCompanyShowcaseData = ServicesSections["CompanyShowcase"]["variants"]["ServicesCompanyShowcase1"];
+export type ServicesTestimonialsData = ServicesSections["Testimonials"]["variants"]["ServicesTestimonials1"];
+export type ServicesTeamData = ServicesSections["Team"]["variants"]["ServicesTeam1"];
+export type ServicesAwardsData = ServicesSections["Awards"]["variants"]["ServicesAwards1"];
+export type ServicesFAQData = ServicesSections["FAQ"]["variants"]["ServicesFAQ1"];
+export type ServicesBlogData = ServicesSections["Blog"]["variants"]["ServicesBlog1"];
+export type ServicesCTAData = ServicesSections["CTA"]["variants"]["ServicesCTA1"];
+export type ServicesContactInfoData = ServicesSections["ContactInfo"]["variants"]["ServicesContactInfo1"];
+export type ServicesPricingData = ServicesSections["Pricing"]["variants"]["ServicesPricing1"];
+export type ServicesContactPageData = ServicesSections["ContactPage"]["variants"]["ServicesContactPage1"];
+export type ServicesQuotePageData = ServicesSections["QuotePage"]["variants"]["ServicesQuotePage1"];
+export type ServicesEnquiryPageData = ServicesSections["EnquiryPage"]["variants"]["ServicesEnquiryPage1"];
+export type ServicesCareerPageData = ServicesSections["CareerPage"]["variants"]["ServicesCareerPage1"];
+export type ServicesProjectsGalleryData = ServicesSections["ProjectsGallery"]["variants"]["ServicesProjectsGallery1"];
+export type ServicesIndustriesWeServeData = ServicesSections["IndustriesWeServe"]["variants"]["ServicesIndustriesWeServe1"];
+export type ServicesSitemapPageData = ServicesSections["SitemapPage"]["variants"]["ServicesSitemapPage1"];
+export type ServicesTermsPageData = ServicesSections["TermsPage"]["variants"]["ServicesTermsPage1"];
+export type ServicesFooterData = ServicesSections["Footer"]["variants"]["ServicesFooter1"];
+
+// ── Legacy Site Map for Standalone Plumbio Site ──
 const sec = siteData.Services.sections;
 
 const legacySiteMap = {

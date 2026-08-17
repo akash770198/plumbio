@@ -1,9 +1,9 @@
-import { site } from "@/data";
+import { site, SectionProps, ServicesTrustedByData } from "@/data";
 import { BrandLogo } from "./BrandLogos";
 import { Reveal } from "./Reveal";
 
-export function TrustedBy() {
-  const { trustedBy } = site;
+export function TrustedBy({ data }: SectionProps<ServicesTrustedByData> = {}) {
+  const trustedBy = data || site.trustedBy;
 
   return (
     <section className="bg-white pt-14 pb-5 lg:pt-16 lg:pb-6">

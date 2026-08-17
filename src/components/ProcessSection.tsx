@@ -1,15 +1,14 @@
 import Image from "next/image";
-import { site } from "@/data";
+import { site, SectionProps, ServicesProcessData } from "@/data";
 import { Reveal } from "./Reveal";
 import { Icon } from "./Icon";
 
-export function ProcessSection({ className }: { className?: string }) {
-  const { process } = site;
+export function ProcessSection({ data }: SectionProps<ServicesProcessData> = {}) {
+  const process = data || site.process;
 
   return (
     <section
       className={
-        className ??
         "relative overflow-hidden bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]"
       }
     >
@@ -110,9 +109,7 @@ export function ProcessSection({ className }: { className?: string }) {
                   <div className="mx-auto -mt-[2px] h-0 w-0 border-l-[12px] border-r-[12px] border-t-[18px] border-l-transparent border-r-transparent border-t-[#8db8ff]" />
 
                   <p className="mt-4 text-[48px] font-extrabold leading-none text-blue-600">
-
-                    {step.number}
-
+                    {String(step.number).padStart(2, "0")}
                   </p>
 
                   <h3 className="mt-2 text-[24px] font-bold text-[#082b7a]">

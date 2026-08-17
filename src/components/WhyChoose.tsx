@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { site } from "@/data";
+import { site, SectionProps, ServicesWhyChooseData } from "@/data";
+import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
 
 const FEATURE_ICONS: Record<string, string> = {

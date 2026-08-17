@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { site } from "@/data";
+import { site, SectionProps, ServicesFAQData } from "@/data";
 import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
@@ -165,8 +165,8 @@ function FaqCard({
   );
 }
 
-export function FaqSection({ className }: { className?: string }) {
-  const { faq } = site;
+export function FaqSection({ className, data }: SectionProps<ServicesFAQData> = {}) {
+  const faq = data?.faq || site.faq;
 
   const defaultOpen = useMemo(
     () =>

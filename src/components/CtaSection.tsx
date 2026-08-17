@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { site } from "@/data";
+import { site, SectionProps, ServicesCTAData } from "@/data";
 import { Reveal } from "./Reveal";
 
-export function CtaSection() {
-  const { ctaSection } = site;
+export function CtaSection({ data }: SectionProps<ServicesCTAData> = {}) {
+  const ctaSection = data || site.ctaSection;
 
   return (
     <section className="section-y relative overflow-hidden bg-[#044fc2] text-white">

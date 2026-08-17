@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/data";
+import { site, SectionProps, ServicesFooterData } from "@/data";
 
-export function Footer() {
-  const { footer, site: siteInfo } = site;
+export function Footer({ data }: SectionProps<ServicesFooterData> = {}) {
+  const footer = data || site.footer;
+  const siteInfo = site.site;
 
   return (
     <footer className="bg-[#003c96] pt-12 text-white md:pt-16">

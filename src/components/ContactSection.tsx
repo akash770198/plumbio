@@ -1,4 +1,4 @@
-import { site } from "@/data";
+import { site, SectionProps, ServicesContactInfoData } from "@/data";
 import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
@@ -61,8 +61,8 @@ const SOCIAL_ICONS = {
   ),
 };
 
-export function ContactSection() {
-  const { contactInfo } = site;
+export function ContactSection({ data }: SectionProps<ServicesContactInfoData> = {}) {
+  const contactInfo = data || site.contactInfo;
 
   return (
     <section className="section-y bg-white">

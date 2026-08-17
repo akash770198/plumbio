@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { site } from "@/data";
+import { site, SectionProps, ServicesTestimonialsData } from "@/data";
 import { AccentTitleLines } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
-export function Testimonials({ className }: { className?: string }) {
-  const { testimonials } = site;
-  const items = testimonials.items;
+export function Testimonials({ className, data }: SectionProps<ServicesTestimonialsData> = {}) {
+  const testimonials = data?.testimonials || site.testimonials;
+  const items = testimonials.items || [];
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((c) => (c - 1 + items.length) % items.length);

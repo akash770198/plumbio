@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { site } from "@/data";
+import { site, SectionProps, ServicesPricingData } from "@/data";
 import { Reveal } from "./Reveal";
 
 function CheckIcon() {
@@ -168,14 +168,12 @@ function CouponCard({
   );
 }
 
-export function PricingSection() {
-  const {
-    specialOffers,
-    pricing,
-    laborPricing,
-    hourlyRatePricing,
-    pricingCta,
-  } = site;
+export function PricingSection({ data }: SectionProps<ServicesPricingData> = {}) {
+  const specialOffers = data?.specialOffers || site.specialOffers;
+  const pricing = data?.pricing || site.pricing;
+  const laborPricing = data?.laborPricing || site.laborPricing;
+  const hourlyRatePricing = data?.hourlyRatePricing || site.hourlyRatePricing;
+  const pricingCta = data?.pricingCta || site.pricingCta;
 
   const [offerPage, setOfferPage] = useState(0);
   const [planPage, setPlanPage] = useState(0);

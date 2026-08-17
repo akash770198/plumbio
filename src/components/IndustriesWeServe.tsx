@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { site } from "@/data";
+import { site, SectionProps, ServicesIndustriesWeServeData } from "@/data";
 import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 

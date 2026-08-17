@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { site } from "@/data";
+import { site, SectionProps, ServicesProjectsGalleryData } from "@/data";
 import { Reveal } from "./Reveal";
 
 function FeatureIcon({ name }: { name: string }) {
@@ -32,8 +32,8 @@ function FeatureIcon({ name }: { name: string }) {
   );
 }
 
-export function ProjectsGallery() {
-  const { projectsGallery: data } = site;
+export function ProjectsGallery({ data: propData }: SectionProps<ServicesProjectsGalleryData> = {}) {
+  const data = propData || site.projectsGallery;
   const [activeFilter, setActiveFilter] = useState(data.filters[0]);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 

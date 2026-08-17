@@ -1,33 +1,33 @@
 "use client";
 
 import { ServicePageLayout, type ServicePageData } from "./ServicePageLayout";
-import { site } from "@/data";
+import { site, SectionProps, ServicesCommercialData } from "@/data";
 
-export function CommercialServices({ className }: { className?: string }) {
-  const data = site.commercialServices;
+export function CommercialServices({ className, data }: SectionProps<ServicesCommercialData> = {}) {
+  const sectionData = data || site.commercialServices;
 
   const pageData: ServicePageData = {
     id: "commercial-services",
-    label: data.label,
-    title: data.title,
-    image: data.image,
-    imageAlt: data.imageAlt,
-    intro: data.intro,
-    industriesTitle: data.industriesTitle,
-    industriesIntro: data.industriesIntro,
-    industries: data.industries,
-    experienceTitle: data.experienceTitle,
-    experienceText: data.experienceText,
-    experiencePoints: data.experiencePoints,
-    bidCta: data.bidCta,
-    servicesHeading: data.servicesHeading,
-    servicesList: data.servicesList.map((label) => ({
+    label: sectionData.label,
+    title: sectionData.title,
+    image: sectionData.image,
+    imageAlt: sectionData.imageAlt,
+    intro: sectionData.intro,
+    industriesTitle: sectionData.industriesTitle,
+    industriesIntro: sectionData.industriesIntro,
+    industries: sectionData.industries,
+    experienceTitle: sectionData.experienceTitle,
+    experienceText: sectionData.experienceText,
+    experiencePoints: sectionData.experiencePoints,
+    bidCta: sectionData.bidCta,
+    servicesHeading: sectionData.servicesHeading,
+    servicesList: sectionData.servicesList.map((label) => ({
       label,
       href: "/services/commercial",
     })),
-    askQuestion: data.askQuestion,
-    bookCta: data.bookCta,
-    reasons: data.reasons,
+    askQuestion: sectionData.askQuestion,
+    bookCta: sectionData.bookCta,
+    reasons: sectionData.reasons,
   };
 
   return <ServicePageLayout data={pageData} className={className} />;

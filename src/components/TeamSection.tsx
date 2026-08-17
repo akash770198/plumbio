@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/data";
+import { site, SectionProps, ServicesTeamData } from "@/data";
 import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
@@ -16,8 +16,9 @@ export function TeamSection({
   limit,
   showButton = true,
   linkToDetail = false,
-}: TeamSectionProps) {
-  const { team } = site;
+  data,
+}: TeamSectionProps & SectionProps<ServicesTeamData> = {}) {
+  const team = data?.team || site.team;
   const displayCount = limit ?? team.members.length;
   const members = team.members.slice(0, displayCount);
 

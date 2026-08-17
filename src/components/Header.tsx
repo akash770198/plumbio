@@ -4,11 +4,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { site } from "@/data";
+import { site, SectionProps, ServicesHeaderData } from "@/data";
 import { Icon } from "./Icon";
 
-export function Header() {
-  const { topbar, nav, header, site: siteInfo } = site;
+export function Header({ data }: SectionProps<ServicesHeaderData> = {}) {
+  const header = data?.header || site.header;
+  const nav = data?.nav || site.nav;
+  const siteInfo = data?.site || site.site;
+  const topbar = site.topbar;
   const [open, setOpen] = useState(false);
   const [openSub, setOpenSub] = useState(false);
   const pathname = usePathname();

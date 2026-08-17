@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { site } from "@/data";
+import { site, SectionProps, ServicesAboutData } from "@/data";
 import { AccentTitleLines } from "./AccentTitle";
 import { BadgeIcon, Icon, VerifiedIcon } from "./Icon";
 import { Reveal } from "./Reveal";
 
-export function About({ className }: { className?: string }) {
-  const { about } = site;
+export function About({ data, className }: SectionProps<ServicesAboutData>) {
+  const about = data || site.about;
 
   return (
     <section className={className ?? "bg-white pt-5 pb-0 lg:pt-6"}>

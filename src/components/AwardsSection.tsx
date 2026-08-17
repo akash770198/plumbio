@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site } from "@/data";
+import { site, SectionProps, ServicesAwardsData } from "@/data";
 import { Reveal } from "./Reveal";
 
 const ICONS = {
@@ -27,8 +27,8 @@ const ICONS = {
   ),
 };
 
-export function AwardsSection({ className }: { className?: string }) {
-  const { awards } = site;
+export function AwardsSection({ className, data }: SectionProps<ServicesAwardsData> = {}) {
+  const awards = data?.awards || site.awards;
 
   return (
     <section className={className ?? "bg-[#fbfcff] pt-0 pb-0"}>

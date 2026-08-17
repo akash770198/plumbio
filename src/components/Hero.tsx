@@ -3,12 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { site } from "@/data";
+import { site, SectionProps, ServicesHeroData } from "@/data";
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
 
-export function Hero() {
-  const { hero } = site;
+export function Hero({ data }: SectionProps<ServicesHeroData> = {}) {
+  const hero = data || site.hero;
   const slides = hero.slides;
   const [index, setIndex] = useState(0);
 
