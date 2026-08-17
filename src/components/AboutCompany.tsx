@@ -43,7 +43,12 @@ export function AboutCompany({
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
           {/* Left: Copy */}
           <Reveal className="flex-shrink-0 lg:w-[340px] xl:w-[380px]">
-            {label && <p className="section-label">{label}</p>}
+            {label && (
+              <div className="flex items-center gap-3">
+                <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
+                <p className="section-label">{label}</p>
+              </div>
+            )}
             <AccentTitle
               className="mt-3"
               before={titleBefore}

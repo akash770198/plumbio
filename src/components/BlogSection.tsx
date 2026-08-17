@@ -53,17 +53,12 @@ export function BlogSection({
         {/* ── HEADER ── */}
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            {/* Label */}
             <div className="flex items-center justify-center gap-3">
-              <span className="flex items-center justify-center text-[#0051d4]">
-                <svg viewBox="0 0 24 24" className="h-5 w-5 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                </svg>
-              </span>
+              <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
               <p className="section-label">
-                {blog.label}
+                {blog.label.toUpperCase()}
               </p>
+              <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
             </div>
 
             {/* Title */}
@@ -77,19 +72,12 @@ export function BlogSection({
               {blog.description}
             </p>
 
-            {/* Decorative Divider */}
-            <div className="mt-8 flex items-center justify-center gap-4">
-              <span className="h-[2px] w-12 bg-[#0051d4]" />
-              <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-[#0051d4]" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
-              </svg>
-              <span className="h-[2px] w-12 bg-[#0051d4]" />
-            </div>
+
           </div>
         </Reveal>
 
         {/* ── BLOG CARDS GRID ── */}
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {blogItems.map((item, index) => (
             <Reveal key={index} delay={index * 100}>
               <div className="group flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-lg">

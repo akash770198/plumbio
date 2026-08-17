@@ -36,12 +36,12 @@ export function ProcessSection({ data, className }: SectionProps<ServicesProcess
 
           <div className="text-center">
 
-            <div className="flex items-center justify-center gap-5">
-              <span className="h-[2px] w-16 bg-blue-600" />
+            <div className="flex items-center justify-center gap-3">
+              <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
               <p className="section-label">
-                {process.label}
+                {process.label.toUpperCase()}
               </p>
-              <span className="h-[2px] w-16 bg-blue-600" />
+              <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
             </div>
 
             <h2 className="section-title mt-6">

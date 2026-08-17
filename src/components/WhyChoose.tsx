@@ -141,7 +141,7 @@ export function WhyChoose({ className }: { className?: string }) {
         <div className="relative w-full lg:w-[48%] lg:pr-4">
           <Reveal>
             <div className="flex items-center gap-3">
-              <span className="block h-[2px] w-8 bg-[#20b2ff]" />
+              <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
               <p className="section-label">{whyChoose.label}</p>
             </div>
 

@@ -53,7 +53,10 @@ export function ServicesSection({
       <div className="shell relative">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           <Reveal className="lg:pr-2">
-            <p className="section-label">{servicesCatalog.label}</p>
+            <div className="flex items-center gap-3">
+              <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
+              <p className="section-label">{servicesCatalog.label}</p>
+            </div>
             <AccentTitleLines className="mt-3" lines={servicesCatalog.titleLines} />
           </Reveal>
 
