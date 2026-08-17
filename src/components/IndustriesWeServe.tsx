@@ -90,8 +90,8 @@ function CtaIllustration() {
   );
 }
 
-export function IndustriesWeServe() {
-  const { industriesWeServe: data } = site;
+export function IndustriesWeServe({ data: propData }: SectionProps<ServicesIndustriesWeServeData> = {}) {
+  const data = propData || site.industriesWeServe;
 
   return (
     <section className="bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">

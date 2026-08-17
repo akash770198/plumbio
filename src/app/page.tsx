@@ -41,6 +41,7 @@ export default function HomePage() {
         />
         <AwardsSection className={`bg-white ${SECTION_PAD}`} />
         <FaqSection
+          hideCta={true}
           className={`relative overflow-hidden ${SECTION_LIGHT} ${SECTION_PAD}`}
         />
         <BlogSection

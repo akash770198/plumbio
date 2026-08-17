@@ -7,7 +7,7 @@ export type ServicesSections = ServicesSchema["sections"];
 export type ServicesTemplateComponents = ServicesSchema["templateComponents"];
 
 // ── Universal SectionProps Interface (ai-builder Standard) ──
-export interface SectionProps<T = any> {
+export interface SectionProps<T = unknown> {
   data?: T;
   className?: string;
   contentClassName?: string;
@@ -102,7 +102,8 @@ const legacySiteMap = {
   termsPage: sec.TermsPage.variants.ServicesTermsPage1,
   careerBanner: sec.PageBanner.variants.ServicesInnerBanner1.careerBanner,
   careerPage: sec.CareerPage.variants.ServicesCareerPage1,
-
+  
+  industryPages: siteData.Services.industryPages,
   Services: siteData.Services
 };
 

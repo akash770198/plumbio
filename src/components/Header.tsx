@@ -34,7 +34,7 @@ export function Header({ data }: SectionProps<ServicesHeaderData> = {}) {
           height={50}
           className="h-9 w-9 object-contain sm:h-[50px] sm:w-[50px]"
         />
-        <span className="hidden text-[22px] font-bold leading-none tracking-[-0.015em] text-white sm:inline sm:text-[30px]">
+        <span className="text-[22px] font-bold leading-none tracking-[-0.015em] text-white sm:text-[30px]">
           {siteInfo.name}
         </span>
       </Link>

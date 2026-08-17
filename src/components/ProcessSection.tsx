@@ -3,12 +3,13 @@ import { site, SectionProps, ServicesProcessData } from "@/data";
 import { Reveal } from "./Reveal";
 import { Icon } from "./Icon";
 
-export function ProcessSection({ data }: SectionProps<ServicesProcessData> = {}) {
+export function ProcessSection({ data, className }: SectionProps<ServicesProcessData> = {}) {
   const process = data || site.process;
 
   return (
     <section
       className={
+        className ??
         "relative overflow-hidden bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]"
       }
     >

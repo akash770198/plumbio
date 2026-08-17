@@ -84,7 +84,7 @@ export function Testimonials({ className, data }: SectionProps<ServicesTestimoni
               aria-hidden
               className="mb-1 block select-none font-serif text-[48px] font-bold leading-none tracking-[-0.08em] text-[#0458d6]"
             >
-              ””
+              ”
             </span>
             <div className="flex items-center gap-3">
               <span className="h-[2px] w-8 bg-[#0051d4]" />
@@ -148,7 +148,7 @@ export function Testimonials({ className, data }: SectionProps<ServicesTestimoni
             aria-hidden
             className="mb-1 block select-none font-serif text-[64px] font-bold leading-none tracking-[-0.08em] text-[#0458d6]"
           >
-            ””
+            ”
           </span>
           <div className="flex items-center gap-3">
             <span className="h-[2px] w-8 bg-[#0051d4]" />

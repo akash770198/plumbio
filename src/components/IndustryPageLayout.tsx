@@ -5,16 +5,16 @@ import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { Reveal } from "./Reveal";
 
-export type ServicePageData = {
+export type IndustryPageData = {
   id?: string;
   label: string;
   title: string;
   image: string;
   imageAlt: string;
   intro: string;
-  industriesTitle: string;
-  industriesIntro: string;
-  industries: string[];
+  challengesTitle: string;
+  challengesIntro: string;
+  challenges: string[];
   experienceTitle: string;
   experienceText: string;
   experiencePoints: { title: string; text: string }[];
@@ -23,8 +23,8 @@ export type ServicePageData = {
     vanImage: string;
     vanImageAlt: string;
   };
-  servicesHeading: string;
-  servicesList: { label: string; href: string }[];
+  industriesHeading: string;
+  industriesList: { label: string; href: string }[];
   askQuestion: {
     title: string;
     namePlaceholder: string;
@@ -112,18 +112,16 @@ function ImageSlot({
   );
 }
 
-export function ServicePageLayout({
+export function IndustryPageLayout({
   data,
   className,
-  hideReasons,
 }: {
-  data: ServicePageData;
+  data: IndustryPageData;
   className?: string;
-  hideReasons?: boolean;
 }) {
-  const mid = Math.ceil(data.industries.length / 2);
-  const industriesLeft = data.industries.slice(0, mid);
-  const industriesRight = data.industries.slice(mid);
+  const mid = Math.ceil(data.challenges.length / 2);
+  const challengesLeft = data.challenges.slice(0, mid);
+  const challengesRight = data.challenges.slice(mid);
   const [questionSent, setQuestionSent] = useState(false);
 
   function handleAskQuestion(e: FormEvent<HTMLFormElement>) {
@@ -138,8 +136,8 @@ export function ServicePageLayout({
     >
       <div className="shell">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.7fr)_minmax(280px,0.9fr)] lg:gap-14 xl:gap-16">
-          {/* Left Top Content */}
-          <div className="min-w-0 lg:col-start-1 lg:row-start-1">
+          <div className="min-w-0">
+            <Reveal>
               <div className="flex items-center gap-3">
                 <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
                 <p className="section-label">{data.label}</p>
@@ -156,11 +154,11 @@ export function ServicePageLayout({
 
               <p className="section-desc mt-8">{data.intro}</p>
 
-              <h3 className="section-title mt-9">{data.industriesTitle}</h3>
-              <p className="section-desc mt-4">{data.industriesIntro}</p>
+              <h3 className="section-title mt-9">{data.challengesTitle}</h3>
+              <p className="section-desc mt-4">{data.challengesIntro}</p>
 
               <div className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-                {[industriesLeft, industriesRight].map((col, colIdx) => (
+                {[challengesLeft, challengesRight].map((col, colIdx) => (
                   <ul key={colIdx} className="flex flex-col gap-3">
                     {col.map((item) => (
                       <li
@@ -176,12 +174,8 @@ export function ServicePageLayout({
                   </ul>
                 ))}
               </div>
-          </div>
 
-          {/* Left Bottom: Experience Section */}
-          <div className="min-w-0 lg:col-start-1 lg:row-start-2">
-            <Reveal>
-              <h3 className="section-title">{data.experienceTitle}</h3>
+              <h3 className="section-title mt-12">{data.experienceTitle}</h3>
               <p className="section-desc mt-4">{data.experienceText}</p>
 
               <ul className="mt-6 flex flex-col gap-3.5">
@@ -196,16 +190,63 @@ export function ServicePageLayout({
                 ))}
               </ul>
             </Reveal>
+
+            <Reveal delay={80}>
+              <div className="relative mt-10 mb-10 overflow-hidden sm:mb-16 sm:overflow-visible lg:mb-20">
+                <div className="relative flex min-h-[150px] items-center overflow-hidden bg-[#0b5bd3] px-5 py-8 pr-5 sm:min-h-[170px] sm:px-9 sm:pr-[44%] lg:min-h-[180px]">
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-40"
+                    style={{
+                      backgroundImage:
+                        "radial-gradient(circle, rgba(255,255,255,0.55) 1px, transparent 1.2px)",
+                      backgroundSize: "14px 14px",
+                      maskImage:
+                        "linear-gradient(90deg, transparent 0%, transparent 45%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.9) 100%)",
+                      WebkitMaskImage:
+                        "linear-gradient(90deg, transparent 0%, transparent 45%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.9) 100%)",
+                    }}
+                  />
+                  <p className="relative z-[1] max-w-[520px] text-[clamp(16px,1.7vw,21px)] font-bold leading-[1.45] text-white">
+                    {data.bidCta.text}
+                  </p>
+                </div>
+
+                <div className="pointer-events-none relative z-10 mx-auto mt-4 w-[72%] max-w-[300px] sm:absolute sm:bottom-[-64px] sm:right-[-12px] sm:mx-0 sm:mt-0 sm:w-[54%] sm:max-w-[380px] lg:max-w-[440px]">
+                  {data.bidCta.vanImage ? (
+                    <div className="relative w-full">
+                      <div
+                        aria-hidden
+                        className="absolute bottom-[18%] left-1/2 z-0 h-[9%] w-[68%] -translate-x-1/2 rounded-[100%] bg-black/40 blur-[7px]"
+                      />
+                      <div
+                        aria-hidden
+                        className="absolute bottom-[19%] left-1/2 z-0 h-[5%] w-[48%] -translate-x-1/2 rounded-[100%] bg-black/28 blur-[3px]"
+                      />
+                      <div className="relative z-[1] aspect-[5/3] w-full">
+                        <Image
+                          src={data.bidCta.vanImage}
+                          alt={data.bidCta.vanImageAlt}
+                          fill
+                          sizes="440px"
+                          className="object-contain object-bottom"
+                        />
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </Reveal>
           </div>
 
-          {/* Right Top Content */}
-          <aside className="min-w-0 lg:col-start-2 lg:row-start-1 lg:pt-1">
+          <aside className="min-w-0 lg:pt-1">
+            <Reveal delay={60}>
               <h3 className="text-[clamp(22px,2vw,28px)] font-extrabold text-[#0a1f5c]">
-                {data.servicesHeading}
+                {data.industriesHeading}
               </h3>
 
               <ul className="mt-5 bg-[#f4f6f8] px-6 py-2">
-                {data.servicesList.map((item) => (
+                {data.industriesList.map((item) => (
                   <li key={item.label} className="border-b border-[#e6eaef] last:border-b-0">
                     <Link
                       href={item.href}
@@ -279,66 +320,21 @@ export function ServicePageLayout({
                 </Link>
               </div>
 
-              {!hideReasons && (
-                <div className="mt-8 border border-[#b8d8fa] bg-[#eef6ff] px-6 py-8 shadow-[0_8px_30px_rgba(10,31,92,0.08)]">
-                  <h3 className="text-[clamp(20px,1.8vw,24px)] font-extrabold leading-snug text-[#0a1f5c]">
-                    {data.reasons.title}
-                  </h3>
-                  <ul className="mt-6 flex flex-col gap-4">
-                    {data.reasons.items.map((reason, i) => (
-                      <li key={reason} className="flex items-center gap-3.5">
-                        <DropletNumber n={i + 1} />
-                        <span className="text-[15px] font-bold text-[#0a1f5c]">{reason}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-          </aside>
-
-          {/* Right Bottom: Van Box */}
-          <div className="min-w-0 lg:col-start-2 lg:row-start-2">
-            <Reveal delay={80}>
-              <div className="relative overflow-visible bg-[#0b5bd3] px-6 py-9 shadow-[0_8px_30px_rgba(10,31,92,0.08)]">
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 opacity-40"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle, rgba(255,255,255,0.55) 1px, transparent 1.2px)",
-                    backgroundSize: "14px 14px",
-                  }}
-                />
-                <p className="relative z-[1] text-center text-[clamp(18px,1.8vw,22px)] font-bold leading-snug text-white">
-                  {data.bidCta.text}
-                </p>
-
-                {data.bidCta.vanImage && (
-                  <div className="pointer-events-none relative z-10 mx-auto mt-8 w-[90%] max-w-[280px]">
-                    <div className="relative w-full">
-                      <div
-                        aria-hidden
-                        className="absolute bottom-[18%] left-1/2 z-0 h-[9%] w-[68%] -translate-x-1/2 rounded-[100%] bg-black/40 blur-[7px]"
-                      />
-                      <div
-                        aria-hidden
-                        className="absolute bottom-[19%] left-1/2 z-0 h-[5%] w-[48%] -translate-x-1/2 rounded-[100%] bg-black/28 blur-[3px]"
-                      />
-                      <div className="relative z-[1] aspect-[5/3] w-full">
-                        <Image
-                          src={data.bidCta.vanImage}
-                          alt={data.bidCta.vanImageAlt}
-                          fill
-                          sizes="280px"
-                          className="object-contain object-bottom"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
+              <div className="mt-8 border border-[#b8d8fa] bg-[#eef6ff] px-6 py-8 shadow-[0_8px_30px_rgba(10,31,92,0.08)]">
+                <h3 className="text-[clamp(20px,1.8vw,24px)] font-extrabold leading-snug text-[#0a1f5c]">
+                  {data.reasons.title}
+                </h3>
+                <ul className="mt-6 flex flex-col gap-4">
+                  {data.reasons.items.map((reason, i) => (
+                    <li key={reason} className="flex items-center gap-3.5">
+                      <DropletNumber n={i + 1} />
+                      <span className="text-[15px] font-bold text-[#0a1f5c]">{reason}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </Reveal>
-          </div>
+          </aside>
         </div>
       </div>
     </section>

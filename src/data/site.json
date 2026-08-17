@@ -511,6 +511,10 @@
                 "href": "/blog"
               },
               {
+                "label": "Our Policy",
+                "href": "/terms"
+              },
+              {
                 "label": "Contact",
                 "href": "/contact"
               }
@@ -602,6 +606,10 @@
                 "href": "/blog"
               },
               {
+                "label": "Our Policy",
+                "href": "/terms"
+              },
+              {
                 "label": "Contact",
                 "href": "/contact"
               }
@@ -691,6 +699,10 @@
               {
                 "label": "Blog",
                 "href": "/blog"
+              },
+              {
+                "label": "Our Policy",
+                "href": "/policy"
               },
               {
                 "label": "Contact",
@@ -906,7 +918,7 @@
                   "href": "/"
                 },
                 {
-                  "label": "Industries We Serve",
+                  "label": "Industries",
                   "href": "/industries"
                 }
               ]
@@ -1082,7 +1094,7 @@
               ]
             },
             "termsBanner": {
-              "title": "Terms",
+              "title": "Terms & Conditions",
               "backgroundImage": "/img/banner/Page_banner.jpeg",
               "backgroundImageAlt": "Terms and conditions page banner background",
               "breadcrumbs": [
@@ -1091,7 +1103,7 @@
                   "href": "/"
                 },
                 {
-                  "label": "Terms",
+                  "label": "Terms & Conditions",
                   "href": "/terms"
                 }
               ]
@@ -3171,28 +3183,28 @@
             "description": "We combine skilled workmanship, modern tools, and a customer-focused approach to deliver plumbing services you can rely on.",
             "features": [
               {
-                "icon": "/icons/security.png",
+                "icon": "/icons/whyChooseUs/security.png",
                 "iconType": "image",
                 "title": "Experienced & Certified Plumbers"
               },
               {
-                "icon": "/icons/setting.png",
+                "icon": "/icons/whyChooseUs/setting.png",
                 "iconType": "image",
                 "title": "Upfront Pricing – No Hidden Charges"
               },
               {
-                "icon": "/icons/clock.png",
+                "icon": "/icons/whyChooseUs/clock.png",
                 "iconType": "image",
                 "title": "Fast Response & On-Time Service"
               },
               {
-                "icon": "/icons/thumb.png",
+                "icon": "/icons/whyChooseUs/thumb.png",
                 "iconType": "image",
                 "title": "100% Satisfaction Guarantee"
               }
             ],
             "highlightCard": {
-              "icon": "/icons/shield.png",
+              "icon": "/icons/whyChooseUs/shield.png",
               "iconType": "image",
               "title": "Your Satisfaction is Our Priority",
               "text": "We go above and beyond to ensure every job is done right — the first time."
@@ -3201,24 +3213,28 @@
             "imageAlt": "Professional plumber",
             "stats": [
               {
-                "icon": "users",
+                "icon": "/icons/whyChooseUs/trusted_by.png",
                 "title": "Trusted by",
-                "value": "Thousands"
+                "value": "Thousands",
+                "iconType": "image"
               },
               {
-                "icon": "badge",
+                "icon": "/icons/whyChooseUs/quality.png",
                 "title": "Quality",
-                "value": "Workmanship"
+                "value": "Workmanship",
+                "iconType": "image"
               },
               {
-                "icon": "clock",
+                "icon": "/icons/whyChooseUs/support.png",
                 "title": "24/7",
-                "value": "Support"
+                "value": "Support",
+                "iconType": "image"
               },
               {
-                "icon": "shield",
+                "icon": "/icons/whyChooseUs/safe_reliable.png",
                 "title": "Safe &",
-                "value": "Reliable"
+                "value": "Reliable",
+                "iconType": "image"
               }
             ]
           },
@@ -3247,7 +3263,7 @@
                 "title": "Fast Response & On-Time Service"
               },
               {
-                "icon": "/icons/thumb.png",
+                "icon": "/icons/whyChooseUs/thumb.png",
                 "iconType": "image",
                 "title": "100% Satisfaction Guarantee"
               }
@@ -3262,24 +3278,28 @@
             "imageAlt": "Professional plumber",
             "stats": [
               {
-                "icon": "users",
+                "icon": "/icons/Trusted-by.png",
                 "title": "Trusted by",
-                "value": "Thousands"
+                "value": "Thousands",
+                "iconType": "image"
               },
               {
-                "icon": "badge",
+                "icon": "/icons/quality.png",
                 "title": "Quality",
-                "value": "Workmanship"
+                "value": "Workmanship",
+                "iconType": "image"
               },
               {
-                "icon": "clock",
+                "icon": "/icons/clock.png",
                 "title": "24/7",
-                "value": "Support"
+                "value": "Support",
+                "iconType": "image"
               },
               {
-                "icon": "shield",
+                "icon": "/icons/safe_reliable.png",
                 "title": "Safe &",
-                "value": "Reliable"
+                "value": "Reliable",
+                "iconType": "image"
               }
             ]
           },
@@ -3308,7 +3328,7 @@
                 "title": "Fast Response & On-Time Service"
               },
               {
-                "icon": "/icons/thumb.png",
+                "icon": "/icons/whyChooseUs/thumb.png",
                 "iconType": "image",
                 "title": "100% Satisfaction Guarantee"
               }
@@ -3323,24 +3343,28 @@
             "imageAlt": "Professional plumber",
             "stats": [
               {
-                "icon": "users",
+                "icon": "/icons/Trusted-by.png",
                 "title": "Trusted by",
-                "value": "Thousands"
+                "value": "Thousands",
+                "iconType": "image"
               },
               {
-                "icon": "badge",
+                "icon": "/icons/quality.png",
                 "title": "Quality",
-                "value": "Workmanship"
+                "value": "Workmanship",
+                "iconType": "image"
               },
               {
-                "icon": "clock",
+                "icon": "/icons/clock.png",
                 "title": "24/7",
-                "value": "Support"
+                "value": "Support",
+                "iconType": "image"
               },
               {
-                "icon": "shield",
+                "icon": "/icons/safe_reliable.png",
                 "title": "Safe &",
-                "value": "Reliable"
+                "value": "Reliable",
+                "iconType": "image"
               }
             ]
           }
@@ -3381,7 +3405,7 @@
                 "number": 4,
                 "title": "You Relax",
                 "description": "Enjoy hassle-free plumbing and complete peace of mind.",
-                "icon": "/icons/thumb.png",
+                "icon": "/icons/whyChooseUs/thumb.png",
                 "iconType": "image"
               }
             ]
@@ -3419,7 +3443,7 @@
                 "number": 4,
                 "title": "You Relax",
                 "description": "Enjoy hassle-free plumbing and complete peace of mind.",
-                "icon": "/icons/thumb.png",
+                "icon": "/icons/whyChooseUs/thumb.png",
                 "iconType": "image"
               }
             ]
@@ -3457,7 +3481,7 @@
                 "number": 4,
                 "title": "You Relax",
                 "description": "Enjoy hassle-free plumbing and complete peace of mind.",
-                "icon": "/icons/thumb.png",
+                "icon": "/icons/whyChooseUs/thumb.png",
                 "iconType": "image"
               }
             ]
@@ -5943,49 +5967,57 @@
                 "title": "Commercial Buildings",
                 "description": "Reliable plumbing for offices, business parks, and corporate spaces — keeping systems running smoothly.",
                 "icon": "buildings",
-                "href": "/contact"
+                "href": "/industries/commercial-buildings",
+                "slug": "commercial-buildings"
               },
               {
                 "title": "Schools & Colleges",
                 "description": "Safe, dependable plumbing for learning environments serving students, staff, and visitors.",
                 "icon": "school",
-                "href": "/contact"
+                "href": "/industries/schools-colleges",
+                "slug": "schools-colleges"
               },
               {
                 "title": "Healthcare Facilities",
                 "description": "Code-compliant plumbing that supports hygiene, patient safety, and uninterrupted care.",
                 "icon": "healthcare",
-                "href": "/contact"
+                "href": "/industries/healthcare-facilities",
+                "slug": "healthcare-facilities"
               },
               {
                 "title": "Retail Stores",
                 "description": "Fast, professional plumbing that keeps stores welcoming and open for customers.",
                 "icon": "retail",
-                "href": "/contact"
+                "href": "/industries/retail-stores",
+                "slug": "retail-stores"
               },
               {
                 "title": "Industrial Facilities",
                 "description": "Heavy-duty plumbing solutions for manufacturing plants and industrial work areas.",
                 "icon": "industrial",
-                "href": "/contact"
+                "href": "/industries/industrial-facilities",
+                "slug": "industrial-facilities"
               },
               {
                 "title": "Residential Complexes",
                 "description": "Multi-unit plumbing maintenance that keeps common areas and residences running well.",
                 "icon": "residential",
-                "href": "/contact"
+                "href": "/industries/residential-complexes",
+                "slug": "residential-complexes"
               },
               {
                 "title": "Hotels & Hospitality",
                 "description": "Guest-ready plumbing support for hotels, resorts, and hospitality properties.",
                 "icon": "hotel",
-                "href": "/contact"
+                "href": "/industries/hotels-hospitality",
+                "slug": "hotels-hospitality"
               },
               {
                 "title": "Government Offices",
                 "description": "Professional plumbing services for public offices and government buildings.",
                 "icon": "government",
-                "href": "/contact"
+                "href": "/industries/government-offices",
+                "slug": "government-offices"
               }
             ],
             "learnMoreLabel": "Learn More",
@@ -6175,43 +6207,39 @@
             "sections": [
               {
                 "title": "1. Acceptance of Terms",
-                "text": "By accessing our website or using our plumbing services, you agree to comply with these Terms & Conditions and our service policies."
+                "text": "<p>Welcome to Plumbio. By accessing our website, engaging our services, or interacting with our representatives, you agree to be bound by these comprehensive Terms & Conditions. If you do not agree to any part of these terms, you must refrain from using our services. These terms serve as a legally binding agreement between you and Plumbio.</p><p>We reserve the right to update or modify these Terms & Conditions at any time without prior notice. Your continued use of our services following any changes indicates your acceptance of the revised terms.</p>"
               },
               {
-                "title": "2. Our Services",
-                "text": "We provide residential and commercial plumbing services including installation, repair, maintenance, drain cleaning, leak detection, and emergency plumbing."
+                "title": "2. Scope of Services",
+                "text": "<p>Plumbio provides a wide array of professional plumbing services, including but not limited to residential and commercial repairs, installation, routine maintenance, advanced leak detection, pipe replacements, and 24/7 emergency interventions.</p><p>All services are performed by licensed and insured professionals. While we strive to complete all work in a timely and efficient manner, project timelines may vary depending on the complexity of the issue, unforeseen structural complications, or parts availability.</p>"
               },
               {
-                "title": "3. Booking & Appointments",
-                "text": "Appointments are scheduled based on technician availability. Emergency services may incur additional charges. Customers must provide accurate service information."
+                "title": "3. Estimates, Pricing, & Payments",
+                "text": "<p><strong>Estimates:</strong> Initial quotes provided over the phone or online are provisional. A final, binding estimate will be provided only after a thorough on-site inspection by our certified technicians. We reserve the right to revise quotes if hidden damages or undisclosed issues are discovered during the service execution.</p><p><strong>Payments:</strong> Payment in full is required immediately upon the completion of the provided service unless prior financing or commercial account terms have been explicitly agreed upon in writing. We accept major credit cards, bank transfers, and cash.</p>"
               },
               {
-                "title": "4. Pricing & Payments",
-                "text": "All estimates are based on inspection and may vary. Payment is due upon completion of the service. We accept cash, card and online payments."
+                "title": "4. Cancellations & Rescheduling",
+                "text": "<p>We understand that schedules change. However, out of respect for our technicians' time, we require at least 24 hours' notice for any cancellation or rescheduling requests. Cancellations made with less than 24 hours' notice may be subject to a standard dispatch fee. If a technician arrives at your property and is unable to gain access, a non-refundable call-out charge will apply.</p>"
               },
               {
-                "title": "5. Cancellation Policy",
-                "text": "Cancel at least 24 hours before your appointment to avoid cancellation charges. Less than 24 hours may be subject to a service fee. If the technician is already on-site, visit charges will apply."
+                "title": "5. Warranties & Guarantees",
+                "text": "<p>Plumbio stands by the quality of our workmanship. We offer a limited warranty on all labor performed by our technicians, typically covering a period of 90 days from the date of service completion unless stated otherwise.</p><p>This warranty covers defects in installation but does not cover materials, fixtures, or appliances provided by the customer, nor does it cover damages resulting from misuse, subsequent unauthorized repairs, natural disasters, or pre-existing structural decay.</p>"
               },
               {
-                "title": "6. Emergency Services",
-                "text": "We offer 24/7 emergency plumbing services. Response times depend on technician availability and location."
+                "title": "6. Limitation of Liability",
+                "text": "<p>To the fullest extent permitted by applicable law, Plumbio, its officers, employees, and affiliates shall not be held liable for any indirect, incidental, punitive, or consequential damages arising from the use of our services. Our maximum liability in any claim related to the services provided shall not exceed the total amount paid by the customer for that specific service call.</p>"
               },
               {
-                "title": "7. Warranty",
-                "text": "We provide warranty on workmanship for selected services. Warranty does not cover damages caused by misuse, normal wear and tear, or third-party repairs."
+                "title": "7. Privacy Policy",
+                "text": "<p>We take your privacy seriously. This Privacy Policy governs the collection, usage, and safeguarding of your personal data when you interact with Plumbio. We collect personal information (such as your name, address, email, and phone number) strictly for the purpose of scheduling services, processing payments, and improving customer communication.</p><p><strong>Data Protection:</strong> We implement robust security protocols to protect your data against unauthorized access. We do not sell, rent, or trade your personal information to third-party marketers. Your data may only be shared with trusted third-party service providers (such as payment processors) strictly to facilitate our business operations, or when mandated by law.</p>"
               },
               {
-                "title": "8. Limitation of Liability",
-                "text": "We are not liable for any indirect, incidental or consequential damages. Our total liability is limited to the amount paid for the service."
+                "title": "8. Governing Law & Dispute Resolution",
+                "text": "<p>These Terms & Conditions are governed by and construed in accordance with the laws of the jurisdiction in which Plumbio operates. Any disputes arising out of or related to these terms or our services shall be resolved through good-faith negotiation. If a resolution cannot be reached, the dispute shall be subject to binding arbitration.</p>"
               },
               {
-                "title": "9. Privacy Policy",
-                "text": "Your personal information is used only for service purposes. We do not share your information with third parties except as required by law."
-              },
-              {
-                "title": "10. Contact Us",
-                "text": "If you have any questions about these Terms & Conditions, please contact us using the details below."
+                "title": "9. Contact Us",
+                "text": "<p>If you have any questions, concerns, or require further clarification regarding these Terms & Conditions or our Privacy Policy, please reach out to our support team.</p>"
               }
             ],
             "helpBar": {
@@ -6521,6 +6549,281 @@
             "copyright": "© 2025 Plumbio. All Rights Reserved."
           }
         }
+      }
+    },
+    "pages": {},
+    "industryPages": {
+      "commercial-buildings": {
+        "slug": "commercial-buildings",
+        "label": "Commercial Buildings Plumbing",
+        "headline": "Specialized Plumbing for Commercial Buildings",
+        "image": "/img/industry_detail/commercials.jpeg",
+        "imageAlt": "Commercial Buildings plumbing services",
+        "intro": "Reliable plumbing for offices, business parks, and corporate spaces — keeping systems running smoothly. We deliver durable repairs, preventative maintenance, and code-compliant installations tailored strictly to the needs of commercial buildings.",
+        "industriesTitle": "Services We Provide For Commercial Buildings",
+        "industriesIntro": "From everyday fixes to large-scale facility upgrades, our team brings the right tools and training to keep your operations running.",
+        "servicesList": [
+          "Preventative Maintenance",
+          "Emergency Repairs",
+          "Sewer & Drain Cleaning",
+          "Water Heater Systems",
+          "Pipe Repair & Repiping",
+          "Backflow Testing"
+        ],
+        "experienceTitle": "Why Commercial Buildings Trust Us",
+        "experienceText": "We understand that downtime costs money and affects your bottom line. We prioritize safety, efficiency, and clear communication.",
+        "experiencePoints": [
+          {
+            "title": "Minimal Downtime",
+            "text": "We work around your schedule to ensure zero disruption to your daily operations."
+          },
+          {
+            "title": "Code Compliance",
+            "text": "All our work meets local commercial health and safety regulations."
+          },
+          {
+            "title": "Licensed Experts",
+            "text": "Our team is fully certified and insured to handle large-scale plumbing needs."
+          }
+        ]
+      },
+      "schools-colleges": {
+        "slug": "schools-colleges",
+        "label": "Schools & Colleges Plumbing",
+        "headline": "Specialized Plumbing for Schools & Colleges",
+        "image": "/img/industry_detail/school.jpeg",
+        "imageAlt": "Schools & Colleges plumbing services",
+        "intro": "Safe, dependable plumbing for learning environments serving students, staff, and visitors. We deliver durable repairs, preventative maintenance, and code-compliant installations tailored strictly to the needs of schools & colleges.",
+        "industriesTitle": "Services We Provide For Schools & Colleges",
+        "industriesIntro": "From everyday fixes to large-scale facility upgrades, our team brings the right tools and training to keep your operations running.",
+        "servicesList": [
+          "Preventative Maintenance",
+          "Emergency Repairs",
+          "Sewer & Drain Cleaning",
+          "Water Heater Systems",
+          "Pipe Repair & Repiping",
+          "Backflow Testing"
+        ],
+        "experienceTitle": "Why Schools & Colleges Trust Us",
+        "experienceText": "We understand that downtime costs money and affects your bottom line. We prioritize safety, efficiency, and clear communication.",
+        "experiencePoints": [
+          {
+            "title": "Minimal Downtime",
+            "text": "We work around your schedule to ensure zero disruption to your daily operations."
+          },
+          {
+            "title": "Code Compliance",
+            "text": "All our work meets local commercial health and safety regulations."
+          },
+          {
+            "title": "Licensed Experts",
+            "text": "Our team is fully certified and insured to handle large-scale plumbing needs."
+          }
+        ]
+      },
+      "healthcare-facilities": {
+        "slug": "healthcare-facilities",
+        "label": "Healthcare Facilities Plumbing",
+        "headline": "Specialized Plumbing for Healthcare Facilities",
+        "image": "/img/industry_detail/healthcare.jpeg",
+        "imageAlt": "Healthcare Facilities plumbing services",
+        "intro": "Code-compliant plumbing that supports hygiene, patient safety, and uninterrupted care. We deliver durable repairs, preventative maintenance, and code-compliant installations tailored strictly to the needs of healthcare facilities.",
+        "industriesTitle": "Services We Provide For Healthcare Facilities",
+        "industriesIntro": "From everyday fixes to large-scale facility upgrades, our team brings the right tools and training to keep your operations running.",
+        "servicesList": [
+          "Preventative Maintenance",
+          "Emergency Repairs",
+          "Sewer & Drain Cleaning",
+          "Water Heater Systems",
+          "Pipe Repair & Repiping",
+          "Backflow Testing"
+        ],
+        "experienceTitle": "Why Healthcare Facilities Trust Us",
+        "experienceText": "We understand that downtime costs money and affects your bottom line. We prioritize safety, efficiency, and clear communication.",
+        "experiencePoints": [
+          {
+            "title": "Minimal Downtime",
+            "text": "We work around your schedule to ensure zero disruption to your daily operations."
+          },
+          {
+            "title": "Code Compliance",
+            "text": "All our work meets local commercial health and safety regulations."
+          },
+          {
+            "title": "Licensed Experts",
+            "text": "Our team is fully certified and insured to handle large-scale plumbing needs."
+          }
+        ]
+      },
+      "retail-stores": {
+        "slug": "retail-stores",
+        "label": "Retail Stores Plumbing",
+        "headline": "Specialized Plumbing for Retail Stores",
+        "image": "/img/industry_detail/retail_store.jpeg",
+        "imageAlt": "Retail Stores plumbing services",
+        "intro": "Fast, professional plumbing that keeps stores welcoming and open for customers. We deliver durable repairs, preventative maintenance, and code-compliant installations tailored strictly to the needs of retail stores.",
+        "industriesTitle": "Services We Provide For Retail Stores",
+        "industriesIntro": "From everyday fixes to large-scale facility upgrades, our team brings the right tools and training to keep your operations running.",
+        "servicesList": [
+          "Preventative Maintenance",
+          "Emergency Repairs",
+          "Sewer & Drain Cleaning",
+          "Water Heater Systems",
+          "Pipe Repair & Repiping",
+          "Backflow Testing"
+        ],
+        "experienceTitle": "Why Retail Stores Trust Us",
+        "experienceText": "We understand that downtime costs money and affects your bottom line. We prioritize safety, efficiency, and clear communication.",
+        "experiencePoints": [
+          {
+            "title": "Minimal Downtime",
+            "text": "We work around your schedule to ensure zero disruption to your daily operations."
+          },
+          {
+            "title": "Code Compliance",
+            "text": "All our work meets local commercial health and safety regulations."
+          },
+          {
+            "title": "Licensed Experts",
+            "text": "Our team is fully certified and insured to handle large-scale plumbing needs."
+          }
+        ]
+      },
+      "industrial-facilities": {
+        "slug": "industrial-facilities",
+        "label": "Industrial Facilities Plumbing",
+        "headline": "Specialized Plumbing for Industrial Facilities",
+        "image": "/img/industry_detail/industrial_facilities.jpeg",
+        "imageAlt": "Industrial Facilities plumbing services",
+        "intro": "Heavy-duty plumbing solutions for manufacturing plants and industrial work areas. We deliver durable repairs, preventative maintenance, and code-compliant installations tailored strictly to the needs of industrial facilities.",
+        "industriesTitle": "Services We Provide For Industrial Facilities",
+        "industriesIntro": "From everyday fixes to large-scale facility upgrades, our team brings the right tools and training to keep your operations running.",
+        "servicesList": [
+          "Preventative Maintenance",
+          "Emergency Repairs",
+          "Sewer & Drain Cleaning",
+          "Water Heater Systems",
+          "Pipe Repair & Repiping",
+          "Backflow Testing"
+        ],
+        "experienceTitle": "Why Industrial Facilities Trust Us",
+        "experienceText": "We understand that downtime costs money and affects your bottom line. We prioritize safety, efficiency, and clear communication.",
+        "experiencePoints": [
+          {
+            "title": "Minimal Downtime",
+            "text": "We work around your schedule to ensure zero disruption to your daily operations."
+          },
+          {
+            "title": "Code Compliance",
+            "text": "All our work meets local commercial health and safety regulations."
+          },
+          {
+            "title": "Licensed Experts",
+            "text": "Our team is fully certified and insured to handle large-scale plumbing needs."
+          }
+        ]
+      },
+      "residential-complexes": {
+        "slug": "residential-complexes",
+        "label": "Residential Complexes Plumbing",
+        "headline": "Specialized Plumbing for Residential Complexes",
+        "image": "/img/industry_detail/residential_complexes.jpeg",
+        "imageAlt": "Residential Complexes plumbing services",
+        "intro": "Multi-unit plumbing maintenance that keeps common areas and residences running well. We deliver durable repairs, preventative maintenance, and code-compliant installations tailored strictly to the needs of residential complexes.",
+        "industriesTitle": "Services We Provide For Residential Complexes",
+        "industriesIntro": "From everyday fixes to large-scale facility upgrades, our team brings the right tools and training to keep your operations running.",
+        "servicesList": [
+          "Preventative Maintenance",
+          "Emergency Repairs",
+          "Sewer & Drain Cleaning",
+          "Water Heater Systems",
+          "Pipe Repair & Repiping",
+          "Backflow Testing"
+        ],
+        "experienceTitle": "Why Residential Complexes Trust Us",
+        "experienceText": "We understand that downtime costs money and affects your bottom line. We prioritize safety, efficiency, and clear communication.",
+        "experiencePoints": [
+          {
+            "title": "Minimal Downtime",
+            "text": "We work around your schedule to ensure zero disruption to your daily operations."
+          },
+          {
+            "title": "Code Compliance",
+            "text": "All our work meets local commercial health and safety regulations."
+          },
+          {
+            "title": "Licensed Experts",
+            "text": "Our team is fully certified and insured to handle large-scale plumbing needs."
+          }
+        ]
+      },
+      "hotels-hospitality": {
+        "slug": "hotels-hospitality",
+        "label": "Hotels & Hospitality Plumbing",
+        "headline": "Specialized Plumbing for Hotels & Hospitality",
+        "image": "/img/industry_detail/hotels.jpeg",
+        "imageAlt": "Hotels & Hospitality plumbing services",
+        "intro": "Guest-ready plumbing support for hotels, resorts, and hospitality properties. We deliver durable repairs, preventative maintenance, and code-compliant installations tailored strictly to the needs of hotels & hospitality.",
+        "industriesTitle": "Services We Provide For Hotels & Hospitality",
+        "industriesIntro": "From everyday fixes to large-scale facility upgrades, our team brings the right tools and training to keep your operations running.",
+        "servicesList": [
+          "Preventative Maintenance",
+          "Emergency Repairs",
+          "Sewer & Drain Cleaning",
+          "Water Heater Systems",
+          "Pipe Repair & Repiping",
+          "Backflow Testing"
+        ],
+        "experienceTitle": "Why Hotels & Hospitality Trust Us",
+        "experienceText": "We understand that downtime costs money and affects your bottom line. We prioritize safety, efficiency, and clear communication.",
+        "experiencePoints": [
+          {
+            "title": "Minimal Downtime",
+            "text": "We work around your schedule to ensure zero disruption to your daily operations."
+          },
+          {
+            "title": "Code Compliance",
+            "text": "All our work meets local commercial health and safety regulations."
+          },
+          {
+            "title": "Licensed Experts",
+            "text": "Our team is fully certified and insured to handle large-scale plumbing needs."
+          }
+        ]
+      },
+      "government-offices": {
+        "slug": "government-offices",
+        "label": "Government Offices Plumbing",
+        "headline": "Specialized Plumbing for Government Offices",
+        "image": "/img/industry_detail/govt.jpeg",
+        "imageAlt": "Government Offices plumbing services",
+        "intro": "Professional plumbing services for public offices and government buildings. We deliver durable repairs, preventative maintenance, and code-compliant installations tailored strictly to the needs of government offices.",
+        "industriesTitle": "Services We Provide For Government Offices",
+        "industriesIntro": "From everyday fixes to large-scale facility upgrades, our team brings the right tools and training to keep your operations running.",
+        "servicesList": [
+          "Preventative Maintenance",
+          "Emergency Repairs",
+          "Sewer & Drain Cleaning",
+          "Water Heater Systems",
+          "Pipe Repair & Repiping",
+          "Backflow Testing"
+        ],
+        "experienceTitle": "Why Government Offices Trust Us",
+        "experienceText": "We understand that downtime costs money and affects your bottom line. We prioritize safety, efficiency, and clear communication.",
+        "experiencePoints": [
+          {
+            "title": "Minimal Downtime",
+            "text": "We work around your schedule to ensure zero disruption to your daily operations."
+          },
+          {
+            "title": "Code Compliance",
+            "text": "All our work meets local commercial health and safety regulations."
+          },
+          {
+            "title": "Licensed Experts",
+            "text": "Our team is fully certified and insured to handle large-scale plumbing needs."
+          }
+        ]
       }
     }
   }

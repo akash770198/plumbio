@@ -66,7 +66,6 @@ export function TermsPage() {
   return (
     <section className="bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
       <div className="shell">
-        <Reveal>
           <div className="flex flex-col gap-4 rounded-2xl border border-[#e6ebf2] bg-white px-5 py-5 sm:flex-row sm:items-center sm:gap-0 sm:px-7 sm:py-6">
             <div className="flex items-center gap-3 sm:pr-8">
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#eef6ff] text-[#1e6fd0]">
@@ -88,23 +87,33 @@ export function TermsPage() {
               <span className="font-bold text-brand">{data.lastUpdated}</span>
             </p>
           </div>
-        </Reveal>
 
         <div className="mt-10">
-          {data.sections.map((section, index) => (
-            <Reveal key={section.title} delay={Math.min(index * 40, 200)}>
+          {data.sections.map((section, index) => {
+            const content = (
               <article
+                id={section.title.toLowerCase().includes("policy") ? "policy" : undefined}
                 className={
                   index < data.sections.length - 1
-                    ? "border-b border-[#e8edf5] pb-7 mb-7"
-                    : "pb-2"
+                    ? "border-b border-[#e8edf5] pb-7 mb-7 scroll-mt-24"
+                    : "pb-2 scroll-mt-24"
                 }
               >
                 <h2 className="section-title text-[#1e6fd0]">{section.title}</h2>
-                <p className="section-desc mt-3 max-w-4xl">{section.text}</p>
+                <div className="mt-3 space-y-4" dangerouslySetInnerHTML={{ __html: section.text.replace(/<p>/g, '<p class="section-desc">') }} />
               </article>
-            </Reveal>
-          ))}
+            );
+
+            if (index === 0) {
+              return <div key={section.title}>{content}</div>;
+            }
+
+            return (
+              <Reveal key={section.title} delay={Math.min(index * 40, 200)}>
+                {content}
+              </Reveal>
+            );
+          })}
         </div>
 
         <Reveal delay={120}>

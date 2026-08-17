@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { site, SectionProps, ServicesWhyChooseData } from "@/data";
-import { Icon } from "./Icon";
+import { site } from "@/data";
 import { Reveal } from "./Reveal";
 
 const FEATURE_ICONS: Record<string, string> = {
@@ -70,7 +69,7 @@ export function WhyChoose({ className }: { className?: string }) {
         Frame runs from content top to near section bottom so the FULL image
         fits with object-contain — nothing cropped; wave only covers the waist.
       */}
-      <div className="pointer-events-none absolute bottom-0 right-[var(--page-gutter)] top-12 z-10 hidden w-[min(560px,52%)] translate-x-2 xl:translate-x-4 lg:block">
+      <div className="pointer-events-none absolute bottom-0 right-[var(--page-gutter)] top-12 z-10 hidden w-[min(560px,52%)] translate-x-5 xl:translate-x-8 lg:block">
         <Image
           src={whyChoose.image}
           alt={whyChoose.imageAlt}
@@ -100,19 +99,29 @@ export function WhyChoose({ className }: { className?: string }) {
         </svg>
 
         <div className="shell pointer-events-auto absolute inset-x-0 bottom-0 flex h-[110px] items-center pt-6">
-          <div className="ml-auto flex w-full max-w-[560px] translate-x-5 -translate-y-10 items-stretch justify-between">
+          <div className="ml-auto flex w-full max-w-[460px] -translate-x-4 -translate-y-10 items-stretch justify-between">
             {whyChoose.stats.map((stat, i) => (
               <div
                 key={stat.title}
-                className={`flex flex-1 flex-col items-center justify-center px-3 text-center ${
+                className={`flex flex-1 flex-col items-center justify-center px-2 text-center ${
                   i > 0 ? "border-l border-[#d5deee]" : ""
                 }`}
               >
-                <FeatureIcon
-                  name={stat.icon}
-                  className="mb-1.5 h-6 w-6 text-[#002870]"
-                />
-                <p className="text-[12px] font-bold leading-[1.3] text-[#002870]">
+                {stat.iconType === "image" ? (
+                  <Image
+                    src={stat.icon}
+                    alt={stat.title}
+                    width={32}
+                    height={32}
+                    className="mb-2 h-8 w-8 object-contain"
+                  />
+                ) : (
+                  <FeatureIcon
+                    name={stat.icon}
+                    className="mb-2 h-8 w-8 text-[#0051d4]"
+                  />
+                )}
+                <p className="text-[14px] font-bold leading-[1.3] text-[#002870]">
                   {stat.title}
                   {stat.value ? (
                     <>
@@ -177,7 +186,7 @@ export function WhyChoose({ className }: { className?: string }) {
             <div className="relative mt-5 max-w-[500px] overflow-hidden rounded-[12px] border border-[#1b4a9a] bg-[#051c50] p-5 shadow-xl sm:p-6">
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#20b2ff]/10 to-transparent" />
               <div className="relative z-10 flex items-start gap-4 sm:gap-5">
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#20b2ff] text-white shadow-[0_0_15px_rgba(32,178,255,0.4)] sm:h-[62px] sm:w-[62px]">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#0051d4] text-white shadow-[0_0_15px_rgba(0,81,212,0.4)] sm:h-[62px] sm:w-[62px]">
                   {whyChoose.highlightCard.iconType === "image" ? (
                     <Image
                       src={whyChoose.highlightCard.icon}
@@ -223,11 +232,21 @@ export function WhyChoose({ className }: { className?: string }) {
               key={stat.title}
               className="flex flex-col items-center justify-center px-1 py-2 text-center"
             >
-              <FeatureIcon
-                name={stat.icon}
-                className="mb-1.5 h-6 w-6 text-[#002870]"
-              />
-              <p className="text-[11px] font-bold leading-[1.3] text-[#002870]">
+              {stat.iconType === "image" ? (
+                <Image
+                  src={stat.icon}
+                  alt={stat.title}
+                  width={28}
+                  height={28}
+                  className="mb-2 h-7 w-7 object-contain"
+                />
+              ) : (
+                <FeatureIcon
+                  name={stat.icon}
+                  className="mb-2 h-7 w-7 text-[#0051d4]"
+                />
+              )}
+              <p className="text-[13px] font-bold leading-[1.3] text-[#002870]">
                 {stat.title}
                 {stat.value ? (
                   <>

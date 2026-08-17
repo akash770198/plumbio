@@ -165,7 +165,7 @@ function FaqCard({
   );
 }
 
-export function FaqSection({ className, data }: SectionProps<ServicesFAQData> = {}) {
+export function FaqSection({ className, data, hideCta }: SectionProps<ServicesFAQData> & { hideCta?: boolean } = {}) {
   const faq = data?.faq || site.faq;
 
   const defaultOpen = useMemo(
@@ -243,75 +243,77 @@ export function FaqSection({ className, data }: SectionProps<ServicesFAQData> = 
           {renderColumn(rightColumn, 1)}
         </div>
 
-        <Reveal delay={120}>
-          <div
-            className="relative mt-10 overflow-hidden rounded-2xl bg-[#0a3d9c] px-5 py-6 sm:px-8 sm:py-7 lg:mt-12"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, rgba(255,255,255,0.14) 1.1px, transparent 1.2px)",
-              backgroundSize: "14px 14px",
-              backgroundPosition: "right bottom",
-            }}
-          >
-            <div className="relative z-[1] flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-0">
-              <div className="flex flex-1 items-center gap-4 lg:pr-8">
-                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-[#0a3d9c]">
-                  <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current" aria-hidden>
-                    <path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.4 1.4 0 011.5-.34 11.4 11.4 0 003.5.56 1.4 1.4 0 011.4 1.4V20a1.4 1.4 0 01-1.4 1.4A17.4 17.4 0 012.6 4 1.4 1.4 0 014 2.6h3.2A1.4 1.4 0 018.6 4a11.4 11.4 0 00.56 3.5 1.4 1.4 0 01-.34 1.5L6.6 10.8z" />
-                  </svg>
+        {!hideCta && (
+          <Reveal delay={120}>
+            <div
+              className="relative mt-10 overflow-hidden rounded-2xl bg-[#0a3d9c] px-5 py-6 sm:px-8 sm:py-7 lg:mt-12"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle, rgba(255,255,255,0.14) 1.1px, transparent 1.2px)",
+                backgroundSize: "14px 14px",
+                backgroundPosition: "right bottom",
+              }}
+            >
+              <div className="relative z-[1] flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-0">
+                <div className="flex flex-1 items-center gap-4 lg:pr-8">
+                  <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-[#0a3d9c]">
+                    <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current" aria-hidden>
+                      <path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.4 1.4 0 011.5-.34 11.4 11.4 0 003.5.56 1.4 1.4 0 011.4 1.4V20a1.4 1.4 0 01-1.4 1.4A17.4 17.4 0 012.6 4 1.4 1.4 0 014 2.6h3.2A1.4 1.4 0 018.6 4a11.4 11.4 0 00.56 3.5 1.4 1.4 0 01-.34 1.5L6.6 10.8z" />
+                    </svg>
+                  </div>
+                  <div className="text-white">
+                    <p className="section-desc text-white/85">
+                      {faq.cta.helpEyebrow}
+                    </p>
+                    <p className="section-title mt-1 text-[clamp(22px,2vw,28px)] text-white">
+                      {faq.cta.helpTitle}
+                    </p>
+                  </div>
                 </div>
-                <div className="text-white">
-                  <p className="section-desc text-white/85">
-                    {faq.cta.helpEyebrow}
-                  </p>
-                  <p className="section-title mt-1 text-[clamp(22px,2vw,28px)] text-white">
-                    {faq.cta.helpTitle}
-                  </p>
-                </div>
-              </div>
 
-              <div className="hidden h-14 w-px shrink-0 bg-white/20 lg:block" />
+                <div className="hidden h-14 w-px shrink-0 bg-white/20 lg:block" />
 
-              <div className="flex flex-1 items-center gap-4 lg:px-8">
-                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-[#0a3d9c]">
-                  <span className="text-[11px] font-bold leading-none">24/7</span>
+                <div className="flex flex-1 items-center gap-4 lg:px-8">
+                  <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-[#0a3d9c]">
+                    <span className="text-[11px] font-bold leading-none">24/7</span>
+                  </div>
+                  <div className="text-white">
+                    <p className="section-desc text-white/85">
+                      {faq.cta.callLabel}
+                    </p>
+                    <a
+                      href={faq.cta.phoneHref}
+                      className="section-title mt-1 block text-[clamp(22px,2vw,28px)] text-white transition hover:opacity-90"
+                    >
+                      {faq.cta.phone}
+                    </a>
+                  </div>
                 </div>
-                <div className="text-white">
-                  <p className="section-desc text-white/85">
-                    {faq.cta.callLabel}
-                  </p>
-                  <a
-                    href={faq.cta.phoneHref}
-                    className="section-title mt-1 block text-[clamp(22px,2vw,28px)] text-white transition hover:opacity-90"
+
+                <div className="hidden h-14 w-px shrink-0 bg-white/20 lg:block" />
+
+                <div className="flex shrink-0 lg:pl-8">
+                  <Link
+                    href={faq.cta.button.href}
+                    className="section-desc inline-flex items-center gap-2 rounded-md bg-white px-6 py-3.5 font-bold text-[#0a3d9c] transition hover:bg-[#eef5ff]"
                   >
-                    {faq.cta.phone}
-                  </a>
+                    {faq.cta.button.label}
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4 fill-none stroke-current"
+                      strokeWidth="2.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </Link>
                 </div>
-              </div>
-
-              <div className="hidden h-14 w-px shrink-0 bg-white/20 lg:block" />
-
-              <div className="flex shrink-0 lg:pl-8">
-                <Link
-                  href={faq.cta.button.href}
-                  className="section-desc inline-flex items-center gap-2 rounded-md bg-white px-6 py-3.5 font-bold text-[#0a3d9c] transition hover:bg-[#eef5ff]"
-                >
-                  {faq.cta.button.label}
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-4 w-4 fill-none stroke-current"
-                    strokeWidth="2.25"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden
-                  >
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </Link>
               </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        )}
       </div>
     </section>
   );
