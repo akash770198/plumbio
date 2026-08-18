@@ -46,6 +46,31 @@ export type ServicesSitemapPageData = ServicesSections["SitemapPage"]["variants"
 export type ServicesTermsPageData = ServicesSections["TermsPage"]["variants"]["ServicesTermsPage1"];
 export type ServicesFooterData = ServicesSections["Footer"]["variants"]["ServicesFooter1"];
 
+export type ServicesIndustryPageData = typeof siteData.Services.industryPages[keyof typeof siteData.Services.industryPages];
+
+export type ServicePageData = {
+  id?: string;
+  label: string;
+  title: string;
+  image: string;
+  imageAlt: string;
+  intro: string;
+  industriesTitle: string;
+  industriesIntro: string;
+  industries: string[];
+  experienceTitle: string;
+  experienceText: string;
+  experiencePoints: { title: string; text: string }[];
+  bidCta: { text: string; vanImage: string; vanImageAlt: string; };
+  servicesHeading: string;
+  servicesList: { label: string; href: string }[];
+  askQuestion: { title: string; namePlaceholder: string; emailPlaceholder: string; questionPlaceholder: string; buttonLabel: string; };
+  bookCta: { title: string; text: string; phone: string; phoneHref: string; };
+  reasons: { title: string; items: string[]; };
+};
+export type ServicesTeamMember = typeof siteData.Services.sections.Team.variants.ServicesTeam1.team.members[0];
+export type QuoteLikePage = ServicesQuotePageData | ServicesEnquiryPageData;
+
 // ── Legacy Site Map for Standalone Plumbio Site ──
 const sec = siteData.Services.sections;
 
@@ -73,9 +98,11 @@ const legacySiteMap = {
   reviews: sec.Testimonials.variants.ServicesTestimonials1.reviews,
   videoTestimonials: sec.Testimonials.variants.ServicesTestimonials1.videoTestimonials,
   testimonials: sec.Testimonials.variants.ServicesTestimonials1.testimonials,
+  testimonialsSectionData: sec.Testimonials.variants.ServicesTestimonials1,
   teamBanner: sec.PageBanner.variants.ServicesInnerBanner1.teamBanner,
   teamDetailBanner: sec.PageBanner.variants.ServicesInnerBanner1.teamDetailBanner,
-  team: sec.Team.variants.ServicesTeam1.team,
+  teamSectionData: sec.Team.variants.ServicesTeam1,
+  team: sec.Team.variants.ServicesTeam1.team.members,
   awardsBanner: sec.PageBanner.variants.ServicesInnerBanner1.awardsBanner,
   awards: sec.Awards.variants.ServicesAwards1.awards,
   faqBanner: sec.PageBanner.variants.ServicesInnerBanner1.faqBanner,

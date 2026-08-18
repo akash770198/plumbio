@@ -4,49 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
-
-interface Review {
-  title: string;
-  review: string;
-  author: string;
-  role: string;
-  rating: number;
-}
-
-interface VideoTestimonial {
-  thumbnail: string;
-  alt: string;
-}
-
-interface ReviewsSectionProps {
-  reviews: {
-    label: string;
-    titleBefore: string;
-    titleAccent: string;
-    description: string;
-    items: Review[];
-    moreButton: {
-      label: string;
-      href: string;
-    };
-  };
-  videoTestimonials: {
-    label: string;
-    title: string;
-    titleBefore: string;
-    titleAccent: string;
-    description: string;
-    cta: {
-      label: string;
-      href: string;
-    };
-    mainVideo: {
-      thumbnail: string;
-      alt: string;
-    };
-    videos: VideoTestimonial[];
-  };
-}
+import { site, SectionProps, ServicesTestimonialsData } from "@/data";
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -65,10 +23,9 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-export function ReviewsSection({
-  reviews,
-  videoTestimonials,
-}: ReviewsSectionProps) {
+export function ReviewsSection({ data, className }: SectionProps<ServicesTestimonialsData> = {}) {
+  const testimonialsData = data || site.testimonialsSectionData;
+  const { reviews, videoTestimonials } = testimonialsData;
   return (
     <div className="w-full">
       {/* ── Reviews Section ── */}

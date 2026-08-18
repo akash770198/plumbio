@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site } from "@/data";
+import { site, SectionProps, ServicesTermsPageData } from "@/data";
 import { Reveal } from "./Reveal";
 
 function CalendarIcon({ className }: { className?: string }) {
@@ -60,8 +60,8 @@ function HelpIcon({ name }: { name: string }) {
   }
 }
 
-export function TermsPage() {
-  const { termsPage: data } = site;
+export function TermsPage({ data, className }: SectionProps<ServicesTermsPageData> = {}) {
+  const termsPageData = data || site.termsPage;
 
   return (
     <section className="bg-[#f7f9fc] pt-[3.25rem] pb-[3.25rem] lg:pt-[3.75rem] lg:pb-[3.75rem]">
@@ -72,8 +72,8 @@ export function TermsPage() {
                 <CalendarIcon className="h-5 w-5" />
               </span>
               <p className="section-desc">
-                {data.effectiveDateLabel}{" "}
-                <span className="font-bold text-brand">{data.effectiveDate}</span>
+                {termsPageData.effectiveDateLabel}{" "}
+                <span className="font-bold text-brand">{termsPageData.effectiveDate}</span>
               </p>
             </div>
 
@@ -83,43 +83,45 @@ export function TermsPage() {
             />
 
             <p className="section-desc sm:pl-6">
-              {data.lastUpdatedLabel}{" "}
-              <span className="font-bold text-brand">{data.lastUpdated}</span>
+              {termsPageData.lastUpdatedLabel}{" "}
+              <span className="font-bold text-brand">{termsPageData.lastUpdated}</span>
             </p>
           </div>
 
         <div className="mt-10">
-          {data.sections.map((section, index) => {
-            const content = (
-              <article
-                id={section.title.toLowerCase().includes("policy") ? "policy" : undefined}
-                className={
-                  index < data.sections.length - 1
-                    ? "border-b border-[#e8edf5] pb-7 mb-7 scroll-mt-24"
-                    : "pb-2 scroll-mt-24"
-                }
-              >
-                <h2 className="section-title text-[#1e6fd0]">{section.title}</h2>
-                <div className="mt-3 space-y-4" dangerouslySetInnerHTML={{ __html: section.text.replace(/<p>/g, '<p class="section-desc">') }} />
-              </article>
-            );
+          <div className="section-desc flex flex-col gap-5">
+            {termsPageData.sections.map((section, index) => {
+              const content = (
+                <article
+                  id={section.title.toLowerCase().includes("policy") ? "policy" : undefined}
+                  className={
+                    index < termsPageData.sections.length - 1
+                      ? "border-b border-[#e8edf5] pb-7 mb-7 scroll-mt-24"
+                      : "pb-2 scroll-mt-24"
+                  }
+                >
+                  <h3 className="section-title text-[#1e6fd0]">{section.title}</h3>
+                  <div className="mt-3 space-y-4" dangerouslySetInnerHTML={{ __html: section.text.replace(/<p>/g, '<p class="section-desc">') }} />
+                </article>
+              );
 
-            if (index === 0) {
-              return <div key={section.title}>{content}</div>;
-            }
+              if (index === 0) {
+                return <div key={section.title}>{content}</div>;
+              }
 
-            return (
-              <Reveal key={section.title} delay={Math.min(index * 40, 200)}>
-                {content}
-              </Reveal>
-            );
-          })}
+              return (
+                <Reveal key={section.title} delay={Math.min(index * 40, 200)}>
+                  {content}
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
 
         <Reveal delay={120}>
           <div className="mt-12 rounded-2xl bg-[#eaf4ff] px-5 py-7 sm:px-8 sm:py-8">
             <div className="grid gap-7 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
-              {data.helpBar.items.map((item) => {
+              {termsPageData.helpBar.items.map((item) => {
                 const content = (
                   <>
                     <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#0a3d9c] text-white shadow-[0_8px_18px_rgba(10,61,156,0.22)]">

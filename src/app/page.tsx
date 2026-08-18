@@ -36,7 +36,7 @@ export default function HomePage() {
           <Testimonials />
         </div>
         <TeamSection
-          limit={site.team.homeDisplayCount}
+          limit={site.teamSectionData.team.homeDisplayCount}
           className={`relative overflow-hidden ${SECTION_LIGHT} ${SECTION_PAD}`}
         />
         <AwardsSection className={`bg-white ${SECTION_PAD}`} />

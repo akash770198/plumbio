@@ -1,7 +1,7 @@
 "use client";
 
-import { ServicePageLayout, type ServicePageData } from "./ServicePageLayout";
-import { site, SectionProps, ServicesCommercialData } from "@/data";
+import { ServicePageLayout } from "./ServicePageLayout";
+import { site, SectionProps, ServicesCommercialData, ServicePageData } from "@/data";
 
 export function CommercialServices({ className, data }: SectionProps<ServicesCommercialData> = {}) {
   const sectionData = data || site.commercialServices;

@@ -9,12 +9,12 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return site.team.members.map((member) => ({ slug: member.slug }));
+  return site.team.map((member) => ({ slug: member.slug }));
 }
 
 export default async function Page({ params }: PageProps) {
   const { slug } = await params;
-  const member = site.team.members.find((item) => item.slug === slug);
+  const member = site.team.find((m) => m.slug === slug);
 
   if (!member) {
     notFound();
@@ -36,7 +36,7 @@ export default async function Page({ params }: PageProps) {
           backgroundImage={site.teamDetailBanner.backgroundImage}
           backgroundImageAlt={site.teamDetailBanner.backgroundImageAlt}
         />
-        <TeamMemberDetail member={member} />
+        <TeamMemberDetail data={member} />
       </main>
     </>
   );

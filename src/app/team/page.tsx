@@ -9,7 +9,7 @@ import { SECTION_LIGHT, SECTION_PAD } from "@/lib/section-styles";
 
 export default function Page() {
   const { teamBanner, team, topbar } = site;
-  const social = team.pageSocial;
+  const social = site.teamSectionData.team.pageSocial;
 
   return (
     <>

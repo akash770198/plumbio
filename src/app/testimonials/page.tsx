@@ -14,10 +14,7 @@ export default function Page() {
           backgroundImage={site.testimonialsBanner.backgroundImage}
           backgroundImageAlt={site.testimonialsBanner.backgroundImageAlt}
         />
-        <ReviewsSection
-          reviews={site.reviews}
-          videoTestimonials={site.videoTestimonials}
-        />
+        <ReviewsSection />
       </main>
     </>
   );

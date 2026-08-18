@@ -18,8 +18,9 @@ export function TeamSection({
   linkToDetail = false,
   data,
 }: TeamSectionProps & SectionProps<ServicesTeamData> = {}) {
-  const team = data?.team || site.team;
-  const displayCount = limit ?? team.members.length;
+  const teamData = data || site.teamSectionData;
+  const team = teamData.team;
+  const displayCount = limit ?? team.homeDisplayCount;
   const members = team.members.slice(0, displayCount);
 
   return (

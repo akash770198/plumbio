@@ -1,12 +1,10 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/data";
+import { site, SectionProps, ServicesTeamMember } from "@/data";
 import { AccentTitle } from "./AccentTitle";
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
-
-type TeamMember = (typeof site.team.members)[number];
 
 function CertIcon({ name }: { name: string }) {
   const props = {
@@ -134,10 +132,10 @@ function SocialLinks({ size = "md" }: { size?: "md" | "lg" }) {
   );
 }
 
-export function TeamMemberDetail({ member }: { member: TeamMember }) {
-  const { team } = site;
-  const cta = team.detailCta;
-  const social = team.detailSocial;
+export function TeamMemberDetail({ data: member }: SectionProps<ServicesTeamMember>) {
+  if (!member) return null;
+  const cta = site.teamSectionData.team.detailCta;
+  const social = site.teamSectionData.team.detailSocial;
   const ctaDescription = cta.description.replace("{name}", member.name.split(" ")[0]);
 
   const contactItems = [
@@ -226,7 +224,7 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
             <Reveal>
               <SectionCard title={`About ${member.name}`}>
                 <div className="space-y-4">
-                  {member.aboutParagraphs.map((paragraph) => (
+                  {member.aboutParagraphs.map((paragraph: string) => (
                     <p key={paragraph.slice(0, 40)} className="section-desc">
                       {paragraph}
                     </p>
@@ -246,7 +244,7 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
             <Reveal delay={80}>
               <SectionCard title="Expertise & Skills">
                 <div className="space-y-5">
-                  {member.skills.map((skill) => (
+                  {member.skills.map((skill: { name: string; percent: number }) => (
                     <div key={skill.name}>
                       <div className="mb-2 flex items-center justify-between gap-4">
                         <span className="section-desc font-bold text-brand">{skill.name}</span>
@@ -275,7 +273,7 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
             <Reveal>
               <SectionCard title="Experience">
                 <div className="relative space-y-8 pl-6 before:absolute before:bottom-2 before:left-[7px] before:top-2 before:w-[2px] before:bg-[#1e6fd0]">
-                  {member.experience.map((item) => (
+                  {member.experience.map((item: { period: string; title: string; company: string; description: string }) => (
                     <div key={`${item.period}-${item.title}`} className="relative">
                       <span className="absolute -left-6 top-1.5 h-3 w-3 rounded-full bg-[#1e6fd0]" />
                       <p className="section-label text-[#1e6fd0]">{item.period}</p>
@@ -293,7 +291,7 @@ export function TeamMemberDetail({ member }: { member: TeamMember }) {
             <Reveal delay={80}>
               <SectionCard title="Certifications">
                 <div className="space-y-4">
-                  {member.certifications.map((cert) => (
+                  {member.certifications.map((cert: { title: string; subtitle: string; icon: string }) => (
                     <div
                       key={cert.title}
                       className="flex items-start gap-4 rounded-xl border border-[#e8edf5] px-4 py-4"

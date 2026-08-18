@@ -2,12 +2,9 @@
 
 import Link from "next/link";
 import { FormEvent, useState } from "react";
-import { site } from "@/data";
+import { site, SectionProps, QuoteLikePage } from "@/data";
 import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
-
-type QuoteLikePage = typeof site.quotePage;
-
 function FeatureIcon({ name }: { name: string }) {
   const props = {
     viewBox: "0 0 24 24",
@@ -115,8 +112,9 @@ function SuccessMessage({ title, message }: { title: string; message: string }) 
   );
 }
 
-export function QuoteFormPage({ data }: { data: QuoteLikePage }) {
-  const { sidebar, form } = data;
+export function QuoteFormPage({ data, className }: SectionProps<QuoteLikePage> = {}) {
+  const pageData = data || site.quotePage;
+  const { sidebar, form } = pageData;
   const fields = form.fields;
   const [submitted, setSubmitted] = useState(false);
 

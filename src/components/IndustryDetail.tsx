@@ -1,7 +1,7 @@
 "use client";
 
-import { ServicePageLayout, type ServicePageData } from "./ServicePageLayout";
-import { site } from "@/data";
+import { ServicePageLayout } from "./ServicePageLayout";
+import { site, ServicePageData } from "@/data";
 
 type IndustryItem = (typeof site.industryPages)[keyof typeof site.industryPages];
 
@@ -23,20 +23,17 @@ export function IndustryDetail({
     intro: industry.intro,
     industriesTitle: industry.industriesTitle,
     industriesIntro: industry.industriesIntro,
-    industries: industry.servicesList, // Map services to the list layout
+    industries: industry.servicesList,
     experienceTitle: industry.experienceTitle,
     experienceText: industry.experienceText,
     experiencePoints: industry.experiencePoints,
     bidCta: {
-      text: `Request a quote for your ${industry.label} project from our professional team today!`,
+      text: shared.bidCta.text,
       vanImage: shared.bidCta.vanImage,
       vanImageAlt: shared.bidCta.vanImageAlt,
     },
-    servicesHeading: "Explore More Industries",
-    servicesList: Object.values(site.industryPages).map(ind => ({
-      label: ind.label,
-      href: `/industries/${ind.slug}`
-    })),
+    servicesHeading: shared.servicesHeading,
+    servicesList: industry.servicesList.map((s) => ({ label: s, href: "#" })),
     askQuestion: shared.askQuestion,
     bookCta: shared.bookCta,
     reasons: shared.reasons,

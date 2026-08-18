@@ -3,46 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
-import { Reveal } from "./Reveal";
-
-export type ServicePageData = {
-  id?: string;
-  label: string;
-  title: string;
-  image: string;
-  imageAlt: string;
-  intro: string;
-  industriesTitle: string;
-  industriesIntro: string;
-  industries: string[];
-  experienceTitle: string;
-  experienceText: string;
-  experiencePoints: { title: string; text: string }[];
-  bidCta: {
-    text: string;
-    vanImage: string;
-    vanImageAlt: string;
-  };
-  servicesHeading: string;
-  servicesList: { label: string; href: string }[];
-  askQuestion: {
-    title: string;
-    namePlaceholder: string;
-    emailPlaceholder: string;
-    questionPlaceholder: string;
-    buttonLabel: string;
-  };
-  bookCta: {
-    title: string;
-    text: string;
-    phone: string;
-    phoneHref: string;
-  };
-  reasons: {
-    title: string;
-    items: string[];
-  };
-};
+import { Reveal } from "./Reveal";import { site, SectionProps, ServicePageData } from "@/data";
 
 function ArrowIcon({ className }: { className?: string }) {
   return (
@@ -116,14 +77,33 @@ export function ServicePageLayout({
   data,
   className,
   hideReasons,
-}: {
-  data: ServicePageData;
-  className?: string;
-  hideReasons?: boolean;
-}) {
-  const mid = Math.ceil(data.industries.length / 2);
-  const industriesLeft = data.industries.slice(0, mid);
-  const industriesRight = data.industries.slice(mid);
+}: SectionProps<ServicePageData> & { hideReasons?: boolean } = {}) {
+  // If no data provided, we fallback to a safe shape by adapting industryPages[0]
+  const fallbackIndustry = site.industryPages[Object.keys(site.industryPages)[0] as keyof typeof site.industryPages];
+  const fallbackData: ServicePageData = {
+    id: `industry-${fallbackIndustry.slug}`,
+    label: fallbackIndustry.label,
+    title: fallbackIndustry.headline,
+    image: fallbackIndustry.image,
+    imageAlt: fallbackIndustry.imageAlt,
+    intro: fallbackIndustry.intro,
+    industriesTitle: fallbackIndustry.industriesTitle,
+    industriesIntro: fallbackIndustry.industriesIntro,
+    industries: fallbackIndustry.servicesList,
+    experienceTitle: fallbackIndustry.experienceTitle,
+    experienceText: fallbackIndustry.experienceText,
+    experiencePoints: fallbackIndustry.experiencePoints,
+    bidCta: site.commercialServices.bidCta,
+    servicesHeading: site.commercialServices.servicesHeading,
+    servicesList: fallbackIndustry.servicesList.map((s) => ({ label: s, href: "#" })),
+    askQuestion: site.commercialServices.askQuestion,
+    bookCta: site.commercialServices.bookCta,
+    reasons: site.commercialServices.reasons,
+  };
+  const pageData = data || fallbackData;
+  const mid = Math.ceil(pageData.industries.length / 2);
+  const industriesLeft = pageData.industries.slice(0, mid);
+  const industriesRight = pageData.industries.slice(mid);
   const [questionSent, setQuestionSent] = useState(false);
 
   function handleAskQuestion(e: FormEvent<HTMLFormElement>) {
@@ -135,22 +115,22 @@ export function ServicePageLayout({
     <>
       <div className="flex items-center gap-3">
         <span className="block h-[2px] w-8 bg-[#3aa0f0]" />
-        <p className="section-label">{data.label}</p>
+        <p className="section-label">{pageData.label}</p>
       </div>
 
-      <h2 className="section-title mt-3 max-w-[640px]">{data.title}</h2>
+      <h2 className="section-title mt-3 max-w-[640px]">{pageData.title}</h2>
 
       <ImageSlot
-        src={data.image || undefined}
-        alt={data.imageAlt}
+        src={pageData.image || undefined}
+        alt={pageData.imageAlt}
         className="mt-7 aspect-[16/9] w-full"
         sizes="(max-width: 1024px) 100vw, 60vw"
       />
 
-      <p className="section-desc mt-8">{data.intro}</p>
+      <p className="section-desc mt-8">{pageData.intro}</p>
 
-      <h3 className={`section-title ${hideReasons ? 'mt-16' : 'mt-9'}`}>{data.industriesTitle}</h3>
-      <p className="section-desc mt-4">{data.industriesIntro}</p>
+      <h3 className={`section-title ${hideReasons ? 'mt-16' : 'mt-9'}`}>{pageData.industriesTitle}</h3>
+      <p className="section-desc mt-4">{pageData.industriesIntro}</p>
 
       <div className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
         {[industriesLeft, industriesRight].map((col, colIdx) => (
@@ -174,11 +154,11 @@ export function ServicePageLayout({
 
   const experienceSection = (
     <>
-      <h3 className={`section-title ${hideReasons ? 'mt-0' : 'mt-12'}`}>{data.experienceTitle}</h3>
-      <p className="section-desc mt-4">{data.experienceText}</p>
+      <h3 className={`section-title ${hideReasons ? 'mt-0' : 'mt-12'}`}>{pageData.experienceTitle}</h3>
+      <p className="section-desc mt-4">{pageData.experienceText}</p>
 
       <ul className="mt-6 flex flex-col gap-3.5 max-sm:pl-4">
-        {data.experiencePoints.map((point) => (
+        {pageData.experiencePoints.map((point) => (
           <li key={point.title} className="flex items-start gap-2.5">
             <ArrowIcon className="mt-1 h-4 w-4 shrink-0 text-[#0a1f5c]" />
             <p className="text-[15px] leading-[1.7] text-[#666]">
@@ -208,12 +188,12 @@ export function ServicePageLayout({
           }}
         />
         <p className="relative z-[1] max-w-[520px] text-[clamp(16px,1.7vw,21px)] font-bold leading-[1.45] text-white">
-          {data.bidCta.text}
+          {pageData.bidCta.text}
         </p>
       </div>
 
       <div className="pointer-events-none relative z-10 mx-auto mt-4 w-[72%] max-w-[300px] sm:absolute sm:bottom-[-64px] sm:right-[-12px] sm:mx-0 sm:mt-0 sm:w-[54%] sm:max-w-[380px] lg:max-w-[440px]">
-        {data.bidCta.vanImage ? (
+        {pageData.bidCta.vanImage ? (
           <div className="relative w-full">
             <div
               aria-hidden
@@ -225,8 +205,8 @@ export function ServicePageLayout({
             />
             <div className="relative z-[1] aspect-[5/3] w-full">
               <Image
-                src={data.bidCta.vanImage}
-                alt={data.bidCta.vanImageAlt}
+                src={pageData.bidCta.vanImage}
+                alt={pageData.bidCta.vanImageAlt}
                 fill
                 sizes="440px"
                 className="object-contain object-bottom"
@@ -251,10 +231,10 @@ export function ServicePageLayout({
           }}
         />
         <p className="relative z-[1] text-center text-[clamp(18px,1.8vw,22px)] font-bold leading-snug text-white">
-          {data.bidCta.text}
+          {pageData.bidCta.text}
         </p>
 
-        {data.bidCta.vanImage && (
+        {pageData.bidCta.vanImage && (
           <div className="pointer-events-none relative z-10 mx-auto mt-8 w-[90%] max-w-[280px]">
             <div className="relative w-full">
               <div
@@ -267,8 +247,8 @@ export function ServicePageLayout({
               />
               <div className="relative z-[1] aspect-[5/3] w-full">
                 <Image
-                  src={data.bidCta.vanImage}
-                  alt={data.bidCta.vanImageAlt}
+                  src={pageData.bidCta.vanImage}
+                  alt={pageData.bidCta.vanImageAlt}
                   fill
                   sizes="280px"
                   className="object-contain object-bottom"
@@ -284,11 +264,11 @@ export function ServicePageLayout({
   const rightTopContent = (
     <>
       <h3 className="section-title text-[clamp(22px,2vw,28px)]">
-        {data.servicesHeading}
+        {pageData.servicesHeading}
       </h3>
 
       <ul className="mt-5 bg-[#f4f6f8] py-2 max-sm:px-4 sm:px-6">
-        {data.servicesList.map((item) => (
+        {pageData.servicesList.map((item) => (
           <li key={item.label} className="border-b border-[#e6eaef] last:border-b-0">
             <Link
               href={item.href}
@@ -302,7 +282,7 @@ export function ServicePageLayout({
       </ul>
 
       <h3 className="section-title mt-10 text-[clamp(22px,2vw,28px)]">
-        {data.askQuestion.title}
+        {pageData.askQuestion.title}
       </h3>
 
       {questionSent ? (
@@ -315,28 +295,28 @@ export function ServicePageLayout({
             type="text"
             name="name"
             required
-            placeholder={data.askQuestion.namePlaceholder}
+            placeholder={pageData.askQuestion.namePlaceholder}
             className="w-full rounded-md border-0 bg-[#f4f6f8] px-4 py-3.5 text-[15px] text-[#0a1f5c] outline-none placeholder:text-[#9aa3b2] focus:ring-2 focus:ring-[#3aa0f0]/35"
           />
           <input
             type="email"
             name="email"
             required
-            placeholder={data.askQuestion.emailPlaceholder}
+            placeholder={pageData.askQuestion.emailPlaceholder}
             className="w-full rounded-md border-0 bg-[#f4f6f8] px-4 py-3.5 text-[15px] text-[#0a1f5c] outline-none placeholder:text-[#9aa3b2] focus:ring-2 focus:ring-[#3aa0f0]/35"
           />
           <textarea
             name="question"
             rows={5}
             required
-            placeholder={data.askQuestion.questionPlaceholder}
+            placeholder={pageData.askQuestion.questionPlaceholder}
             className="w-full resize-none rounded-md border-0 bg-[#f4f6f8] px-4 py-3.5 text-[15px] text-[#0a1f5c] outline-none placeholder:text-[#9aa3b2] focus:ring-2 focus:ring-[#3aa0f0]/35"
           />
           <button
             type="submit"
             className="inline-flex items-center justify-center rounded-[3px] bg-[#f07a1a] px-7 py-3.5 text-[15px] font-bold text-white transition hover:bg-[#d96a12]"
           >
-            {data.askQuestion.buttonLabel}
+            {pageData.askQuestion.buttonLabel}
           </button>
         </form>
       )}
@@ -350,25 +330,25 @@ export function ServicePageLayout({
         }}
       >
         <p className="text-[clamp(22px,2vw,28px)] font-extrabold leading-tight">
-          {data.bookCta.title}
+          {pageData.bookCta.title}
         </p>
-        <p className="mt-2 text-[14px] text-white/95">{data.bookCta.text}</p>
+        <p className="mt-2 text-[14px] text-white/95">{pageData.bookCta.text}</p>
         <Link
-          href={data.bookCta.phoneHref}
+          href={pageData.bookCta.phoneHref}
           className="mt-5 inline-flex items-center justify-center gap-2.5 text-[clamp(22px,2.2vw,28px)] font-extrabold text-white transition hover:opacity-90"
         >
           <PhoneIcon className="h-6 w-6" />
-          {data.bookCta.phone}
+          {pageData.bookCta.phone}
         </Link>
       </div>
 
       {!hideReasons && (
         <div className="mt-8 border border-[#b8d8fa] bg-[#eef6ff] px-6 py-8 shadow-[0_8px_30px_rgba(10,31,92,0.08)]">
           <h3 className="section-title text-[clamp(20px,1.8vw,24px)]">
-            {data.reasons.title}
+            {pageData.reasons.title}
           </h3>
           <ul className="mt-6 flex flex-col gap-4">
-            {data.reasons.items.map((reason, i) => (
+            {pageData.reasons.items.map((reason, i) => (
               <li key={reason} className="flex items-center gap-3.5">
                 <DropletNumber n={i + 1} />
                 <span className="text-[15px] font-bold text-[#0a1f5c]">{reason}</span>
@@ -384,7 +364,7 @@ export function ServicePageLayout({
     // Industry Detail Layout: 4-cell flattened grid for perfect row-start-2 horizontal alignment
     return (
       <section
-        id={data.id ?? "service-detail"}
+        id={pageData.id ?? "service-detail"}
         className={className ?? "bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]"}
       >
         <div className="shell">
@@ -410,7 +390,7 @@ export function ServicePageLayout({
   // Service Detail Layout: 2-column flex layout restoring the rectangular Van Box at the bottom left
   return (
     <section
-      id={data.id ?? "service-detail"}
+      id={pageData.id ?? "service-detail"}
       className={className ?? "bg-white pt-0 pb-[3.25rem] lg:pb-[3.75rem]"}
     >
       <div className="shell">
