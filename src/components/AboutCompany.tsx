@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/data";
+import { site, SectionProps } from "@/data";
 import { AccentTitle } from "./AccentTitle";
 import { Reveal } from "./Reveal";
 
@@ -10,11 +10,9 @@ export function AboutCompany({
   className,
   contentClassName,
   data,
-}: {
-  className?: string;
-  contentClassName?: string;
-  data?: CompanyShowcaseData;
-}) {
+  isEditable,
+  onUpdate
+}: SectionProps<CompanyShowcaseData> = {}) {
   const showcaseData = data || site.companyShowcase;
   const {
     label,

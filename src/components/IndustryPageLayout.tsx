@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { Reveal } from "./Reveal";
+import { SectionProps } from "@/data";
 
 export type IndustryPageData = {
   id?: string;
@@ -115,10 +116,9 @@ function ImageSlot({
 export function IndustryPageLayout({
   data,
   className,
-}: {
-  data: IndustryPageData;
-  className?: string;
-}) {
+  isEditable,
+  onUpdate
+}: SectionProps<IndustryPageData> & { data: IndustryPageData }) {
   const mid = Math.ceil(data.challenges.length / 2);
   const challengesLeft = data.challenges.slice(0, mid);
   const challengesRight = data.challenges.slice(mid);

@@ -37,7 +37,7 @@ export default async function Page({ params }: PageProps) {
           backgroundImage={site.blogBanner.backgroundImage}
           backgroundImageAlt={site.blogBanner.backgroundImageAlt}
         />
-        <BlogDetail post={post} />
+        <BlogDetail data={post} />
       </main>
     </>
   );

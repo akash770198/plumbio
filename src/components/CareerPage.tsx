@@ -2,12 +2,12 @@
 
 import { ChangeEvent, FormEvent, useState } from "react";
 import Link from "next/link";
-import { site } from "@/data";
+import { site, SectionProps } from "@/data";
 import { Reveal } from "./Reveal";
 
 type CareerPageData = typeof site.careerPage;
 
-export function CareerPage({ data }: { data?: CareerPageData }) {
+export function CareerPage({ data, className, isEditable, onUpdate }: SectionProps<CareerPageData> = {}) {
   const pageData = data || site.careerPage;
   const { sidebar, form, backgroundTitle } = pageData;
 

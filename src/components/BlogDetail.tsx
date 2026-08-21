@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/data";
+import { site, SectionProps } from "@/data";
 import type { BlogPost } from "@/lib/blog-posts";
 import { getAllBlogPosts } from "@/lib/blog-posts";
 import { SECTION_LIGHT, SECTION_PAD } from "@/lib/section-styles";
@@ -51,7 +51,7 @@ function MetaLine({
   );
 }
 
-export function BlogDetail({ post }: { post: BlogPost }) {
+export function BlogDetail({ data: post, className, isEditable, onUpdate }: SectionProps<BlogPost> & { data: BlogPost }) {
   const { details } = site.blog;
   const allPosts = getAllBlogPosts();
   const otherPosts = allPosts.filter((item) => item.slug !== post.slug);
