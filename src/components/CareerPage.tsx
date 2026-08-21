@@ -541,7 +541,7 @@ export function CareerPage({ data }: { data?: CareerPageData }) {
                         <span>{form.buttonLabel}</span>
                         <svg
                           viewBox="0 0 24 24"
-                          className="h-4 w-4 fill-current rotate-45"
+                          className="h-4 w-4 fill-current -rotate-45 -translate-y-0.5"
                           aria-hidden
                         >
                           <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />

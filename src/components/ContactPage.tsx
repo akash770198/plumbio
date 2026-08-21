@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { FormEvent, useState } from "react";
 import { site } from "@/data";
 import { AccentTitle } from "./AccentTitle";
@@ -40,7 +41,7 @@ export function ContactPage() {
   const { contactPage: data, contactInfo } = site;
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSubmitted(true);
   };
