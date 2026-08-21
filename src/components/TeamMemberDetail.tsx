@@ -272,7 +272,7 @@ export function TeamMemberDetail({ data: member }: SectionProps<ServicesTeamMemb
           <div className="grid gap-6 lg:grid-cols-2">
             <Reveal>
               <SectionCard title="Experience">
-                <div className="relative space-y-8 pl-6 before:absolute before:bottom-2 before:left-[7px] before:top-2 before:w-[2px] before:bg-[#1e6fd0]">
+                <div className="relative space-y-8 pl-6 before:absolute before:bottom-2 before:left-[5px] before:top-2 before:w-[2px] before:bg-[#1e6fd0]">
                   {member.experience.map((item: { period: string; title: string; company: string; description: string }) => (
                     <div key={`${item.period}-${item.title}`} className="relative">
                       <span className="absolute -left-6 top-1.5 h-3 w-3 rounded-full bg-[#1e6fd0]" />
@@ -312,22 +312,7 @@ export function TeamMemberDetail({ data: member }: SectionProps<ServicesTeamMemb
             </Reveal>
           </div>
 
-          <Reveal delay={100}>
-            <div className="mt-6 rounded-xl border border-[#e8edf5] bg-[#f7f9fc] p-6 shadow-[0_8px_28px_rgba(10,31,92,0.05)] sm:p-8 lg:p-10">
-              <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between">
-                <div className="max-w-xl">
-                  <p className="section-label">{social.label}</p>
-                  <AccentTitle
-                    className="mt-3"
-                    before={social.titleBefore}
-                    accent={social.titleAccent}
-                  />
-                  <p className="section-desc mt-3">{social.description}</p>
-                </div>
-                <SocialLinks size="lg" />
-              </div>
-            </div>
-          </Reveal>
+
 
           <Reveal delay={120}>
             <div
